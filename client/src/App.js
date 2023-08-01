@@ -30,8 +30,8 @@ function App() {
               element={<Categories />}
             />
             <Route 
-              path="/createProfile"
-              element={<createProfile />}
+              path="/signUp"
+              element={<signUp />}
             />
           </Routes>
         </div>
