@@ -18,16 +18,20 @@ function App() {
               element={<Home />}
             />
             <Route 
-              path="/matchup" 
-              element={<Matchup />}
+              path="/calendar" 
+              element={<Calendar />}
             />
             <Route 
-              path="/matchup/:id" 
-              element={<Vote />}
+              path="/workout/:id" 
+              element={<Workouts />}
             />
             <Route 
-              path="*"
-              element={<NotFound />}
+              path="/categories"
+              element={<Categories />}
+            />
+            <Route 
+              path="/createProfile"
+              element={<createProfile />}
             />
           </Routes>
         </div>
