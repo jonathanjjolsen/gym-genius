@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
-function NotFound() {
+function signUp() {
   let location = useLocation();
   return (
     <div className="card bg-white card-rounded w-50">
@@ -14,4 +14,4 @@ function NotFound() {
   );
 }
 
-export default NotFound;
+export default signUp;
