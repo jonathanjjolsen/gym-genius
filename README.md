@@ -19,5 +19,20 @@ Gym Genius is an application that allows users to create workouts. Using our vas
 - Chris Gramer
 - Hugo Olivares
 
-## Screenshots
+## Screenshots                                     
+                                       
+### Landing Page                              
+![](client/public/Screenshots/Gym%20Genius%20(1).png)                       
+### Exercise Categories                              
+![](client/public/Screenshots/Gym%20Genius%20(2).png)            
+### Expanded Categories                             
+![](client/public/Screenshots/Gym%20Genius%20(3).png)                 
+### Add Exercise to Workout                                     
+![](client/public/Screenshots/Gym%20Genius%20(4).png)                       
+### Login Page                                           
+![](client/public/Screenshots/Gym%20Genius%20(5).png)                            
+### Sign Up Page                                     
+![](client/public/Screenshots/Gym%20Genius%20(6).png)                        
+### Profile Page                              
+![](client/public/Screenshots/Gym%20Genius%20(7).png)   
 
