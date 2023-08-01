@@ -6,11 +6,11 @@ Gym Genius is an application that allows users to create workouts. Using our vas
 
 ## Usage
 
--Create a user profile.
--Select a category of exercises.
--Select the exercise to be added.
--Select which workout you would like to add the exercises to.
--Once you've finished building your workout, you can view the entire workout from the profile page.
+-Create a user profile.<br/>
+-Select a category of exercises.<br/>
+-Select the exercise to be added.<br/>
+-Select which workout you would like to add the exercises to.<br/>
+-Once you've finished building your workout, you can view the entire workout from the profile page.<br/>
 -If you'd like to plan out your week, select a day and then choose a workout you'd like to add to it.
 
 ## Collaborators
