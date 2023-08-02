@@ -6,6 +6,8 @@ import Calendar from './pages/Calendar'
 import Signup from './pages/signUp'
 import Workouts from './pages/Workouts'
 import Categories from './pages/Categories'
+import Login from './pages/Login'
+import Profile from './pages/Profile'
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -16,7 +18,6 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="flex-column justify-center align-center min-100-vh bg-primary">
           <Routes>
             <Route
               path="/"
@@ -38,8 +39,15 @@ function App() {
               path="/signUp"
               element={<Signup />}
             />
+            <Route
+              path="/Login"
+              element={<Login />}
+            />
+            <Route
+              path="/Profile"
+              element={<Profile />}
+            />
           </Routes>
-        </div>
       </Router>
     </ApolloProvider>
   );
