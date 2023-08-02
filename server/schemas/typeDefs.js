@@ -26,6 +26,9 @@ const typeDefs = gql`
         name: String!
     }
 
+    type Query {
+        categories: [Categories]
+    }
 `;
 
 module.exports = typeDefs;
