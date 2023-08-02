@@ -34,9 +34,9 @@ const resolvers = {
             }
             return await Exercise.find(params).populate('category');
         },
-        exercise: async (parent, { _id }) => {
-            return await Exercise.findById(_id).populate('category');
-        },
+        // exercise: async (parent, { _id }) => {
+        //     return await Exercise.findById(_id).populate('category');
+        // },
         workout: async (parent, { _id }, context) => {
             if (context.user) {
               const user = await User.findById(context.user._id).populate({
@@ -56,11 +56,6 @@ const resolvers = {
             const token = signToken(user);
 
             return { token, user };
-        },
-        addExercise: async (parent, args) => {
-            const exercise = await Exercise.create(args);
-            
-            return exercise;
         },
         login: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
