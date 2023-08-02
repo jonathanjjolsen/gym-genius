@@ -38,10 +38,10 @@ const exercises = new Schema({
         allowNull: true,
         trim: true
     },
-    url: {
-        type: String,
-        allowNull: true,
-        trim: true
+    category: {
+        type: Schema.Types.ObjectId,
+        ref: 'Category',
+        required: true,
     }
 });
 

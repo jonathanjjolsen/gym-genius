@@ -1,17 +1,17 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
+// import React from 'react';
+// import { useLocation } from 'react-router-dom';
 
-function signUp() {
-  let location = useLocation();
-  return (
-    <div className="card bg-white card-rounded w-50">
-      <div className="card-header bg-dark text-center">
-        <h1>
-          test
-        </h1>
-      </div>
-    </div>
-  );
-}
+// function signUp() {
+//   let location = useLocation();
+//   return (
+//     <div className="card bg-white card-rounded w-50">
+//       <div className="card-header bg-dark text-center">
+//         <h1>
+//           test
+//         </h1>
+//       </div>
+//     </div>
+//   );
+// }
 
-export default signUp;
+// export default signUp;
