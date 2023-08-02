@@ -6,6 +6,7 @@ import Calendar from './pages/Calendar'
 import Signup from './pages/signUp'
 import Workouts from './pages/Workouts'
 import Categories from './pages/Categories'
+import Navbar from './components/Header'
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -16,6 +17,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
+        <Navbar />
         <div className="flex-column justify-center align-center min-100-vh bg-primary">
           <Routes>
             <Route
