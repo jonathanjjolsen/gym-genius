@@ -2,11 +2,12 @@
 // // import { useQuery } from '@apollo/client';
 // // import { QUERY_MATCHUPS } from '../utils/queries';i
 import React from 'react';
+import Header from '../Components/Header';
 
 const Home = () => {
   return (
     <div>
-      <h1>Hello Home!</h1>
+      <Header />
     </div>
   )
 }
