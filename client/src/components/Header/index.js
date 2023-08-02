@@ -3,15 +3,27 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header className="bg-primary text-light mb-4 py-3 flex-row align-center">
-      <div className="container flex-row justify-space-between-lg justify-center align-center">
-        <Link className="text-light" to="/">
-          <h1 className="m-0">Gym Genius</h1>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-2 " id="mainNav">
+      <div className="container px-4 px-lg-5">
+        <Link to="/" className='text-decoration-none navbar-brand text-light fs-2' href="#page-top">
+          Gym Genius
         </Link>
-        <p className="m-0">PLACEHOLD UNTIL WE GET SERVER SIDE COMPLETED</p>
+        <button className="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+          aria-label="Toggle navigation">
+          Menu
+          <i className="fas fa-bars"></i>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarResponsive">
+          <ul className="navbar-nav ms-auto fs-4">
+            <li className="nav-item"><Link className="nav-link text-light text-decoration-none" to="" href="" id="">Categories</Link></li>
+            <li className="nav-item"><Link className="nav-link text-light text-decoration-none" to="" href="#" id="">Workouts</Link></li>
+            <li className="nav-item"><Link className="nav-link text-light text-decoration-none" to="" href="" id="">Login</Link></li>
+          </ul>
+        </div>
       </div>
-    </header>
-  );
+    </nav>
+  )
 };
 
 export default Header;

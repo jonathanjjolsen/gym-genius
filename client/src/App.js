@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import * as bootstrap from 'bootstrap'
 import Home from './pages/Home'
 import Calendar from './pages/Calendar'
 import Signup from './pages/signUp'
@@ -18,30 +20,28 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <Navbar />
-        <div className="flex-column justify-center align-center min-100-vh bg-primary">
-          <Routes>
-            <Route
-              path="/"
-              element={<Home />}
-            />
-            <Route
-              path="/calendar"
-              element={<Calendar />}
-            />
-            <Route
-              path="/workout/:id"
-              element={<Workouts />}
-            />
-            <Route
-              path="/categories"
-              element={<Categories />}
-            />
-            <Route
-              path="/signUp"
-              element={<Signup />}
-            />
-          </Routes>
-        </div>
+        <Routes>
+          <Route
+            path="/"
+            element={<Home />}
+          />
+          <Route
+            path="/calendar"
+            element={<Calendar />}
+          />
+          <Route
+            path="/workout/:id"
+            element={<Workouts />}
+          />
+          <Route
+            path="/categories"
+            element={<Categories />}
+          />
+          <Route
+            path="/signUp"
+            element={<Signup />}
+          />
+        </Routes>
       </Router>
     </ApolloProvider>
   );
