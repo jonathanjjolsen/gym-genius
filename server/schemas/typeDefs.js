@@ -24,6 +24,13 @@ const typeDefs = gql`
     type Categories {
         _id: ID!
         name: String!
+        exercises: [Exercises]
+    }
+
+    type Query {
+        exercises: [Exercises]
+        users: [Users]
+        categories: [Categories]
     }
 
 `;

@@ -7,7 +7,10 @@ const categorySchema = new Schema({
         required: true,
         trim: true
     },
-    exercises: [exercises]
+    exercises: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Exercises'
+    }]
 });
 
 const Category = mongoose.model('Category', categorySchema);

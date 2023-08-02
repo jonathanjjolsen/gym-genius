@@ -1,7 +1,7 @@
 const { Schema, model } = require('mongoose');
 
 const UsersSchema = new Schema(
-  {
+    {
         firstName: {
             type: String,
             required: true,
@@ -23,7 +23,10 @@ const UsersSchema = new Schema(
             required: true,
             minlength: 5,
         },
-        savedWorkouts: [workoutSchema]
+        exercises: [{
+            type: Schema.Types.ObjectId,
+            ref: 'Exercises'
+        }],
     },
 
     {
