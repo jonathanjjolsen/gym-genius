@@ -1,6 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+import Home from './pages/Home'
+import Calendar from './pages/Calendar'
+import Signup from './pages/signUp'
+import Workouts from './pages/Workouts'
+import Categories from './pages/Categories'
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -13,25 +18,25 @@ function App() {
       <Router>
         <div className="flex-column justify-center align-center min-100-vh bg-primary">
           <Routes>
-            <Route 
-              path="/" 
+            <Route
+              path="/"
               element={<Home />}
             />
-            <Route 
-              path="/calendar" 
+            <Route
+              path="/calendar"
               element={<Calendar />}
             />
-            <Route 
-              path="/workout/:id" 
+            <Route
+              path="/workout/:id"
               element={<Workouts />}
             />
-            <Route 
+            <Route
               path="/categories"
               element={<Categories />}
             />
-            <Route 
+            <Route
               path="/signUp"
-              element={<signUp />}
+              element={<Signup />}
             />
           </Routes>
         </div>
