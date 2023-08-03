@@ -1,0 +1,15 @@
+h1 {
+    position: absolute;
+    /* Position the h1 absolutely within the container */
+    top: 50%;
+    /* Position the top of the h1 at the vertical center of the container */
+    left: 50%;
+    /* Position the left side of the h1 at the horizontal center of the container */
+    transform: translate(-50%, -50%);
+    /* Use translate to center the h1 precisely */
+    font-size: 48px;
+    /* Corrected CSS */
+    text-shadow: 2px 2px 4px #000000;
+
+
+}

@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-const exercises = new Schema({
+const exerciseSchema = new Schema({
     name: {
         type: String,
         required: true,
@@ -38,13 +38,13 @@ const exercises = new Schema({
         allowNull: true,
         trim: true
     },
-    url: {
-        type: String,
-        allowNull: true,
-        trim: true
+    category: {
+        type: Schema.Types.ObjectId,
+        ref: 'Category',
+        required: true,
     }
 });
 
-const Exercises = mongoose.model('Exercises', exercises);
+const Exercise = mongoose.model('Exercise', exerciseSchema);
 
-module.exports = Exercises;
+module.exports = Exercise;

@@ -1,5 +1,6 @@
-const Users = require('./Users');
-const Categories = require('./Categories');
-const Exercises = require('./Exercises');
+const User = require('./User');
+const Category = require('./Category');
+const Exercise = require('./Exercise');
+const Workout = require('./Workout');
 
-module.exports = { Users, Categories, Exercises };
+module.exports = { Category, Exercise, Workout, User };

@@ -1,7 +1,11 @@
-const { Schema, model } = require('mongoose');
+const mongoose = require('mongoose');
 
-const UsersSchema = new Schema(
-  {
+const { Schema } = mongoose;
+const bcrypt = require('bcrypt');
+const Workout = require('./Workout');
+
+const userSchema = new Schema(
+    {
         firstName: {
             type: String,
             required: true,
@@ -23,17 +27,11 @@ const UsersSchema = new Schema(
             required: true,
             minlength: 5,
         },
-        savedWorkouts: [workoutSchema]
+        workouts: [Workout.schema]
     },
-
-    {
-        toJSON: {
-            virtuals: true,
-        },
-    }
 );
 
-UsersSchema.pre('save', async function (next) {
+userSchema.pre('save', async function (next) {
     if (this.isNew || this.isModified('password')) {
         const saltRounds = 10;
         this.password = await bcrypt.hash(this.password, saltRounds);
@@ -41,10 +39,10 @@ UsersSchema.pre('save', async function (next) {
     next();
 });
 
-UsersSchema.methods.isCorrectPassword = async function (password) {
+userSchema.methods.isCorrectPassword = async function (password) {
     return await bcrypt.compare(password, this.password);
 };
 
-const Users = model('Users', UsersSchema);
+const User = mongoose.model('User', userSchema);
 
-module.exports = Users;
+module.exports = User;

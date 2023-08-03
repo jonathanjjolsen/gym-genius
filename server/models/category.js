@@ -7,7 +7,6 @@ const categorySchema = new Schema({
         required: true,
         trim: true
     },
-    exercises: [exercises]
 });
 
 const Category = mongoose.model('Category', categorySchema);
