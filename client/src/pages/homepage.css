@@ -1,4 +1,4 @@
-h1 {
+.hero {
     position: absolute;
     /* Position the h1 absolutely within the container */
     top: 50%;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-2 " id="mainNav">
       <div className="container px-4 px-lg-5">
@@ -26,4 +26,4 @@ const Header = () => {
   )
 };
 
-export default Header;
+export default Navbar;

@@ -8,7 +8,7 @@ import Calendar from './pages/Calendar'
 import Signup from './pages/signUp'
 import Workouts from './pages/Workouts'
 import Categories from './pages/Categories'
-import Navbar from './components/Header'
+import Navbar from './Components/Navbar'
 
 const client = new ApolloClient({
   uri: '/graphql',
