@@ -8,6 +8,7 @@ import Workouts from './pages/Workouts'
 import Categories from './pages/Categories'
 import Login from './pages/Login'
 import Profile from './pages/Profile'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const client = new ApolloClient({
   uri: '/graphql',
