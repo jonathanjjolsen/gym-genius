@@ -1,70 +1,71 @@
-// // import { useQuery, useMutation } from '@apollo/client';
-// // import { useParams, Link } from 'react-router-dom';
-// // import { CREATE_VOTE } from '../utils/mutations';
-// // import { QUERY_MATCHUPS } from '../utils/queries';
+import React, { useState } from 'react';
+import './categories.css';
 
-// const Categories = () => {
-//   //   let { id } = useParams();
 
-//   // const { loading, data } = useQuery(QUERY_MATCHUPS, {
-//   //   variables: { _id: id },
-//   // });
+const Categories = () => {
+    return (
+        <div>
+            <div className="accordion accordion-flush " id="accordionExample">
 
-//   // const matchup = data?.matchups || [];
+                <div className="accordion-item m-5">
+                    <h2 className="accordion-header">
+                        <button className="accordion-button custom-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Upper Body
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div className="accordion-body text-center">
+                            <strong>Workout 1</strong>
+                            <br /> 
+                            Just a test description
+                            <br/>
+                            <button className='rounded'>Add to Workout</button>
+                        </div>
+                    </div>
+                </div>
 
-//   // const [createVote, { error }] = useMutation(CREATE_VOTE);
+                <div className="accordion-item m-5">
+                    <h2 className="accordion-header">
+                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Lower Body
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div className="accordion-body">
+                            <strong>Workout 2</strong> Another test description
+                        </div>
+                    </div>
+                </div>
 
-//   // const handleVote = async (techNum) => {
-//   //   try {
-//   //     await createVote({
-//   //       variables: { _id: id, techNum: techNum },
-//   //     });
-//   //   } catch (err) {
-//   //     console.error(err);
-//   //   }
-//   // };
+                <div className="accordion-item m-5">
+                    <h2 className="accordion-header">
+                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Cardio
+                        </button>
+                    </h2>
+                    <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div className="accordion-body">
+                            <strong>Workout 3</strong> Yet again, another test description.
+                        </div>
+                    </div>
+                </div>
 
-//   // return (
-//   //   <div className="card bg-white card-rounded w-50">
-//   //     <div className="card-header bg-dark text-center">
-//   //       <h1>Here is the matchup!</h1>
-//   //     </div>
-//   //     {loading ? (
-//   //       <div>Loading...</div>
-//   //     ) : (
-//   //       <div className="card-body text-center mt-3">
-//   //         <h2>
-//   //           {matchup[0].tech1} vs. {matchup[0].tech2}
-//   //         </h2>
-//   //         <h3>
-//   //           {matchup[0].tech1_votes} : {matchup[0].tech2_votes}
-//   //         </h3>
-//   //         <button className="btn btn-info" onClick={() => handleVote(1)}>
-//   //           Vote for {matchup[0].tech1}
-//   //         </button>{' '}
-//   //         <button className="btn btn-info" onClick={() => handleVote(2)}>
-//   //           Vote for {matchup[0].tech2}
-//   //         </button>
-//   //         <div className="card-footer text-center m-3">
-//   //           <br></br>
-//   //           <Link to="/">
-//   //             <button className="btn btn-lg btn-danger">
-//   //               View all matchups
-//   //             </button>
-//   //           </Link>
-//   //         </div>
-//   //       </div>
-//   //     )}
-//   //     {error && <div>Something went wrong...</div>}
-//   //   </div>
-//   // );
+                <div className="accordion-item m-5">
+                    <h2 className="accordion-header">
+                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Core
+                        </button>
+                    </h2>
+                    <div id="collapseFour" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div className="accordion-body">
+                            <strong>Workout 4</strong> You guessed it! ANOTHER test description
+                        </div>
+                    </div>
+                </div>
 
-//   return (
-//     <div>
-//       <h1>Hello Categories!</h1>
-//     </div>
-//   )
+            </div>
+        </div>
+    )
+};
 
-// };
-
-// export default Categories;
+export default Categories;
