@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import homeHero from '../images/home-hero.jpg';
 import './homepage.css'
 
 const Home = () => {
