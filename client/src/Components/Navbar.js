@@ -1,18 +1,15 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
+import Auth from '../pages/utils/auth';
 const Navbar = () => {
 
   //TODO: check for log in on load 
-  useEffect(() => {
+  // useEffect(() => {
 
-  }, [])
-
-  //temporary conditional data until we can use token or session data
-  let loggedIn = false
+  // }, [])
 
   // if not logged in, display the login link 
-  return (!loggedIn ?
+  return (!Auth.loggedIn() ?
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-2 " id="mainNav">
       <div className="container px-4 px-lg-5">
         <Link to="/" className='text-decoration-none navbar-brand text-light fs-2' href="#page-top">
