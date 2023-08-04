@@ -5,7 +5,7 @@ import './homepage.css'
 const Home = () => {
   return (
     <section className='bg-dark'>
-      <div>
+      <div id="Home">
         <h1 className='text-light text-center'>Insanely Smart Workouts</h1>
         <img src={homeHero} alt="man working out" className='w-100' />
       </div>

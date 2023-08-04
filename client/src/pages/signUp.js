@@ -1,17 +1,76 @@
-// import React from 'react';
-// import { useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './homepage.css'
 
-// function signUp() {
-//   let location = useLocation();
-//   return (
-//     <div className="card bg-white card-rounded w-50">
-//       <div className="card-header bg-dark text-center">
-//         <h1>
-//           test
-//         </h1>
-//       </div>
-//     </div>
-//   );
-// }
+function SignUp() {
+  return (
+    <div id="SignupForm">
+      <h1 id="SignupHeading">Sign Up</h1>
+      <div>
 
-// export default signUp;
+        <form>
+          <div className="form-group">
+            <input
+              className="form-control"
+              placeholder="Full Name"
+              name="username"
+              type="text"
+            // value={username}
+            // onChange={handleChange}
+            />
+          </div>
+
+          <div className="form-group">
+            <input
+              className="form-control"
+              placeholder="Email"
+              name="email"
+              type="email"
+            // value={email}
+            // onChange={handleChange}
+            />
+          </div>
+
+          <div className="form-group">
+            <input
+              className="form-control"
+              placeholder="Password"
+              name="pwd"
+              type="password"
+            // value={password}
+            // onChange={handleChange}
+            />
+          </div>
+
+          <div className="form-group">
+            <input
+              className="form-control"
+              placeholder="Gender"
+              name="Gender"
+              type="text"
+            // value={gender}
+            // onChange={handleChange}
+            />
+          </div>
+
+          <div className="form-group">
+            <input
+              className="form-control"
+              placeholder="Weight"
+              name="Weight"
+              type="text"
+            // value={Weight}
+            // onChange={handleChange}
+            />
+          </div>
+          <button type="submit" className="btn btn-primary ">
+            Sign Up
+          </button>
+
+        </form>
+      </div>
+    </div>
+  );
+}
+
+export default SignUp;

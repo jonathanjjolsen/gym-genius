@@ -5,6 +5,10 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+ :root {
+  --backgroundGrey: #4e4e4e;
+}
+
 html {
   line-height: 1.15;
   /* 1 */
@@ -923,9 +927,8 @@ a:hover {
 
 /* BACKGROUND UTILS */
 .bg-primary {
-  background-color: #2d3e50 !important;
+  background-color: var(--backgroundGrey) !important;
 }
-
 .bg-info {
   background-color: #1bbc9b !important;
 }
