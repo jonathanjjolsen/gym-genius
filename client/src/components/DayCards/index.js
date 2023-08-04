@@ -2,7 +2,22 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
-const DayCards = () => {
+
+const DayCards = (x) => {
+    var day = x.day.Day;
+    var WorkoutType = x.day.WorkoutType;
+    var Exercise = x.day.Exercise;
+    var Goal = x.day.Goal;
+    console.log(day);
+    console.log(WorkoutType);
+    console.log(Exercise);
+    console.log(Goal);
+    Exercise.map((x) => {
+        Document.getElementById("WorkoutExc").innerHTML = "<li>" + x + "</li>";
+    });
+    
+
+
     return (
         <div id="WorkoutCards" class="card ">
             <div class="card-body col-md-12">
@@ -12,18 +27,14 @@ const DayCards = () => {
                 </div>
 
                 <div id="WorkoutTitle">
-                    <h1>Day Workout</h1>
-                    <p>Workout type</p>
+                    <h1>{day}</h1>
+                    <p>{WorkoutType} Workout</p>
                 </div>
 
 
                 <div id="WorkcardBtm">
                     <div>
                         <ul id="WorkoutExc">
-                            <li>Exercise 1</li>
-                            <li>Exercise 2</li>
-                            <li>Exercise 3</li>
-                            <li>Exercise 4</li>
                         </ul>
                     </div>
                     <div id="WorkoutGoal">
