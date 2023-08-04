@@ -11,7 +11,20 @@ const typeDefs = gql`
         difficulty: String!
         instructions: String!
         url: String!
+        category: Category!
     }
+
+    input ExerciseInput {
+        name: String!
+        description: String!
+        mainMuscles: String!
+        minorMuscles: String!
+        equipment: String!
+        difficulty: String!
+        instructions: String!
+        url: String!
+        category: String!
+      }
 
     type Workout {
         _id: ID!
@@ -45,10 +58,12 @@ const typeDefs = gql`
         user: User
     }
 
+
     type Mutation {
         addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
         login(email: String!, password: String!): Auth
         createWorkout(email: String!, workoutName: String!): Workout
+        addExerciseToWorkout(workoutName: String!, exerciseInput: ExerciseInput! ): Workout
     }
 
 `;
