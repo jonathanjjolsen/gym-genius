@@ -1,8 +1,10 @@
 import React from 'react';
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as bootstrap from 'bootstrap'
+
 import Home from './pages/Home'
 import Calendar from './Components/Calendar'
 import Signup from './pages/signUp'

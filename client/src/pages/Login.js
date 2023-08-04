@@ -1,36 +1,51 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useFormik } from 'formik';
-
+import { LOGIN_USER } from '../utils/mutations';
+import { useMutation } from '@apollo/client';
+import Auth from '../utils/auth';
 
 function Login() {
 
-  //form hander for login form
-  const formik = useFormik({
-    initialValues: {
-      email: '',
-      password: '',
-    },
-    //form submission handler
-    onSubmit: async values => {
-      try {
-        // TODO: submit api call to login user
-      } catch (error) {
-        console.log(error)
-      }
-    },
-  });
+  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [loginUser] = useMutation(LOGIN_USER);
+
+  //handles form submit and passes variables to loginUser mutation
+  const handleSubmit = async event => {
+    event.preventDefault();
+    try {
+      const response = await loginUser({
+        variables: {
+          email: formState.email,
+          password: formState.password,
+        },
+      });
+      const token = response.data.login.token;
+      Auth.login(token);
+    }
+    catch (e) {
+      console.log(e)
+    }
+  };
+
+  //handles form change and updates formState
+  const handleFormChange = event => {
+    const { name, value } = event.target;
+    setFormState({
+      ...formState,
+      [name]: value
+    });
+  };
 
 
   return (
     <div id="LoginPage">
       <h1 className="my-">Login</h1>
-      <form onSubmit={formik.handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <div className="form-group mx-auto text-center">
-          <input type="email" required className="form-control rounded text-center mx-auto" id="email" placeholder="Email" onChange={formik.handleChange} values={formik.values.email} />
+          <input type="email" required className="form-control rounded text-center mx-auto" name='email' id="email" placeholder="Email" onChange={handleFormChange}/>
         </div>
         <div className="form-group mx-auto text-center">
-          <input type="password" required className="form-control rounded text-center mx-auto" id="password" placeholder="Password" onChange={formik.handleChange} values={formik.values.password} />
+          <input type="password" required className="form-control rounded text-center mx-auto" name='password' id="password" placeholder="Password" onChange={handleFormChange}/>
         </div>
         <div className='mx-auto text-center'>
           <button type="submit" className="btn btn-primary text-center mx-auto">Submit</button>
