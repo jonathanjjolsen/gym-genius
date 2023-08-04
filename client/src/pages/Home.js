@@ -5,10 +5,14 @@ import './homepage.css'
 const Home = () => {
   return (
     <section className='bg-dark '>
-      <div>
-        <h2 className='text-light text-center fs-1 hero'>Insanely Smart Workouts</h2>
-        <img src={homeHero} alt="man working out" className='w-100 h-75' />
+      <div id="hero-flex" className='d-flex text-center justify-content-center align-items-center'>
+        <div className=''>
+          <h2 className='text-light text-center hero'>Insanely Smart Workouts</h2>
+          <Link className='text-center btn btn-light hero-signup rounded-pill mt-3 px-4' to={'/signUp'}>Sign Up Today</Link>
+        </div>
       </div>
+
+      {/*  */}
       <div className='container mt-4 py-5'>
         <div className='row'>
           <div className='col-10  mx-auto text-light bg-black rounded'>
