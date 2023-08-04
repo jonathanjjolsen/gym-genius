@@ -74,6 +74,21 @@ const resolvers = {
             const token = signToken(user);
             return { token, user, redirectURL: '/Profile' };
         },
+        createWorkout: async (parent, { email, workoutName }, context) => {
+            console.log(context);
+            // if (context.user) {
+            const workout = new Workout({ workoutName });
+            console.log('the workout: ', workout)
+            const theUser = await User.findOne({ email });
+            theUser.workouts.push(workout);
+            theUser.save()
+            workout.save()
+
+            return workout;
+            // }
+
+            throw new AuthenticationError('Not logged in');
+        }
     }
 };
 
