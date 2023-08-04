@@ -36,6 +36,7 @@ function Login() {
           <button type="submit" className="btn btn-primary text-center mx-auto">Submit</button>
         </div>
       </form>
+      <p>New here? Click to <Link to={'/signUp'}>signup!</Link></p>
     </div>
   );
 }
