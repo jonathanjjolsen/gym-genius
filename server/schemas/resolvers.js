@@ -6,7 +6,7 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
     Query: {
         categories: async () => {
-            return await Categories.find();
+            return await Category.find();
         },
         user: async (parent, args, context) => {
             if (context.user) {
@@ -22,18 +22,18 @@ const resolvers = {
 
             throw new AuthenticationError('Not logged in');
         },
-        exercises: async (parent, { category, name }) => {
-            const params = {};
-            if (category) {
-                params.category = category;
-            }
-            if (name) {
-                params.name = {
-                    $regex: name
-                };
-            }
-            return await Exercise.find(params).populate('category');
-        },
+        // exercises: async (parent, { category, name }) => {
+        //     const params = {};
+        //     if (category) {
+        //         params.category = category;
+        //     }
+        //     if (name) {
+        //         params.name = {
+        //             $regex: name
+        //         };
+        //     }
+        //     return await Exercise.find(params).populate('category');
+        // },
         // exercise: async (parent, { _id }) => {
         //     return await Exercise.findById(_id).populate('category');
         // },
