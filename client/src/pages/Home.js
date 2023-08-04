@@ -9,7 +9,7 @@ const Home = () => {
         <h2 className='text-light text-center fs-1 hero'>Insanely Smart Workouts</h2>
         <img src={homeHero} alt="man working out" className='w-100 h-75' />
       </div>
-      <div className='container mt-4 pb-4'>
+      <div className='container mt-4 py-5'>
         <div className='row'>
           <div className='col-10  mx-auto text-light bg-black rounded'>
             <h1 className='py-4 fs-1 text-center'>What is Gym Genius?</h1>

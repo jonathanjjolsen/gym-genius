@@ -12,6 +12,7 @@ import Login from './pages/Login'
 import Profile from './pages/Profile'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './Components/Navbar'
+import Footer from './Components/Footer'
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -53,6 +54,7 @@ function App() {
             element={<Profile />}
           />
         </Routes>
+        <Footer />
       </Router>
     </ApolloProvider>
   );
