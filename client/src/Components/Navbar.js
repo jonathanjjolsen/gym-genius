@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Auth from '../pages/utils/auth';
+import Auth from '../utils/auth';
 const Navbar = () => {
 
   //TODO: check for log in on load 
