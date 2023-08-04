@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import DayCards from '../components/DayCards';
+import DayCards from '../Components/DayCards';
 
 function Profile() {
     return (
