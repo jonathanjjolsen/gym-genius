@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import DayCards from '../Components/DayCards';
+import './homepage.css'
 
 function Profile() {
     return (
