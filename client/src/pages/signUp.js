@@ -1,64 +1,72 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './homepage.css'
 
 function SignUp() {
   return (
-    <div className="">
-      <div className="">
-        <h1 className="my-4">Sign Up</h1>
+    <div id="SignupForm">
+      <h1 id="SignupHeading">Sign Up</h1>
+      <div>
 
         <form>
           <div className="form-group">
-            <label htmlFor="username">Username:</label>
             <input
               className="form-control"
-              placeholder="Your username"
+              placeholder="Full Name"
               name="username"
               type="text"
-              // value={username}
-              // onChange={handleChange}
+            // value={username}
+            // onChange={handleChange}
             />
           </div>
 
           <div className="form-group">
-            <label htmlFor="email">Email address:</label>
             <input
               className="form-control"
-              placeholder="Your email address"
+              placeholder="Email"
               name="email"
               type="email"
-              // value={email}
-              // onChange={handleChange}
+            // value={email}
+            // onChange={handleChange}
             />
           </div>
 
           <div className="form-group">
-            <label htmlFor="pwd">Password:</label>
             <input
               className="form-control"
-              placeholder="Your password"
+              placeholder="Password"
               name="pwd"
               type="password"
-              // value={password}
-              // onChange={handleChange}
+            // value={password}
+            // onChange={handleChange}
             />
           </div>
 
           <div className="form-group">
-            <label htmlFor="confirmPwd">Confirm Password:</label>
             <input
               className="form-control"
-              placeholder="Confirm your password"
-              name="confirmPwd"
-              type="password"
-              // value={password}
-              // onChange={handleChange}
+              placeholder="Gender"
+              name="Gender"
+              type="text"
+            // value={gender}
+            // onChange={handleChange}
             />
           </div>
 
-          <button type="submit" className="btn btn-primary col-12 col-md-3 offset-md-9">
+          <div className="form-group">
+            <input
+              className="form-control"
+              placeholder="Weight"
+              name="Weight"
+              type="text"
+            // value={Weight}
+            // onChange={handleChange}
+            />
+          </div>
+          <button type="submit" className="btn btn-primary ">
             Sign Up
           </button>
+
         </form>
       </div>
     </div>
