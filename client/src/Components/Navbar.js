@@ -46,7 +46,8 @@ const Navbar = () => {
             <li className="nav-item"><Link className="nav-link text-light text-decoration-none" to={'/categories'} href="" id="">Categories</Link></li>
             {/* TODO: Pull user id from data to pass to workout route /workouts/:id*/}
             <li className="nav-item"><Link className="nav-link text-light text-decoration-none" href="" id="">Workouts</Link></li>
-            <li className="nav-item"><Link className="nav-link text-light text-decoration-none" to={'/login'} href="" id="">Profile</Link></li>
+            <li className="nav-item"><Link className="nav-link text-light text-decoration-none" to={'/Profile'} href="" id="">Profile</Link></li>
+            <li className="nav-item"><Link className="nav-link text-light text-decoration-none" onClick={Auth.logout} to={'/'} href="" id="">Log Out</Link></li>
           </ul>
         </div>
       </div>

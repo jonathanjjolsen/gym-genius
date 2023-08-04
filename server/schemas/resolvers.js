@@ -72,10 +72,8 @@ const resolvers = {
             }
 
             const token = signToken(user);
-            return { token, user };
+            return { token, user, redirectURL: '/Profile' };
         },
-        
-
     }
 };
 
