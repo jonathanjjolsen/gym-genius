@@ -6,7 +6,6 @@ function Login() {
 
 
   return (
-
     <div id="LoginPage">
       <h1 className="my-4">Login</h1>
 
@@ -33,7 +32,6 @@ function Login() {
       </div>
       <button type="submit" className="btn btn-primary ">Submit</button>
     </div>
-
   );
 }
 
