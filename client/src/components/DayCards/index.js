@@ -8,14 +8,10 @@ const DayCards = (x) => {
     var WorkoutType = x.day.WorkoutType;
     var Exercise = x.day.Exercise;
     var Goal = x.day.Goal;
-    console.log(day);
-    console.log(WorkoutType);
-    console.log(Exercise);
-    console.log(Goal);
-    Exercise.map((x) => {
-        Document.getElementById("WorkoutExc").innerHTML = "<li>" + x + "</li>";
-    });
-    
+    // console.log(day);
+    // console.log(WorkoutType);
+    // console.log(Exercise);
+    // console.log(Goal);
 
 
     return (
@@ -35,6 +31,7 @@ const DayCards = (x) => {
                 <div id="WorkcardBtm">
                     <div>
                         <ul id="WorkoutExc">
+                            <li>{Exercise}</li>
                         </ul>
                     </div>
                     <div id="WorkoutGoal">

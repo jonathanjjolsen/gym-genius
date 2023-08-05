@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import DayCards from '../Components/DayCards';
+import { FIND_USER } from '../utils/mutations';
 
 // Interchangeable info
 const initialPersonalInfo = {
@@ -66,9 +67,9 @@ const Week = WeekWorkout.map((Workout, i) => {
     }
 });
 
-console.log(Week);
+// console.log(Week);
 
-
+console.log({FIND_USER});
 
 
 

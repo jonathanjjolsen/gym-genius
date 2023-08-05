@@ -4,10 +4,14 @@ const { signToken } = require('../utils/auth');
 
 
 const resolvers = {
+    // finds all categories
     Query: {
         categories: async () => {
             return await Categories.find();
         },
+        // categories: async () => {
+        //     return await Categories.find();
+        // },
         user: async (parent, args, context) => {
             if (context.user) {
                 const user = await User.findById(context.user._id).populate({
@@ -22,18 +26,19 @@ const resolvers = {
 
             throw new AuthenticationError('Not logged in');
         },
-        exercises: async (parent, { category, name }) => {
-            const params = {};
-            if (category) {
-                params.category = category;
-            }
-            if (name) {
-                params.name = {
-                    $regex: name
-                };
-            }
-            return await Exercise.find(params).populate('category');
-        },
+
+        // exercises: async (parent, { category, name }) => {
+        //     const params = {};
+        //     if (category) {
+        //         params.category = category;
+        //     }
+        //     if (name) {
+        //         params.name = {
+        //             $regex: name
+        //         };
+        //     }
+        //     return await Exercise.find(params).populate('category');
+        // },
         // exercise: async (parent, { _id }) => {
         //     return await Exercise.findById(_id).populate('category');
         // },
@@ -51,6 +56,11 @@ const resolvers = {
         },
     },
     Mutation: {
+        UserProfile: async (parent, { firstName, lastName }) => {
+            const user = await User.findOne({ firstName, lastName });
+            return user;
+        },
+
         //addUser mutation to connect with front end
         addUser: async (parent, args) => {
             const user = await User.create(args);

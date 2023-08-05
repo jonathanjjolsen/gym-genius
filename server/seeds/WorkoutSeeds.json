@@ -1,99 +1,107 @@
-{
-  "cardioWorkouts": [
-    {
-      "name": "Running",
-      "mainMuscles": "Legs (quadriceps, hamstrings, calves), Core",
-      "minorMuscles": "Glutes, Hip Flexors",
-      "equipment": "Running Shoes",
-      "difficulty": "Intermediate",
-      "instructions": "Go for a jog or run at a steady pace for 20-30 minutes to elevate your heart rate and improve cardiovascular endurance.",
-      "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
-    },
-    {
-      "name": "Jump Rope",
-      "mainMuscles": "Calves, Shoulders, Forearms",
-      "minorMuscles": "Quadriceps, Hamstrings",
-      "equipment": "Jump Rope",
-      "difficulty": "Easy",
-      "instructions": "Jump rope continuously for 10-15 minutes, focusing on maintaining a consistent pace and rhythm.",
-      "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
-    },
-    {
-      "name": "Cycling",
-      "mainMuscles": "Legs (quadriceps, hamstrings, calves), Glutes",
-      "minorMuscles": "Core, Hip Flexors",
-      "equipment": "Stationary Bike or Bicycle",
-      "difficulty": "Intermediate",
-      "instructions": "Pedal on a stationary bike or ride a bicycle outdoors for 30-45 minutes, adjusting resistance as needed.",
-      "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
-    },
-    {
-      "name": "High-Intensity Interval Training (HIIT)",
-      "mainMuscles": "Full Body (various muscle groups)",
-      "minorMuscles": "N/A",
-      "equipment": "Bodyweight or Dumbbells (optional)",
-      "difficulty": "Hard",
-      "instructions": "Perform a series of intense exercises with short rest intervals, such as burpees, jumping jacks, and mountain climbers, for 15-20 minutes.",
-      "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
-    },
-    {
-      "name": "Swimming",
-      "mainMuscles": "Full Body (various muscle groups)",
-      "minorMuscles": "N/A",
-      "equipment": "Swimming Pool",
-      "difficulty": "Intermediate",
-      "instructions": "Swim laps using different strokes for an overall body workout and improved cardiovascular fitness.",
-      "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
-    }
-  ],
-  "waistWorkouts": [
-    {
-      "name": "Russian Twists",
-      "mainMuscles": "Obliques",
-      "minorMuscles": "Rectus Abdominis, Hip Flexors",
-      "equipment": "Weighted Medicine Ball or Dumbbell",
-      "difficulty": "Intermediate",
-      "instructions": "Sit on the floor, lean back slightly, and twist your torso from side to side while holding the weight.",
-      "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
-    },
-    {
-      "name": "Bicycle Crunches",
-      "mainMuscles": "Rectus Abdominis, Obliques",
-      "minorMuscles": "Hip Flexors",
-      "equipment": "N/A (Bodyweight Exercise)",
-      "difficulty": "Easy",
-      "instructions": "Lie on your back, lift your legs off the ground, and bring one knee towards your chest while simultaneously twisting your torso to touch the opposite elbow.",
-      "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
-    },
-    {
-      "name": "Side Plank",
-      "mainMuscles": "Obliques",
-      "minorMuscles": "Rectus Abdominis, Transverse Abdominis",
-      "equipment": "N/A (Bodyweight Exercise)",
-      "difficulty": "Easy",
-      "instructions": "Support your body on one elbow and feet, keeping your body straight and hold the position for 30-60 seconds on each side.",
-      "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
-    },
-    {
-      "name": "Hanging Leg Raises",
-      "mainMuscles": "Rectus Abdominis",
-      "minorMuscles": "Hip Flexors, Obliques",
-      "equipment": "Pull-up Bar",
-      "difficulty": "Intermediate",
-      "instructions": "Hang from a bar and lift your legs up towards your chest, then lower them down slowly without swinging.",
-      "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
-    },
-    {
-      "name": "Woodchoppers",
-      "mainMuscles": "Obliques",
-      "minorMuscles": "Rectus Abdominis, Shoulders",
-      "equipment": "Cable Machine or Resistance Band",
-      "difficulty": "Intermediate",
-      "instructions": "Stand sideways to the cable machine or anchor a resistance band, then pull the handle diagonally across your body as if you are chopping wood.",
-      "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
-    }
-  ],
-    "chestWorkouts": [
+[
+  {
+    "WorkoutName": "cardioWorkouts",
+    "excercises": [
+      {
+        "name": "Running",
+        "mainMuscles": "Legs (quadriceps, hamstrings, calves), Core",
+        "minorMuscles": "Glutes, Hip Flexors",
+        "equipment": "Running Shoes",
+        "difficulty": "Intermediate",
+        "instructions": "Go for a jog or run at a steady pace for 20-30 minutes to elevate your heart rate and improve cardiovascular endurance.",
+        "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+      },
+      {
+        "name": "Jump Rope",
+        "mainMuscles": "Calves, Shoulders, Forearms",
+        "minorMuscles": "Quadriceps, Hamstrings",
+        "equipment": "Jump Rope",
+        "difficulty": "Easy",
+        "instructions": "Jump rope continuously for 10-15 minutes, focusing on maintaining a consistent pace and rhythm.",
+        "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+      },
+      {
+        "name": "Cycling",
+        "mainMuscles": "Legs (quadriceps, hamstrings, calves), Glutes",
+        "minorMuscles": "Core, Hip Flexors",
+        "equipment": "Stationary Bike or Bicycle",
+        "difficulty": "Intermediate",
+        "instructions": "Pedal on a stationary bike or ride a bicycle outdoors for 30-45 minutes, adjusting resistance as needed.",
+        "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+      },
+      {
+        "name": "High-Intensity Interval Training (HIIT)",
+        "mainMuscles": "Full Body (various muscle groups)",
+        "minorMuscles": "N/A",
+        "equipment": "Bodyweight or Dumbbells (optional)",
+        "difficulty": "Hard",
+        "instructions": "Perform a series of intense exercises with short rest intervals, such as burpees, jumping jacks, and mountain climbers, for 15-20 minutes.",
+        "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+      },
+      {
+        "name": "Swimming",
+        "mainMuscles": "Full Body (various muscle groups)",
+        "minorMuscles": "N/A",
+        "equipment": "Swimming Pool",
+        "difficulty": "Intermediate",
+        "instructions": "Swim laps using different strokes for an overall body workout and improved cardiovascular fitness.",
+        "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+      }
+    ]
+  },
+  {
+    "WorkoutName": "waistWorkouts",
+    "excercises": [
+      {
+        "name": "Russian Twists",
+        "mainMuscles": "Obliques",
+        "minorMuscles": "Rectus Abdominis, Hip Flexors",
+        "equipment": "Weighted Medicine Ball or Dumbbell",
+        "difficulty": "Intermediate",
+        "instructions": "Sit on the floor, lean back slightly, and twist your torso from side to side while holding the weight.",
+        "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+      },
+      {
+        "name": "Bicycle Crunches",
+        "mainMuscles": "Rectus Abdominis, Obliques",
+        "minorMuscles": "Hip Flexors",
+        "equipment": "N/A (Bodyweight Exercise)",
+        "difficulty": "Easy",
+        "instructions": "Lie on your back, lift your legs off the ground, and bring one knee towards your chest while simultaneously twisting your torso to touch the opposite elbow.",
+        "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+      },
+      {
+        "name": "Side Plank",
+        "mainMuscles": "Obliques",
+        "minorMuscles": "Rectus Abdominis, Transverse Abdominis",
+        "equipment": "N/A (Bodyweight Exercise)",
+        "difficulty": "Easy",
+        "instructions": "Support your body on one elbow and feet, keeping your body straight and hold the position for 30-60 seconds on each side.",
+        "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+      },
+      {
+        "name": "Hanging Leg Raises",
+        "mainMuscles": "Rectus Abdominis",
+        "minorMuscles": "Hip Flexors, Obliques",
+        "equipment": "Pull-up Bar",
+        "difficulty": "Intermediate",
+        "instructions": "Hang from a bar and lift your legs up towards your chest, then lower them down slowly without swinging.",
+        "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+      },
+      {
+        "name": "Woodchoppers",
+        "mainMuscles": "Obliques",
+        "minorMuscles": "Rectus Abdominis, Shoulders",
+        "equipment": "Cable Machine or Resistance Band",
+        "difficulty": "Intermediate",
+        "instructions": "Stand sideways to the cable machine or anchor a resistance band, then pull the handle diagonally across your body as if you are chopping wood.",
+        "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+      }
+    ]
+  },
+  {
+    "WorkoutName": "chestWorkouts",
+    "excercises": [
       {
         "name": "Bench Press",
         "mainMuscles": "Pectoralis Major",
@@ -139,8 +147,11 @@
         "instructions": "Stand facing the cable machine, grab the handles, and press them forward while keeping your arms parallel to the ground.",
         "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
       }
-    ],
-    "armsWorkouts": [
+    ]
+  },
+  {
+    "WorkoutName": "armsWorkouts",
+    "excercises": [
       {
         "name": "Bicep Curls",
         "mainMuscles": "Biceps",
@@ -186,8 +197,11 @@
         "instructions": "Sit on the preacher curl bench, hold the weight with palms facing up, and curl it towards your shoulders.",
         "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
       }
-    ],
-    "backWorkouts": [
+    ]
+  },
+  {
+    "WorkoutName": "backWorkouts",
+    "excercises": [
       {
         "name": "Deadlifts",
         "mainMuscles": "Erector Spinae (Lower Back), Glutes, Hamstrings",
@@ -233,8 +247,11 @@
         "instructions": "Lie face down, extend your arms and legs off the ground, and lift them as high as you can to engage your lower back.",
         "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
       }
-    ],
-    "shouldersWorkouts": [
+    ]
+  },
+  {
+    "WorkoutName": "shouldersWorkouts",
+    "excercises": [
       {
         "name": "Shoulder Press",
         "mainMuscles": "Deltoids (Shoulders)",
@@ -280,8 +297,11 @@
         "instructions": "Start with dumbbells at shoulder height, rotate them as you press overhead, and then reverse the motion on the way down.",
         "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
       }
-    ],
-    "thighsWorkouts": [
+    ]
+  },
+  {
+    "WorkoutName": "thighsWorkouts",
+    "excercises": [
       {
         "name": "Squats",
         "mainMuscles": "Quadriceps, Hamstrings, Glutes",
@@ -327,8 +347,11 @@
         "instructions": "Hold the barbell or dumbbells with palms facing your body, hinge at the hips, and lower the weight down while keeping your back straight.",
         "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
       }
-    ],
-    "absWorkouts": [
+    ]
+  },
+  {
+    "WorkoutName": "absWorkouts",
+    "excercises": [
       {
         "name": "Crunches",
         "mainMuscles": "Rectus Abdominis",
@@ -374,8 +397,11 @@
         "instructions": "Lie on your back, lift your legs off the ground, and bring your knees towards your chest while lifting your hips off the ground.",
         "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
       }
-    ],
-    "calvesWorkouts": [
+    ]
+  },
+  {
+    "WorkoutName": "calvesWorkouts",
+    "excercises": [
       {
         "name": "Calf Raises",
         "mainMuscles": "Gastrocnemius, Soleus",
@@ -421,8 +447,11 @@
         "instructions": "Stand near a wall or on a step, place one foot back with the heel on the ground, and lean forward to stretch your calf muscles.",
         "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
       }
-    ],
-    "neckWorkouts": [
+    ]
+  },
+  {
+    "WorkoutName": "neckWorkouts",
+    "excercises": [
       {
         "name": "Neck Flexion",
         "mainMuscles": "Neck (Sternocleidomastoid)",
@@ -470,4 +499,4 @@
       }
     ]
   }
-  
+]

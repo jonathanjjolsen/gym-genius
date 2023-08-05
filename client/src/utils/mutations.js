@@ -35,3 +35,14 @@ mutation createWorkout($email: String!, $workoutName: String!){
     }
 }
 `;
+
+export const FIND_USER = gql`
+mutation UserProfile($firstName: String!, $lastName: String!) {\
+    UserProfile(firstName: $firstName, lastName: $lastName) {
+        _id
+        firstName
+        lastName
+    }
+}
+`;
+
