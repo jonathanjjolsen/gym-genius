@@ -23,13 +23,13 @@ const WeekWorkout = [
     },
     {
         WorkoutName: "Cardio",
-        Exercise: ["Running", "Biking", "Swimming"],
-        Goal: ["Running 200lbs", "Biking 150lbs", "Swimming 150lbs"]
+        Exercise: ["Running", "Biking", "Swimming", "Rowing", "Jump Rope", "Stairmaster", "Elliptical"],
+        Goal: []
     },
     {
         WorkoutName: "Arms",
         Exercise: ["Bicep Curls", "Tricep Extensions", "Hammer Curls"],
-        Goal: ["Bicep Curls 200lbs", "Tricep Extensions 150lbs", "Hammer Curls 150lbs"]
+        Goal: ["Bicep Curls 200lbs", "Tricep Extensions 150lbs", "Hammer Curls 150lbs", "Bicep Curls 200lbs", "Tricep Extensions 150lbs", "Hammer Curls 150lbs"]
     },
     {
         WorkoutName: "Abs",
@@ -68,7 +68,7 @@ const Week = WeekWorkout.map((Workout, i) => {
     }
 });
 
-console.log(Week);
+// console.log(Week);
 
 
 

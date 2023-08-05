@@ -180,6 +180,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
 }
 
 #CardEdit {
@@ -187,6 +188,7 @@ body {
     flex-direction: column;
     justify-content: end;
     align-items: end;
+    margin-right: 1%;
 }
 
 #CardEdit a {
@@ -202,28 +204,29 @@ body {
 #CardBtm {
     display: flex;
     flex-direction: row;
+    min-height: 20vh;
 }
 
 #CardExc {
-    font-size: 2rem;
+    text-align: start;
+    width: 65%;
+}
+
+#CardExc h2:before {
+    content: '\2022';
     color: #822121;
-    text-align: center;
+    margin-right: 0.5em; 
+    font-size: 4rem;
 }
 
 #CardGoal {
     display: flex;
     flex-direction: column;
-    justify-content: end;
     align-items: center;
-    width: 15vw;
-    margin-left: 35vw;
+    width: 30%;
+    margin-right: 5%;
     border: #000000 solid 1px;
 }
-
-
-
-
-
 
 #hero-flex {
     background-image: url('../images/home-hero.jpg');

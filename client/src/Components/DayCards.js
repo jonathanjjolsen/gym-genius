@@ -1,22 +1,27 @@
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
-
 
 const DayCards = (x) => {
     var day = x.day.Day;
     var WorkoutName = x.day.WorkoutName;
     var Exercise = x.day.Exercise;
     var Goal = x.day.Goal;
-    console.log(day);
-    console.log(WorkoutName);
-    console.log(Exercise);
-    console.log(Goal);
 
+    const ExercisesList = () => {
+        return Exercise.map((exercise, index) => (
+            <h2 key={index}>{exercise}</h2>
+        ));
+    };
+
+    const GoalsList = () => {
+        return Goal.map((goal, index) => (
+            <h5 key={index}>{goal}</h5>
+        ));
+    };
 
     return (
-        <div id="ProfileCards" class="card ">
-            <div class="card-body col-md-12">
+        <div id="ProfileCards" className="card">
+            <div className="card-body col-md-12">
 
                 <div id="CardEdit">
                     <a href="#">Edit</a>
@@ -27,21 +32,17 @@ const DayCards = (x) => {
                     <p>{WorkoutName} Workout</p>
                 </div>
 
-
                 <div id="CardBtm">
-                    <div>
-                        <ul id="CardExc">
-                            <li>{Exercise}</li>
-                        </ul>
+                    <div id="CardExc">
+                            {ExercisesList()}
                     </div>
                     <div id="CardGoal">
-                        <h1>Goals</h1>
+                        <h1>Goals:</h1>
                         <ul>
-                            <li>{Goal}</li>
+                            {GoalsList()}
                         </ul>
                     </div>
                 </div>
-
 
             </div>
         </div>
