@@ -10,18 +10,18 @@ const resolvers = {
         },
         user: async (parent, args, context) => {
             if (context.user) {
-              const user = await User.findById(context.user._id).populate({
-                path: 'workouts.exercises',
-                populate: 'category',
-              });
-      
-              user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
-      
-              return user;
+                const user = await User.findById(context.user._id).populate({
+                    path: 'workouts.exercises',
+                    populate: 'exercises',
+                });
+
+                user.workouts.sort((a, b) => b.dateCreated - a.dateCreated);
+
+                return user;
             }
-      
+
             throw new AuthenticationError('Not logged in');
-          },
+        },
         exercises: async (parent, { category, name }) => {
             const params = {};
             if (category) {
@@ -39,18 +39,19 @@ const resolvers = {
         // },
         workout: async (parent, { _id }, context) => {
             if (context.user) {
-              const user = await User.findById(context.user._id).populate({
-                path: 'workouts.exercises',
-                populate: 'category',
-              });
-      
-              return user.workouts.id(_id);
+                const user = await User.findById(context.user._id).populate({
+                    path: 'categories.exercises',
+                    populate: 'workouts',
+                });
+
+                return user.workouts.id(_id);
             }
-      
+
             throw new AuthenticationError('Not logged in');
-          },
+        },
     },
     Mutation: {
+        //addUser mutation to connect with front end
         addUser: async (parent, args) => {
             const user = await User.create(args);
             const token = signToken(user);
@@ -60,22 +61,53 @@ const resolvers = {
         login: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
 
-            if(!user) {
+            if (!user) {
                 throw new AuthenticationError('Incorrect credentials');
             }
 
             const correctPw = await user.isCorrectPassword(password);
 
-            if(!correctPw) {
+            if (!correctPw) {
                 throw new AuthenticationError('Incorrect credentials');
             }
 
             const token = signToken(user);
-            return { token, user };
+            return { token, user, redirectURL: '/Profile' };
         },
+        createWorkout: async (parent, { email, workoutName }, context) => {
+            console.log(context);
+            //TODO: Uncomment this to only allow workouts to be created if user is logged in
+            // if (context.user) {
+            const workout = new Workout({ workoutName });
+            console.log('the workout: ', workout)
+            const theUser = await User.findOne({ email });
+            theUser.workouts.push(workout);
+            theUser.save()
+            workout.save()
+
+            return workout;
+            // }
+
+            throw new AuthenticationError('Not logged in');
+        },
+        // addExerciseToWorkout: async (parent, { workoutName, exerciseInput }, context) => {
+        //     const workout = await Workout.findOne({ workoutName })
+        //     if (!workout) {
+        //         throw new Error('Workout not found');
+        //     }
+        //     // Create a new exercise from the exerciseInput argument
+        //     const newExercise = new Exercise({
+        //         ...exerciseInput,
+        //     });
+
+        //     workout.exercises.push(newExercise);
+        //     workout.save()
+        //     newExercise.save()
+
+        //     // 4. Return the updated workout with the new exercise
+        //     return workout;
+        // }
     }
 };
-
-module.exports = resolvers;
 
 module.exports = resolvers;

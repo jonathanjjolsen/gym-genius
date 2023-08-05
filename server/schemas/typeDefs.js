@@ -11,11 +11,24 @@ const typeDefs = gql`
         difficulty: String!
         instructions: String!
         url: String!
+        category: Category!
     }
+
+    input ExerciseInput {
+        name: String!
+        description: String!
+        mainMuscles: String!
+        minorMuscles: String!
+        equipment: String!
+        difficulty: String!
+        instructions: String!
+        url: String!
+        category: String!
+      }
 
     type Workout {
         _id: ID!
-        name: String!
+        workoutName: String!
         exercises: [Exercise]
     }
 
@@ -35,21 +48,24 @@ const typeDefs = gql`
 
     type Query {
         exercises: [Exercise]
-        user: [User]
+        user: User
         categories: [Category]
         workout: Workout
     }
 
     type Auth {
-        token: ID!
+        token: ID
         user: User
     }
 
+
     type Mutation {
         addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
-        addCategory(name: String!): Category
         login(email: String!, password: String!): Auth
+        createWorkout(email: String!, workoutName: String!): Workout
+        addExerciseToWorkout(workoutName: String!, exerciseInput: ExerciseInput! ): Workout
     }
+
 `;
 
 module.exports = typeDefs;

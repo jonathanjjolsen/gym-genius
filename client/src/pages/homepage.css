@@ -1,23 +1,9 @@
 body {
     background-color: #4e4e4e;
-
 }
 
 .hero {
-
-    position: absolute;
-    /* Position the h1 absolutely within the container */
-    top: 50%;
-    /* Position the top of the h1 at the vertical center of the container */
-    left: 50%;
-    /* Position the left side of the h1 at the horizontal center of the container */
-    transform: translate(-50%, -50%);
-    /* Use translate to center the h1 precisely */
-    font-size: 48px;
-    /* Corrected CSS */
     text-shadow: 2px 2px 4px #000000;
-
-
 }
 
 #SignupForm {
@@ -75,7 +61,6 @@ body {
     align-items: center;
     margin-left: 30%;
     margin-right: 30%;
-    margin-top: 5%;
     padding: 5%;
     height: 75vh;
 
@@ -208,4 +193,30 @@ body {
     width: 15vw;
     margin-left: 35vw;
     border: #000000 solid 1px;
+}
+
+#hero-flex {
+    background-image: url('../images/home-hero.jpg');
+    background-size: cover;
+    height: 75vw
+}
+
+
+/* Media Queries !!! */
+
+@media only screen and (min-width: 1200px) {
+    #hero-flex {
+        background-image: url('../images/home-hero.jpg');
+        background-size: cover;
+        height: 45vw;
+        background-position-y: -100px;
+    }
+
+    #hero-flex h2 {
+        font-size: 80px;
+    }
+
+    .hero-signup {
+        font-size: 2.5rem;
+    }
 }

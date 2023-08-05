@@ -1,70 +1,128 @@
-// // import { useQuery, useMutation } from '@apollo/client';
-// // import { useParams, Link } from 'react-router-dom';
-// // import { CREATE_VOTE } from '../utils/mutations';
-// // import { QUERY_MATCHUPS } from '../utils/queries';
+import React, { useState } from 'react';
+import './categories.css';
+import Accordion from '../../src/Components/accordion'
 
-// const Categories = () => {
-//   //   let { id } = useParams();
+const Categories = () => {
+    // Code will go through here
+    // function will go through our seeds, read each category to determine where the work out goes. Additionally it will pull the necessary information and store it inside
 
-//   // const { loading, data } = useQuery(QUERY_MATCHUPS, {
-//   //   variables: { _id: id },
-//   // });
+    return (
+        <div className="app-container text-center">
+            <h1 className='m-4'>Categories</h1>
 
-//   // const matchup = data?.matchups || [];
+            <div className='accordion-container d-flex flex-column justify-content-center align-items-center'>
 
-//   // const [createVote, { error }] = useMutation(CREATE_VOTE);
+                <Accordion
+                    title="Upper Body"
+                    content="A Workout"
+                />
+                <Accordion
+                    title="Lower Body"
+                    content="Another Workout"
+                />
+                <Accordion
+                    title="Cardio"
+                    content="Yet Another Workout"
+                />
+                <Accordion
+                    title="Core"
+                    content="You guessed it, ANOTHER workout"
+                />
+            </div>
 
-//   // const handleVote = async (techNum) => {
-//   //   try {
-//   //     await createVote({
-//   //       variables: { _id: id, techNum: techNum },
-//   //     });
-//   //   } catch (err) {
-//   //     console.error(err);
-//   //   }
-//   // };
+            <div class="accordion accordion-flush mb-5 mx-auto " id="accordionFlushExample">
+                <div class="accordion-item ">
+                    {/* The accordion-button class adds flex property, so I negated it with the class d-block to center text */}
+                    <h2 class="accordion-header text-center bg-dark">
+                        <button class="accordion-button collapsed text-light bg-dark rounded w-100 h-100 fs-4 mx-auto text-center d-block" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Upper Body
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse bg-dark text-light" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <h3>Pull Ups</h3>
+                            <p>This is a great exercise to target your chest and arms with little to no equipment</p>
+                            <a className='btn btn-warning'>Add to Workout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-//   // return (
-//   //   <div className="card bg-white card-rounded w-50">
-//   //     <div className="card-header bg-dark text-center">
-//   //       <h1>Here is the matchup!</h1>
-//   //     </div>
-//   //     {loading ? (
-//   //       <div>Loading...</div>
-//   //     ) : (
-//   //       <div className="card-body text-center mt-3">
-//   //         <h2>
-//   //           {matchup[0].tech1} vs. {matchup[0].tech2}
-//   //         </h2>
-//   //         <h3>
-//   //           {matchup[0].tech1_votes} : {matchup[0].tech2_votes}
-//   //         </h3>
-//   //         <button className="btn btn-info" onClick={() => handleVote(1)}>
-//   //           Vote for {matchup[0].tech1}
-//   //         </button>{' '}
-//   //         <button className="btn btn-info" onClick={() => handleVote(2)}>
-//   //           Vote for {matchup[0].tech2}
-//   //         </button>
-//   //         <div className="card-footer text-center m-3">
-//   //           <br></br>
-//   //           <Link to="/">
-//   //             <button className="btn btn-lg btn-danger">
-//   //               View all matchups
-//   //             </button>
-//   //           </Link>
-//   //         </div>
-//   //       </div>
-//   //     )}
-//   //     {error && <div>Something went wrong...</div>}
-//   //   </div>
-//   // );
+    )
+};
 
-//   return (
-//     <div>
-//       <h1>Hello Categories!</h1>
-//     </div>
-//   )
+export default Categories;
 
-// };
 
-// export default Categories;
+        // <div className='container'>
+        //     <div className="accordion" id="accordionExample">
+
+        //         <div className="accordion-item m-5">
+        //             <h2 className="accordion-header">
+        //                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+        //                     Upper Body
+        //                 </button>
+        //             </h2>
+        //             <div id="collapseOne" className="accordion-collapse collapse show bg-dark text-white" data-bs-parent="#accordionExample">
+        //                 <div className="accordion-body row">
+        //                     <div className='text-center'>
+
+        //                         <strong>Workout 1</strong>
+        //                         <br />
+        //                         Just a test description
+        //                         <br />
+        //                         <button className='rounded'>Add to Workout</button>
+        //                     </div>
+        //                 </div>
+        //                 <div className="accordion-body text-center">
+        //                     <strong>Workout 1</strong>
+        //                     <br />
+        //                     Just a test description
+        //                     <br />
+        //                     <button className='rounded'>Add to Workout</button>
+        //                 </div>
+        //             </div>
+        //         </div>
+
+        //         <div className="accordion-item m-5">
+        //             <h2 className="accordion-header">
+        //                 <button className="accordion-button collapsed bg-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        //                     Lower Body
+        //                 </button>
+        //             </h2>
+        //             <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        //                 <div className="accordion-body">
+        //                     <strong>Workout 2</strong> Another test description
+        //                 </div>
+        //             </div>
+        //         </div>
+
+        //         <div className="accordion-item m-5">
+        //             <h2 className="accordion-header">
+        //                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        //                     Cardio
+        //                 </button>
+        //             </h2>
+        //             <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        //                 <div className="accordion-body">
+        //                     <strong>Workout 3</strong> Yet again, another test description.
+        //                 </div>
+        //             </div>
+        //         </div>
+
+        //         <div className="accordion-item m-5">
+        //             <h2 className="accordion-header">
+        //                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+        //                     Core
+        //                 </button>
+        //             </h2>
+        //             <div id="collapseFour" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        //                 <div className="accordion-body">
+        //                     <strong>Workout 4</strong> You guessed it! ANOTHER test description
+        //                 </div>
+        //             </div>
+        //         </div>
+
+        //     </div>
+        // </div>
