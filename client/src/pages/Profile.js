@@ -79,10 +79,10 @@ function Profile() {
     const [week, setWeek] = useState(Week);
 
     return (
-        <div id="WorkoutPage" className="card">
-            <div id="WorkoutProflie">
-                <div id="WorkoutProfileTop">
-                    <div id="WorkoutProflieImg">
+        <div id="ProfilePage" className="card">
+            <div>
+                <div id="ProfileTop">
+                    <div>
                         <img src="https://via.placeholder.com/150" alt="profile" />
                     </div>
                     <a href="#">Change Avatar</a>
@@ -91,14 +91,11 @@ function Profile() {
                     <p>{personalInfo.bio}</p>
                     <p>{personalInfo.height}</p>
                     <p>{personalInfo.weight}</p>
-                    <div id="WorkoutWeightGoal">
+                    <div id="ProfileWeightGoal">
                         <button type="button" className="btn"> - </button>
                         <h2>{personalInfo.weightGoal}</h2>
                         <button type="button" className="btn"> + </button>
                     </div>
-                </div>
-
-                <div id="WorkoutProfileBtm">
                 </div>
             </div>
             {
