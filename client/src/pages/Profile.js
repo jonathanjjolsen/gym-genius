@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useMutation } from '@apollo/client'; 
 import DayCards from '../Components/DayCards';
 import { FIND_USER } from '../utils/mutations';
 
@@ -16,37 +17,37 @@ const initialPersonalInfo = {
 // Interchangeable info
 const WeekWorkout = [
     {
-        WorkoutType: "Chest",
+        WorkoutName: "Chest",
         Exercise: ["Bench", "Incline Bench", "Decline Bench"],
         Goal: ["Benching 200lbs", "Incline 150lbs", "Decline 150lbs"]
     },
     {
-        WorkoutType: "Cardio",
+        WorkoutName: "Cardio",
         Exercise: ["Running", "Biking", "Swimming"],
         Goal: ["Running 200lbs", "Biking 150lbs", "Swimming 150lbs"]
     },
     {
-        WorkoutType: "Arms",
+        WorkoutName: "Arms",
         Exercise: ["Bicep Curls", "Tricep Extensions", "Hammer Curls"],
         Goal: ["Bicep Curls 200lbs", "Tricep Extensions 150lbs", "Hammer Curls 150lbs"]
     },
     {
-        WorkoutType: "Abs",
+        WorkoutName: "Abs",
         Exercise: ["Crunches", "Situps", "Planks"],
         Goal: ["Crunches 200lbs", "Situps 150lbs", "Planks 150lbs"]
     },
     {
-        WorkoutType: "",
+        WorkoutName: "",
         Exercise: [],
         Goal: []
     },
     {
-        WorkoutType: "Legs",
+        WorkoutName: "Legs",
         Exercise: ["Squats", "Lunges",],
         Goal: ["Squats 200lbs", "Lunges 150lbs",]
     },
     {
-        WorkoutType: "Back",
+        WorkoutName: "Back",
         Exercise: ["Deadlifts", "Pullups", "Rows"],
         Goal: ["Deadlifts 200lbs", "Pullups 150lbs", "Rows 150lbs"]
     }
@@ -61,15 +62,15 @@ const WeekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Satur
 const Week = WeekWorkout.map((Workout, i) => {
     return {
         Day: WeekDays[i],
-        WorkoutType: Workout.WorkoutType,
-        Exercise: Workout.Exercise[i],
-        Goal: Workout.Goal[i]
+        WorkoutName: Workout.WorkoutName,
+        Exercise: Workout.Exercise,
+        Goal: Workout.Goal
     }
 });
 
-// console.log(Week);
+console.log(Week);
 
-console.log({FIND_USER});
+
 
 
 

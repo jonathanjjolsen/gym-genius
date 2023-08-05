@@ -5,13 +5,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const DayCards = (x) => {
     var day = x.day.Day;
-    var WorkoutType = x.day.WorkoutType;
+    var WorkoutName = x.day.WorkoutName;
     var Exercise = x.day.Exercise;
     var Goal = x.day.Goal;
-    // console.log(day);
-    // console.log(WorkoutType);
-    // console.log(Exercise);
-    // console.log(Goal);
+    console.log(day);
+    console.log(WorkoutName);
+    console.log(Exercise);
+    console.log(Goal);
 
 
     return (
@@ -24,7 +24,7 @@ const DayCards = (x) => {
 
                 <div id="WorkoutTitle">
                     <h1>{day}</h1>
-                    <p>{WorkoutType} Workout</p>
+                    <p>{WorkoutName} Workout</p>
                 </div>
 
 
@@ -36,9 +36,9 @@ const DayCards = (x) => {
                     </div>
                     <div id="WorkoutGoal">
                         <h1>Goals</h1>
-                        <p>Goal 1</p>
-                        <p>Goal 2</p>
-                        <p>Goal 3</p>
+                        <ul>
+                            <li>{Goal}</li>
+                        </ul>
                     </div>
                 </div>
 
