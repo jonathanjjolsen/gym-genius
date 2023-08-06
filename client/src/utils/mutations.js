@@ -24,3 +24,14 @@ mutation login($email: String!, $password: String!) {
     }
 }
 `;
+
+export const CREATE_WORKOUT = gql`
+mutation createWorkout($email: String!, $workoutName: String!){
+    createWorkout(email: $email, workoutName: $workoutName) {
+        workout {
+        _id
+        workoutName
+        }
+    }
+}
+`;
