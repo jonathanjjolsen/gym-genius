@@ -77,11 +77,11 @@ function Profile() {
     const [personalInfo, setPersonalInfo] = useState(initialPersonalInfo);
     const [week, setWeek] = useState(Week);
 
-    const { loading, error, data } = useQuery(GET_USER_PROFILE);
+    // const { loading, error, data } = useQuery(GET_USER_PROFILE);
 
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error: {error.message}</p>;
-    console.log(data);
+    // if (loading) return <p>Loading...</p>;
+    // if (error) return <p>Error: {error.message}</p>;
+    // console.log(data);
 
     const { loading, data } = useQuery(GET_ME);
     const userData = data?.user || {};
