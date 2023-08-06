@@ -27,6 +27,33 @@ const userSchema = new Schema(
             required: true,
             minlength: 5,
         },
+        age: {
+            type: Number,
+            required: false,
+            min: 18,
+            max: 100
+        },
+        bio: {
+            type: String,
+            required: false,
+            maxlength: 280
+        },
+        height: {
+            type: String,
+            required: false,
+        },
+        weight: {
+            type: Number,
+            required: false,
+            min: 50,
+            max: 500
+        },
+        weightGoal: {
+            type: Number,
+            required: false,
+            min: 50,
+            max: 500
+        },
         workouts: [Workout.schema]
     },
 );

@@ -1,21 +1,20 @@
 import React, { useState } from 'react';
 import { useQuery } from '@apollo/client';
 import { GET_ME } from '../utils/queries';
+import { useMutation } from '@apollo/client';
 import DayCards from '../Components/DayCards';
-import { GET_USER_PROFILE } from '../utils/mutations';
-
+import ProfileInfoModal from '../Components/ProfileInfoModal';
+import calculateCalorieDeficit from '../utils/helpers';
 
 const initialPersonalInfo = {
     username: "Ash",
     age: "21",
     bio: "I like to workout",
     height: "5'10",
-    weight: "150lbs",
+    weight: "150",
     weightGoal: "100lbs"
 };
 
-
-// Interchangeable info
 const WeekWorkout = [
     {
         WorkoutName: "Chest",
@@ -44,8 +43,8 @@ const WeekWorkout = [
     },
     {
         WorkoutName: "Legs",
-        Exercise: ["Squats", "Lunges",],
-        Goal: ["Squats 200lbs", "Lunges 150lbs",]
+        Exercise: ["Squats", "Lunges"],
+        Goal: ["Squats 200lbs", "Lunges 150lbs"]
     },
     {
         WorkoutName: "Back",
@@ -54,43 +53,46 @@ const WeekWorkout = [
     }
 ];
 
-
-
-
 const WeekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
-// WeekWorkout Interchangeable 
 const Week = WeekWorkout.map((Workout, i) => {
     return {
         Day: WeekDays[i],
         WorkoutName: Workout.WorkoutName,
         Exercise: Workout.Exercise,
         Goal: Workout.Goal
-    }
+    };
 });
-
-// console.log(Week);
-
-
 
 function Profile() {
     const [personalInfo, setPersonalInfo] = useState(initialPersonalInfo);
     const [week, setWeek] = useState(Week);
-
-    // const { loading, error, data } = useQuery(GET_USER_PROFILE);
-
-    // if (loading) return <p>Loading...</p>;
-    // if (error) return <p>Error: {error.message}</p>;
-    // console.log(data);
-
+    // const [addInfoToUser] = useMutation(ADD_INFO_TO_USER);
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const { loading, data } = useQuery(GET_ME);
     const userData = data?.user || {};
+    console.log(userData);
+
+    const openModal = () => {
+        setIsModalOpen(true);
+        console.log("open modal");
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+        console.log("close modal");
+    };
+
+    const saveChanges = () => {
+        setIsModalOpen(false);
+        console.log("save changes");
+    };
+
 
     if (loading) {
         return <div>Loading...</div>;
     }
-    
-    
+
     return (
         <div id="ProfilePage" className="card">
             <div>
@@ -99,25 +101,28 @@ function Profile() {
                         <img src="https://via.placeholder.com/150" alt="profile" />
                     </div>
                     <a href="#">Change Avatar</a>
-                    <p>{personalInfo.username}</p>
+                    <p>{userData.firstName} {userData.lastName}</p>
                     <p>{personalInfo.age}</p>
                     <p>{personalInfo.bio}</p>
                     <p>{personalInfo.height}</p>
-                    <p>{personalInfo.weight}</p>
+                    <p>{personalInfo.weight}Lbs</p>
+                    <div id="ProfileEdit">
+                        <button type="button" className="btn" onClick={openModal}>Edit Profile</button>
+                    </div>
+                    <p>Weight Goal</p>
                     <div id="ProfileWeightGoal">
                         <button type="button" className="btn"> - </button>
                         <h2>{personalInfo.weightGoal}</h2>
                         <button type="button" className="btn"> + </button>
                     </div>
+                    <p>Calorie Deficit:</p>
+                    <h2>example</h2>
                 </div>
             </div>
-            {
-                week.map((day, i) => {
-                    return <DayCards key={i} day={day} />
-
-                })
-            }
-            <div />
+            {week.map((day, i) => {
+                return <DayCards key={i} day={day} />;
+            })}
+            <ProfileInfoModal showModal={isModalOpen} closeModal={closeModal} saveChanges={saveChanges} />
         </div>
     );
 }

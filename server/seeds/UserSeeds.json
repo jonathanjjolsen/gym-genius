@@ -4,6 +4,11 @@
       "lastName": "Doe",
       "email": "jane.doe@example.com",
       "password": "$2b$10$Yr56WbeJ9U0.ZKpL7CQZdeOvGX10B94fQalBjxfiR6bn6Vy5fTfVS",
+      "age": 25, 
+      "bio": "I'm a fitness enthusiast who loves to run and swim.",
+      "height": "5'5",
+      "weight": 120,
+      "weightGoal": 110,
       "workouts": [],
       "__v": 0
     },
@@ -12,6 +17,11 @@
       "lastName": "Smith",
       "email": "john.smith@example.com",
       "password": "$2b$10$Yr56WbeJ9U0.ZKpL7CQZdeOvGX10B94fQalBjxfiR6bn6Vy5fTfVS",
+      "age": 30,
+      "bio": "I'm a fitness enthusiast who loves to run and swim.",
+      "height": "5'10",
+      "weight": 180,
+      "weightGoal": 170,
       "workouts": [],
       "__v": 0
     },
@@ -20,6 +30,11 @@
       "lastName": "Johnson",
       "email": "alice.johnson@example.com",
       "password": "$2b$10$Yr56WbeJ9U0.ZKpL7CQZdeOvGX10B94fQalBjxfiR6bn6Vy5fTfVS",
+      "age": 35,
+      "bio": "I'm a fitness enthusiast who loves to run and swim.",
+      "height": "5'7",
+      "weight": 150,
+      "weightGoal": 140,
       "workouts": [],
       "__v": 0
     }

@@ -43,6 +43,11 @@ const typeDefs = gql`
         lastName: String!
         email: String!
         password: String!
+        age: Int
+        bio: String
+        height: String
+        weight: Int
+        weightGoal: Int
     }
 
     type Query {
