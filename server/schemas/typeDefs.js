@@ -49,12 +49,13 @@ const typeDefs = gql`
         categories: [Category]
         user: User
         workout: Workout
-        userProfile: User
+        userProfile: [User]
     }
 
     type Auth {
         token: ID
         user: User
+        userProfile: User
     }
 
 
@@ -63,7 +64,6 @@ const typeDefs = gql`
         login(email: String!, password: String!): Auth
         createWorkout(email: String!, workoutName: String!): Workout
         addExerciseToWorkout(workoutName: String!, exerciseInput: ExerciseInput! ): Workout
-        UserProfile(firstName: String!, lastName: String!): User
     }
 
 `;

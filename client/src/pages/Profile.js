@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { useMutation } from '@apollo/client'; 
+import { useQuery } from '@apollo/client';
 import DayCards from '../Components/DayCards';
-import { FIND_USER } from '../utils/mutations';
+import { GET_USER_PROFILE } from '../utils/mutations';
 
-// Interchangeable info
+
 const initialPersonalInfo = {
     username: "Ash",
     age: "21",
@@ -72,11 +72,15 @@ const Week = WeekWorkout.map((Workout, i) => {
 
 
 
-
-
 function Profile() {
     const [personalInfo, setPersonalInfo] = useState(initialPersonalInfo);
     const [week, setWeek] = useState(Week);
+
+    const { loading, error, data } = useQuery(GET_USER_PROFILE);
+
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error: {error.message}</p>;
+    console.log(data);
 
     return (
         <div id="ProfilePage" className="card">
