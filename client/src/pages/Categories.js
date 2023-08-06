@@ -10,36 +10,17 @@ const Categories = () => {
         <div className="app-container text-center">
             <h1 className='m-4'>Categories</h1>
 
-            <div className='accordion-container d-flex flex-column justify-content-center align-items-center'>
 
-                <Accordion
-                    title="Upper Body"
-                    content="A Workout"
-                />
-                <Accordion
-                    title="Lower Body"
-                    content="Another Workout"
-                />
-                <Accordion
-                    title="Cardio"
-                    content="Yet Another Workout"
-                />
-                <Accordion
-                    title="Core"
-                    content="You guessed it, ANOTHER workout"
-                />
-            </div>
-
-            <div class="accordion accordion-flush mb-5 mx-auto " id="accordionFlushExample">
-                <div class="accordion-item ">
+            <div className="accordion accordion-flush mb-5 mx-auto " id="accordionFlushExample">
+                <div className="accordion-item ">
                     {/* The accordion-button class adds flex property, so I negated it with the class d-block to center text */}
-                    <h2 class="accordion-header text-center bg-dark">
-                        <button class="accordion-button collapsed text-light bg-dark rounded w-100 h-100 fs-4 mx-auto text-center d-block" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <h2 className="accordion-header text-center bg-dark">
+                        <button className="accordion-button collapsed text-light bg-dark rounded w-100 h-100 fs-4 mx-auto text-center d-block" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                             Upper Body
                         </button>
                     </h2>
-                    <div id="flush-collapseOne" class="accordion-collapse collapse bg-dark text-light" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
+                    <div id="flush-collapseOne" className="accordion-collapse collapse bg-dark text-light" data-bs-parent="#accordionFlushExample">
+                        <div className="accordion-body">
                             <h3>Pull Ups</h3>
                             <p>This is a great exercise to target your chest and arms with little to no equipment</p>
                             <a className='btn btn-warning'>Add to Workout</a>
@@ -47,12 +28,88 @@ const Categories = () => {
                     </div>
                 </div>
             </div>
+
+            <div className="accordion accordion-flush mb-5 mx-auto " id="accordionFlushExample">
+                <div className="accordion-item ">
+                    {/* The accordion-button class adds flex property, so I negated it with the class d-block to center text */}
+                    <h2 className="accordion-header text-center bg-dark">
+                        <button className="accordion-button collapsed text-light bg-dark rounded w-100 h-100 fs-4 mx-auto text-center d-block" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Lower Body
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" className="accordion-collapse collapse bg-dark text-light" data-bs-parent="#accordionFlushExample">
+                        <div className="accordion-body">
+                            <h3>Pull Ups</h3>
+                            <p>This is a great exercise to target your chest and arms with little to no equipment</p>
+                            <a className='btn btn-warning'>Add to Workout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="accordion accordion-flush mb-5 mx-auto " id="accordionFlushExample">
+                <div className="accordion-item ">
+                    {/* The accordion-button class adds flex property, so I negated it with the class d-block to center text */}
+                    <h2 className="accordion-header text-center bg-dark">
+                        <button className="accordion-button collapsed text-light bg-dark rounded w-100 h-100 fs-4 mx-auto text-center d-block" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            Cardio
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" className="accordion-collapse collapse bg-dark text-light" data-bs-parent="#accordionFlushExample">
+                        <div className="accordion-body">
+                            <h3>Pull Ups</h3>
+                            <p>This is a great exercise to target your chest and arms with little to no equipment</p>
+                            <a className='btn btn-warning'>Add to Workout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="accordion accordion-flush mb-5 mx-auto " id="accordionFlushExample">
+                <div className="accordion-item ">
+                    {/* The accordion-button class adds flex property, so I negated it with the class d-block to center text */}
+                    <h2 className="accordion-header text-center bg-dark">
+                        <button className="accordion-button collapsed text-light bg-dark rounded w-100 h-100 fs-4 mx-auto text-center d-block" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                            Core
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" className="accordion-collapse collapse bg-dark text-light" data-bs-parent="#accordionFlushExample">
+                        <div className="accordion-body">
+                            <h3>Pull Ups</h3>
+                            <p>This is a great exercise to target your chest and arms with little to no equipment</p>
+                            <a className='btn btn-warning'>Add to Workout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
 
     )
 };
 
 export default Categories;
+
+
+            // <div className='accordion-container d-flex flex-column justify-content-center align-items-center'>
+
+            //     <Accordion
+            //         title="Upper Body"
+            //         content="A Workout"
+            //     />
+            //     <Accordion
+            //         title="Lower Body"
+            //         content="Another Workout"
+            //     />
+            //     <Accordion
+            //         title="Cardio"
+            //         content="Yet Another Workout"
+            //     />
+            //     <Accordion
+            //         title="Core"
+            //         content="You guessed it, ANOTHER workout"
+            //     />
+            // </div>
 
 
         // <div className='container'>
