@@ -16,6 +16,15 @@ export const GET_CATEGORIES = gql`
                 instructions
         }
     }
+}
 `;
 
-// export const GET_WORKOUTS = gql`
+export const GET_ME = gql`
+    query user{
+        user {
+            _id
+            firstName
+            lastName
+        }
+    }
+`;

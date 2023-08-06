@@ -1,8 +1,19 @@
 import React, { useState } from 'react';
+import { useQuery } from '@apollo/client';
+import { GET_ME } from '../utils/queries';
 import DayCards from '../Components/DayCards';
 import './homepage.css'
 
+
 function Profile() {
+    const { loading, data } = useQuery(GET_ME);
+    const userData = data?.user || {};
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+    
+    
     return (
         <div id="WorkoutPage" class="card ">
             <div id="WorkoutProflie">
@@ -12,7 +23,7 @@ function Profile() {
                         <img src="https://via.placeholder.com/150" alt="profile" />
                     </div>
                     <a href="#">Change Avatar</a>
-                    <p>Username</p>
+                    <p>{userData.firstName} {userData.lastName}</p>
                     <p>Age</p>
                     <p>Bio?</p>
                     <p>Height</p>

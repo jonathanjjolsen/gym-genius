@@ -10,16 +10,9 @@ const resolvers = {
         },
         user: async (parent, args, context) => {
             if (context.user) {
-                const user = await User.findById(context.user._id).populate({
-                    path: 'workouts.exercises',
-                    populate: 'exercises',
-                });
-
-                user.workouts.sort((a, b) => b.dateCreated - a.dateCreated);
-
+                const user = await User.findById(context.user._id);
                 return user;
             }
-
             throw new AuthenticationError('Not logged in');
         },
         // exercises: async (parent, { category, name }) => {
