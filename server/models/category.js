@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const {Schema} = mongoose;
+const exerciseSchema = require('./Exercise');
 
 const categorySchema = new Schema({
     name: {
@@ -7,6 +8,7 @@ const categorySchema = new Schema({
         required: true,
         trim: true
     },
+    exercises: [exerciseSchema]
 });
 
 const Category = mongoose.model('Category', categorySchema);

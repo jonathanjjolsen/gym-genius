@@ -160,8 +160,8 @@ body {
 #WorkoutEdit {
     display: flex;
     flex-direction: column;
-    justify-content: end;
-    align-items: end;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 #WorkoutEdit a {
@@ -188,7 +188,7 @@ body {
 #WorkoutGoal {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     width: 15vw;
     margin-left: 35vw;
