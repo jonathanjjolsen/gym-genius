@@ -222,6 +222,7 @@ body {
 #CardGoal {
     display: flex;
     flex-direction: column;
+    justify-content: end;
     align-items: center;
     width: 20%;
     margin-right: 3%;

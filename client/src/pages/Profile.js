@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useQuery } from '@apollo/client';
+import { GET_ME } from '../utils/queries';
 import DayCards from '../Components/DayCards';
 import { GET_USER_PROFILE } from '../utils/mutations';
 
@@ -82,6 +83,14 @@ function Profile() {
     if (error) return <p>Error: {error.message}</p>;
     console.log(data);
 
+    const { loading, data } = useQuery(GET_ME);
+    const userData = data?.user || {};
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+    
+    
     return (
         <div id="ProfilePage" className="card">
             <div>
