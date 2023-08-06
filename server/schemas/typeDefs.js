@@ -1,18 +1,7 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
-    type Exercise {
-        _id: ID!
-        name: String!
-        description: String!
-        mainMuscles: String!
-        minorMuscles: String!
-        equipment: String!
-        difficulty: String!
-        instructions: String!
-        url: String!
-        category: Category!
-    }
+
 
     input ExerciseInput {
         name: String!
@@ -24,6 +13,22 @@ const typeDefs = gql`
         instructions: String!
         url: String!
         category: String!
+      }
+      
+      type Exercise {
+        name: String!
+        mainMuscles: String
+        minorMuscles: String
+        equipment: String
+        difficulty: String
+        instructions: String
+        url: String
+      }
+    
+      type Category {
+        _id: ID!
+        WorkoutName: String!
+        exercises: [Exercise!]!
       }
 
     type Workout {
@@ -40,22 +45,17 @@ const typeDefs = gql`
         password: String!
     }
 
-    type Category {
-        _id: ID!
-        name: String!
-        exercise: [Exercise]
-    }
-
     type Query {
-        exercises: [Exercise]
-        user: User
         categories: [Category]
+        user: User
         workout: Workout
+        userProfile: [User]
     }
 
     type Auth {
         token: ID
         user: User
+        userProfile: User
     }
 
 

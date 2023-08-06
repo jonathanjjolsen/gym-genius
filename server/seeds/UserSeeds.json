@@ -1,0 +1,27 @@
+[
+    {
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "email": "jane.doe@example.com",
+      "password": "$2b$10$Yr56WbeJ9U0.ZKpL7CQZdeOvGX10B94fQalBjxfiR6bn6Vy5fTfVS",
+      "workouts": [],
+      "__v": 0
+    },
+    {
+      "firstName": "John",
+      "lastName": "Smith",
+      "email": "john.smith@example.com",
+      "password": "$2b$10$Yr56WbeJ9U0.ZKpL7CQZdeOvGX10B94fQalBjxfiR6bn6Vy5fTfVS",
+      "workouts": [],
+      "__v": 0
+    },
+    {
+      "firstName": "Alice",
+      "lastName": "Johnson",
+      "email": "alice.johnson@example.com",
+      "password": "$2b$10$Yr56WbeJ9U0.ZKpL7CQZdeOvGX10B94fQalBjxfiR6bn6Vy5fTfVS",
+      "workouts": [],
+      "__v": 0
+    }
+  ]
+  
