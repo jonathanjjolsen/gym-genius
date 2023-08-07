@@ -10,7 +10,10 @@ query exercises {
       difficulty
       instructions
       url
-      category
+      category {
+        _id
+        CategoryName
+      }
     }
   }
 `;
