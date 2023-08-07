@@ -48,10 +48,10 @@ function Login() {
           <input type="password" required className="form-control rounded text-center mx-auto" name='password' id="password" placeholder="Password" onChange={handleFormChange}/>
         </div>
         <div className='mx-auto text-center'>
-          <button type="submit" className="btn btn-primary text-center mx-auto">Submit</button>
+          <button type="submit" className="btn  text-center mx-auto">Submit</button>
         </div>
       </form>
-      <p>New here? Click to <Link to={'/signUp'}>signup!</Link></p>
+      <p>New here? Click to <Link to={'/signUp'}>Sign up!</Link></p>
     </div>
   );
 }

@@ -99,26 +99,30 @@ function Profile() {
     <div id="ProfilePage" className="card">
       <div>
         <div id="ProfileTop">
+          <div id="ProfileEdit" class="slide-fade-button">
+            <button type="button" className="btn" onClick={openModal}>Edit Profile</button>
+          </div>
           <div>
             <img src="https://via.placeholder.com/150" alt="profile" />
           </div>
           <a href="#">Change Avatar</a>
-          <div>
-            <p>{userData.firstName} {userData.lastName}</p>
-            <p>{userData.age} Years Old</p>
-            <p>Bio: {userData.bio}</p>
-            <p>Height: {userData.height}</p>
-            <p> Current Weight:</p>
+          <div id="ProfileInfo" >
+            <h1>{userData.firstName} {userData.lastName}</h1>
+            <h2>{userData.age} Years Old</h2>
+            <h2>Bio:</h2>
+            <p>{userData.bio} </p>
+            <h2>Height:</h2>
+            <p>{userData.height}</p>
+            <h2> Current Weight:</h2>
             <p>{userData.weight} Lbs</p>
-            <p>Goal Weight:</p>
+            <h2>Goal Weight:</h2>
             <p>{userData.weightGoal} Lbs</p>
-            <div id="ProfileEdit">
-              <button type="button" className="btn" onClick={openModal}>Edit Profile</button>
-            </div>
+
+            <h2> Daily Calorie Deficit:</h2>
+            <p>{calorieDeficit} Calories</p>
           </div>
 
-          <p> Daily Calorie Deficit:</p>
-          <p>{calorieDeficit}</p>
+
         </div>
       </div>
       {week.map((day, i) => {
