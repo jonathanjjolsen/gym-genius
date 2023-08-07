@@ -16,6 +16,7 @@ const typeDefs = gql`
       }
       
       type Exercise {
+        _id: ID!
         name: String!
         mainMuscles: String
         minorMuscles: String
@@ -23,12 +24,12 @@ const typeDefs = gql`
         difficulty: String
         instructions: String
         url: String
+        category: Category!
       }
     
       type Category {
         _id: ID!
-        WorkoutName: String!
-        exercises: [Exercise!]!
+        CategoryName: String!
       }
 
     type Workout {
@@ -51,9 +52,10 @@ const typeDefs = gql`
     }
 
     type Query {
-        categories: [Category]
+        categories: [Category!]!
         user: User
         workout: Workout
+        exercises: [Exercise]
     }
 
     type Auth {
