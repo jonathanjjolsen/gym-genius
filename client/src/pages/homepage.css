@@ -1,5 +1,5 @@
 body {
-    background-color: #4e4e4e;
+    background: linear-gradient(to top, #000000, #5f5656);
 }
 
 .hero {
@@ -15,9 +15,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 40%;
-    margin-right: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
     padding: 5%;
+    height: 90vh;
 }
 
 #SignupForm h1 {
@@ -40,18 +41,44 @@ body {
 #SignupForm button {
     width: 13vw;
     height: 7vh;
-    border: 1px solid #000000;
-    border-radius: 4%;
-    background-color: #700000;
+    background-color: #000000c7;
     color: #ffffff;
-    font-size: 1.5rem;
-    margin-left: 3.5vw;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: transform 2s ease-in-out, box-shadow 0.7s ease-in-out, background-color .7s ease-in-out;
 }
 
 #SignupForm button:hover {
-    background-color: #9e3939;
-    color: #141212;
-    border: 1px solid #000000;
+    color: #000000;
+    background-color: #696969;
+    transform: scale(1.05);
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, .5); 
+    text-decoration: underline;
+}
+
+#SignupForm a {
+    color: #ffffff;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: transform 1s ease-in-out, box-shadow 0.7s ease-in-out, color 0.5s ease-in-out;
+}
+
+#SignupForm a:hover {
+    color: #857777;
+    transform: scale(1.2);
+    box-shadow: 0 0 50px 5px rgba(0, 0, 0, .5); 
+    text-decoration:underline;
+}
+
+#SignupForm p {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -90,36 +117,57 @@ body {
 #LoginPage button {
     width: 13vw;
     height: 7vh;
-    border: 1px solid #000000;
-    border-radius: 4%;
-    background-color: #700000;
+    background-color: #000000c7;
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: transform 2s ease-in-out, box-shadow 0.7s ease-in-out, background-color .7s ease-in-out;
 
 }
 
 #LoginPage button:hover {
-    background-color: #9e3939;
-    color: #141212;
-    border: 1px solid #000000;
+    color: #000000;
+    background-color: #696969;
+    transform: scale(1.05);
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, .5); 
+    text-decoration: underline;
+}
+
+#LoginPage a {
+    color: #ffffff;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: transform 1s ease-in-out, box-shadow 0.7s ease-in-out, color 0.5s ease-in-out;
+}
+
+#LoginPage a:hover {
+    color: #857777;
+    transform: scale(1.2);
+    box-shadow: 0 0 50px 5px rgba(0, 0, 0, .5); 
+    text-decoration:underline;
+}
+
+#LoginPage p {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-top: 2%;
 }
 
 
 
 
 
+/* Profile Page Styles */ 
 
 
-
-
-
-/* Profile Page Styles */
 
 #ProfilePage {
-    background-color: rgb(0, 0, 0);
+    background: linear-gradient(to bottom, #212529, #000000);
     margin-right: 2%;
     margin-left: 2%;
     margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 #ProfileTop {
@@ -131,33 +179,88 @@ body {
     height: 90vh;
 }
 
+#ProfileTop img {
+    max-width: 10vw;
+    max-width: 17vh;
+    min-width: 10px;
+    min-height: 10px;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    margin-top: 2%;
+}
+
 #ProfileTop a {
-    color: #ffffff;
+    color: #d1b5b5;
+    font-family: 'Helvetica', sans-serif;
     font-size: 2rem;
     text-decoration: none;
-    margin-bottom: 5vh;
+    transition: transform 2s ease-in-out, box-shadow 0.7s ease-in-out, color 0.5s ease-in-out;
 }
 
-#ProfileTop p {
-    color: #ffffff;
-    font-size: 2rem;
-    text-decoration: none;
+#ProfileTop a:hover {
+    color: #000000;
+    transform: scale(1.05);
+    box-shadow: 0 0 50px 5px rgba(0, 0, 0, .5); 
+    text-decoration:underline;
 }
 
-#ProfileWeightGoal {
+#ProfileInfo {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    border-radius: 10%;
-    height: 3vh;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
-#ProfileWeightGoal button {
-    font-size: 2rem;
+#ProfileInfo h1 {
+    color: #ffffff;
+    font-size: 3rem;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
+
+#ProfileInfo h2 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+#ProfileInfo p {
+    color: #d1b5b5;
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+}
+
+#ProfileEdit {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+#ProfileEdit button {
+    background-color: #31373d;
+    color: #d1b5b56c;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: transform 2s ease-in-out, box-shadow 0.7s ease-in-out, background-color 0.7s ease-in-out;
+}
+
+#ProfileEdit button:hover {
+    color: #000000;
+    background-color: #888888;
+    transform: scale(1.05);
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, .5); 
+    text-decoration: underline;
+}
+
 
 
 
@@ -171,8 +274,7 @@ body {
     margin-left: 15%;
     margin-right: 15%;
     margin-top: 5%;
-    background-color: #ffffff;
-    box-shadow: 2px 2px 4px #000000;
+    background : linear-gradient(to bottom, #797979, #e7e7e7);
 }
 
 #CardTitle {
@@ -192,13 +294,17 @@ body {
 }
 
 #CardEdit a {
-    color: #822121;
-    font-size: 2rem;
+    color: #000000;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1.5rem;
     text-decoration: none;
+    transition: transform 2s ease-in-out, color 0.5s ease-in-out;
 }
 
 #CardEdit a:hover {
-    color: #9e3939;
+    color: #000000;
+    transform: scale(1.05);
+    text-decoration:underline;
 }
 
 #CardBtm {
@@ -212,9 +318,18 @@ body {
     width: 77%;
 }
 
+#CardExc h2 {
+    color: #000000;
+    font-size: 2rem;
+    font-family: 'Helvetica', sans-serif;
+    letter-spacing: 0.5px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
 #CardExc h2:before {
     content: '\2022';
-    color: #822121;
+    color: #822121d3;
     margin-right: 0.5em; 
     font-size: 4rem;
 }
@@ -226,8 +341,104 @@ body {
     width: 20%;
     margin-right: 3%;
     border: #000000 solid 1px;
+    overflow: hidden; 
+    white-space: wrap; 
 }
 
+#CardGoal h1 {
+    color: #000000;
+    font-size: 2rem;
+    font-family: 'Helvetica', sans-serif;
+    letter-spacing: 0.5px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+#CardGoal li {
+    color: #000000;
+    font-size: 1.5rem;
+    font-family: 'Helvetica', sans-serif;
+    letter-spacing: 0.5px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+
+
+
+/* Profile modal styles */
+#ProfileModalBackground {
+    background: linear-gradient(to top, #837272c0, #000000);
+    position: fixed;
+}
+
+#ProfileModal {
+    top: 50%;
+    left: 50%;
+    background: linear-gradient(to bottom, #d1b5b5c0, #000000);
+    border-radius: 10%;
+    margin: 0 auto;
+    padding: 4%;
+    border: 1px solid #888;
+    width: 80%;
+    align-items: center;
+    transform: translate(-50%, 50%);
+    
+}
+
+#ModalHeader button {
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+#ModalHeader button:hover {
+    background-color: #6b7c7a;
+}
+
+.ModalTextInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+    color: #000000;
+}
+
+#ModalNumberInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+    color: #a79292;
+}
+
+.ModalTextInput2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+    color: #d1b5b5;
+}
+
+.modal-footer button {
+    background-color: #31373d;
+    color: #d1b5b56c;
+    text-decoration: none;
+    transition: transform 2s ease-in-out, box-shadow 0.7s ease-in-out, background-color 0.7s ease-in-out;
+}
+
+.modal-footer button:hover {
+    color: #d1b5b5;
+    background-color: #31373d;
+    transform: scale(1.05);
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, .5); 
+    text-decoration: underline;
+}
+
+
+/*  */
 #hero-flex {
     background-image: url('../images/home-hero.jpg');
     background-size: cover;

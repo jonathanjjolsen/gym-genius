@@ -43,7 +43,7 @@ const ProfileInfoModal = ({ showModal, closeModal, saveChanges }) => {
     const formattedHeight = `${feet}'${inches}"`;
 
     const [updateUserProfile] = useMutation(UPDATE_USER_PROFILE);
-    
+
     const handleSaveChanges = () => {
         const updatedPersonalInfo = {
             age,
@@ -60,38 +60,54 @@ const ProfileInfoModal = ({ showModal, closeModal, saveChanges }) => {
     };
 
     return (
-        <div className={`modal ${showModal ? 'd-block' : ''}`}>
+        <div id="ProfileModalBackground" className={`modal ${showModal ? 'd-block' : ''}`}>
             <div className="modal-dialog" role="document">
-                <div className="modal-content">
-                    <div className="modal-header">
+                <div id="ProfileModal" className="modal-content">
+
+
+                    <div id="ModalHeader" className="modal-header">
                         <h5 className="modal-title">Edit Profile</h5>
                         <button type="button" className="btn-close" aria-label="Close" onClick={closeModal}></button>
                     </div>
+
+
                     <div className="modal-body">
-                        <label htmlFor="age">Age:</label>
-                        <input type="number"className="form-control" id="age" name="age" min="0" value={age} onChange={handleAgeChange} />
 
-                        <label htmlFor="bio">Bio:</label>
-                        <textarea className="form-control" id="bio" rows="1" value={bio} onChange={(e) => setBio(e.target.value)} />
+                        <div className="ModalTextInput">
+                            <label htmlFor="age">Age:</label>
+                            <input type="number" className="form-control" id="age" name="age" min="0" value={age} onChange={handleAgeChange} />
 
-                        <label htmlFor="height">Height:</label>
-                        <div className="input-group">
-                            <input type="number" className="form-control" id="feet" name="feet" min="0" value={feet} onChange={handleFeetChange} />
-                            <span className="input-group-text">Feet</span>
-                            <input type="number" className="form-control" id="inches" name="inches" min="0" max="11" value={inches} onChange={handleInchesChange}/>
-                            <span className="input-group-text">Inches</span>
+
+                            <label htmlFor="bio">Bio:</label>
+                            <textarea className="form-control" id="bio" rows="2" value={bio} onChange={(e) => setBio(e.target.value)} />
                         </div>
 
-                        <label htmlFor="weight">Weight:</label>
-                        <textarea
-                            className="form-control" id="weight" rows="1" placeholder="Weight In Lbs" maxLength={3} value={weight} onChange={handleWeightChange} />
 
-                        <label htmlFor="weightGoal">Weight Goal:</label>
-                        <textarea className="form-control" id="weightGoal" rows="1" placeholder="Weight Goal In Lbs" maxLength={3} value={weightGoal} onChange={handleWeightGoalChange} />
+                        <div id="ModalNumberInput">
+                            <label htmlFor="height">Height:</label>
+                            <div className="input-group">
+                                <input type="number" className="form-control" id="feet" name="feet" min="0" value={feet} onChange={handleFeetChange} />
+                                <span className="input-group-text">Feet</span>
+                                <input type="number" className="form-control" id="inches" name="inches" min="0" max="11" value={inches} onChange={handleInchesChange} />
+                                <span className="input-group-text">Inches</span>
+                            </div>
+                        </div>
+
+                        <div className="ModalTextInput2">
+                            <label htmlFor="weight">Weight:</label>
+                            <textarea className="form-control" id="weight" rows="1" placeholder="Weight In Lbs" maxLength={3} value={weight} onChange={handleWeightChange} />
+
+
+                            <label htmlFor="weightGoal">Weight Goal:</label>
+                            <textarea className="form-control" id="weightGoal" rows="1" placeholder="Weight Goal In Lbs" maxLength={3} value={weightGoal} onChange={handleWeightGoalChange} />
+                        </div>
+
                     </div>
+
+
                     <div className="modal-footer">
-                        <button type="button" className="btn btn-secondary" onClick={closeModal}>Close</button>
-                        <button type="button" className="btn btn-primary" onClick={handleSaveChanges}>Save Changes</button>
+                        <button type="button" className="btn " onClick={closeModal}>Close</button>
+                        <button type="button" className="btn " onClick={handleSaveChanges}>Save Changes</button>
                     </div>
                 </div>
             </div>
