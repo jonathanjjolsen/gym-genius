@@ -3,12 +3,12 @@ import { useMutation } from '@apollo/client';
 import { UPDATE_USER_PROFILE } from '../utils/mutations';
 
 const ProfileInfoModal = ({ showModal, closeModal, saveChanges }) => {
-    const [age, setAge] = useState('');
+    const [age, setAge] = useState(0);
     const [bio, setBio] = useState('');
     const [feet, setFeet] = useState(0);
     const [inches, setInches] = useState(0);
-    const [weight, setWeight] = useState('');
-    const [weightGoal, setWeightGoal] = useState('');
+    const [weight, setWeight] = useState(0);
+    const [weightGoal, setWeightGoal] = useState(0);
 
     // age must be a number between 0 and 100
     // bio must be a string with a max length of 280 characters
