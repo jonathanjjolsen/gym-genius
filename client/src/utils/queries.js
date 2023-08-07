@@ -25,6 +25,11 @@ export const GET_ME = gql`
             _id
             firstName
             lastName
+            age 
+            bio
+            height
+            weight
+            weightGoal
         }
     }
 `;

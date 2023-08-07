@@ -36,12 +36,27 @@ mutation createWorkout($email: String!, $workoutName: String!){
 }
 `;
 
-
-export const GET_USER_PROFILE = gql`
-  query GetUserProfile {
-    userProfile {
-      firstName
-      lastName
+export const UPDATE_USER_PROFILE = gql`
+  mutation UpdateUserProfile(
+    $age: Int
+    $bio: String
+    $height: String
+    $weight: Int
+    $weightGoal: Int
+  ) {
+    updateUserProfile(
+      age: $age
+      bio: $bio
+      height: $height
+      weight: $weight
+      weightGoal: $weightGoal
+    ) {
+      _id
+      age
+      bio
+      height
+      weight
+      weightGoal
     }
   }
 `;
