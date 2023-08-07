@@ -69,6 +69,13 @@ const typeDefs = gql`
         login(email: String!, password: String!): Auth
         createWorkout(email: String!, workoutName: String!): Workout
         addExerciseToWorkout(workoutName: String!, exerciseInput: ExerciseInput! ): Workout
+        updateUserProfile(
+            age: Int
+            bio: String
+            height: String
+            weight: Int
+            weightGoal: Int
+        ): User
     }
 
 `;
