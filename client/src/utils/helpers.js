@@ -1,20 +1,17 @@
-function calculateCalorieDeficit(currentWeight, goalWeight) {
- 
-    const bmr = 10 * currentWeight + 6.25 * goalWeight - 5 * age + 5;
-  
+function calculateDailyCalorieDeficit(height, currentWeight, goalWeight, age) {
+    const isMale = true; 
+    const genderFactor = isMale ? 5 : -161;
 
-    const dailyCalorieDeficit = bmr - 500; 
-  
+    const weightInKg = currentWeight * 0.453592;
+    const heightInCm = height * 2.54; 
+
+    const bmr = 10 * weightInKg + 6.25 * heightInCm - 5 * age + genderFactor;
+
+
+    const calorieDeficitPerDay = currentWeight - goalWeight;
+    const dailyCalorieDeficit = bmr - (calorieDeficitPerDay * 7700) / 365;
+    
     return dailyCalorieDeficit;
-  }
-  
+}
 
-  const currentWeight = 180; 
-  const goalWeight = 160; 
-  const age = 30; 
-  
-  const calorieDeficit = calculateCalorieDeficit(currentWeight, goalWeight);
-  
-  console.log(`Daily Calorie Deficit: ${calorieDeficit} calories`);
-
-  export default calculateCalorieDeficit;
+export default calculateDailyCalorieDeficit;
