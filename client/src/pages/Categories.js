@@ -7,6 +7,8 @@ const Categories = () => {
     console.log('Executing GET_EXERCISES query')
     const { loading, data } = useQuery(GET_EXERCISES)
 
+    const exercises = data?.exercises || {};
+
     if (loading) return <p>Loading...</p>;
     // if (error) return <p>Error: {error.message}</p>;
 
@@ -14,7 +16,7 @@ const Categories = () => {
     //     return null;
     // }
 
-    console.log({data});
+    console.log(exercises);
 
     return (
         <div className="app-container text-center">

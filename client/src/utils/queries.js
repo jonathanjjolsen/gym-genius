@@ -15,7 +15,6 @@ query exercises {
   }
 `;
 
-// export const GET_EXERCISES = gql ``
 
 export const GET_ME = gql`
     query user{
