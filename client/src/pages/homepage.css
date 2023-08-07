@@ -163,7 +163,7 @@ body {
 
 
 #ProfilePage {
-    background: linear-gradient(to bottom, #212529, #000000);
+    background: linear-gradient(to top, #212529, #000000);
     margin-right: 2%;
     margin-left: 2%;
     margin-top: 5%;
@@ -198,7 +198,7 @@ body {
 }
 
 #ProfileTop a:hover {
-    color: #000000;
+    color: #c4b6b6;
     transform: scale(1.05);
     box-shadow: 0 0 50px 5px rgba(0, 0, 0, .5); 
     text-decoration:underline;
@@ -266,112 +266,103 @@ body {
 
 
 /* DaysCard Styles */
-#ProfileCards {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 5%;
-    background : linear-gradient(to bottom, #797979, #e7e7e7);
+#DayCard {
+    border: 1px solid #000000;
+}
+/* move the button to the end  */
+#DayCardButton {
+    position:absolute;
+    top: 50;
+    right: 0;
+    margin: 2%;
+    width: 5vw;
+    background-color: #31373d;
+    color: #d1b5b56c;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: transform 2s ease-in-out, box-shadow 0.7s ease-in-out, background-color 0.7s ease-in-out;
 }
 
-#CardTitle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#DayCardButton:hover {
+    color: #000000;
+    background-color: #888888;
+    transform: scale(1.05);
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, .5); 
+    text-decoration: underline;
+}
+
+
+#DayCardInner h3 {
+    color: #ffffff;
+    font-family: 'Georgia', serif;
     font-weight: bold;
 }
 
-#CardEdit {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: end;
-    margin-right: 1%;
-}
-
-#CardEdit a {
-    color: #000000;
-    font-family: 'Helvetica', sans-serif;
-    font-size: 1.5rem;
-    text-decoration: none;
-    transition: transform 2s ease-in-out, color 0.5s ease-in-out;
-}
-
-#CardEdit a:hover {
-    color: #000000;
-    transform: scale(1.05);
-    text-decoration:underline;
-}
-
-#CardBtm {
+#DayCardInner h4 {
     display: flex;
     flex-direction: row;
-    min-height: 20vh;
-}
-
-#CardExc {
-    text-align: start;
-    width: 77%;
-}
-
-#CardExc h2 {
-    color: #000000;
-    font-size: 2rem;
-    font-family: 'Helvetica', sans-serif;
-    letter-spacing: 0.5px;
-    margin-top: 1%;
-    margin-bottom: 1%;
-}
-
-#CardExc h2:before {
-    content: '\2022';
-    color: #822121d3;
-    margin-right: 0.5em; 
-    font-size: 4rem;
-}
-
-#CardGoal {
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 20%;
-    margin-right: 3%;
-    border: #000000 solid 1px;
-    overflow: hidden; 
-    white-space: wrap; 
-}
-
-#CardGoal h1 {
-    color: #000000;
-    font-size: 2rem;
+    color: #d4c2c2;
     font-family: 'Helvetica', sans-serif;
-    letter-spacing: 0.5px;
-    margin-top: 1%;
-    margin-bottom: 1%;
+    font-weight: bold;
 }
-#CardGoal li {
-    color: #000000;
-    font-size: 1.5rem;
-    font-family: 'Helvetica', sans-serif;
-    letter-spacing: 0.5px;
-    margin-top: 1%;
-    margin-bottom: 1%;
+
+#DayCardInner p {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #d1b5b5;
+    font-family: 'Arial', sans-serif;
 }
 
 
+
+
+
+/* <div id='DayCard'>
+                <button id='DayCardButton'>Edit</button>
+                {week.map((day, index) => (
+                  <div id='DayCardInner'
+                  key={index}>
+                    <h3>{day.Day}</h3>
+                    <p>Workout: {day.WorkoutName}</p>
+                    <p>Exercises: {day.Exercise.join(', ')}</p>
+                    <p>Goals: {day.Goal.join(', ')}</p>
+                  </div>
+                ))}
+              </div>
+            );
+          }; */
 
 
 /* Profile modal styles */
 #ProfileModalBackground {
+    /* Existing styles */
     background: linear-gradient(to top, #837272c0, #000000);
     position: fixed;
+    opacity: 0; /* Start with zero opacity */
+
+    /* New animation styles */
+    animation-name: fadeIn;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; /* Keep the final state of animation */
+    top: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 #ProfileModal {
+    /* Existing styles */
     top: 50%;
     left: 50%;
     background: linear-gradient(to bottom, #d1b5b5c0, #000000);
@@ -379,11 +370,25 @@ body {
     margin: 0 auto;
     padding: 4%;
     border: 1px solid #888;
-    width: 80%;
+    width: 60%;
     align-items: center;
-    transform: translate(-50%, 50%);
-    
+    animation-name: slidedown;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
+
+@keyframes slidedown {
+    0% {
+        transform: translate(-65%, -50%);
+    }
+    100% {
+        transform: translate(-50%, 50%);
+        width: 80%;
+    }
+}
+
+
 
 #ModalHeader button {
     color: white;
@@ -435,6 +440,24 @@ body {
     transform: scale(1.05);
     box-shadow: 0 0 50px 10px rgba(0, 0, 0, .5); 
     text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+/* Workout Modal */
+#WorkoutModal {
+    /* Existing styles */
+    transform: translate(-100%, 20%);
+    background: linear-gradient(to bottom, #d1b5b5c0, #000000);
+    margin: 0 auto;
+    padding: 4%;
+    border: 1px solid #888;
+    width: 30%;
 }
 
 

@@ -1,15 +1,30 @@
-import React from 'react';
+import React, {useState}from 'react';
 import { useQuery } from '@apollo/client';
 import { GET_EXERCISES } from '../utils/queries';
+import WorkoutModal from '../Components/WorkoutModal';
 
 const Categories = () => {
 
     const { loading, data } = useQuery(GET_EXERCISES)
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
+
+    const saveChanges = () => {
+        console.log('Changes saved');
+        setIsModalOpen(false);
+    };
 
     const exercises = data?.exercises || {};
 
     if (loading) return <p>Loading...</p>;
-    
+
     //Function to sort exercises by category
     function sortExercises(exercises) {
         const exercisesByCategory = {};
@@ -32,8 +47,12 @@ const Categories = () => {
 
     //Return statement generates an accordion for each category and populates it with exercises from that category
     return (
+
         <div className="app-container text-center">
-            <h1 className='m-4'>Categories</h1>
+            <button type="button" className="btn" onClick={openModal}>
+                Edit Profile
+            </button>
+            <WorkoutModal showModal={isModalOpen}closeModal={closeModal}saveChanges={saveChanges}/>
 
             {Object.entries(exercisesByCategory).map(([categoryName, exercises]) => (
                 <div className="accordion accordion-flush mb-5 mx-auto " key={categoryName} id={`accordionFlushExample-${categoryName}`}>

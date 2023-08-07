@@ -90,7 +90,6 @@ function Profile() {
 
 
 
-
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -125,9 +124,7 @@ function Profile() {
 
         </div>
       </div>
-      {week.map((day, i) => {
-        return <DayCards key={i} day={day} />;
-      })}
+      <DayCards week={week} />
       <ProfileInfoModal showModal={isModalOpen} closeModal={closeModal} saveChanges={saveChanges} />
     </div>
   );
