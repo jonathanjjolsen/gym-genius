@@ -6,9 +6,14 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
     // finds all categories
     Query: {
-        categories: async () => {
-            return await Category.find();
-        },
+        exercises: async () => {
+            try {
+              const exercises = await Exercise.find().populate('category');
+              return exercises;
+            } catch (error) {
+              throw new Error(error);
+            }
+          },
         // categories: async () => {
         //     return await Categories.find();
         // },
@@ -19,6 +24,7 @@ const resolvers = {
             }
             throw new AuthenticationError('Not logged in');
         },
+        
 
         // exercises: async (parent, { category, name }) => {
         //     const params = {};
@@ -35,19 +41,29 @@ const resolvers = {
         // exercise: async (parent, { _id }) => {
         //     return await Exercise.findById(_id).populate('category');
         // },
-        workout: async (parent, { _id }, context) => {
-            if (context.user) {
-                const user = await User.findById(context.user._id).populate({
-                    path: 'categories.exercises',
-                    populate: 'workouts',
-                });
+        // workout: async (parent, { _id }, context) => {
+        //     if (context.user) {
+        //         const user = await User.findById(context.user._id).populate({
+        //             path: 'categories.exercises',
+        //             populate: 'workouts',
+        //         });
 
-                return user.workouts.id(_id);
-            }
+        //         return user.workouts.id(_id);
+        //     }
 
-            throw new AuthenticationError('Not logged in');
-        },
+        //     throw new AuthenticationError('Not logged in');
+        // },
     },
+    // Category: {
+    //     exercises: async (parent) => {
+    //         try {
+    //             return parent.exercises;
+    //         } catch(error) {
+    //             console.error('Error fetching', error);
+    //             throw new Error('Failed to fetch');
+    //         }
+    //     }
+    // },
     Mutation: {
         updateUserProfile: async (_, { age, bio, height, weight, weightGoal }, context) => {
             if (!context.user) {

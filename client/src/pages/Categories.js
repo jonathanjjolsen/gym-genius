@@ -1,10 +1,22 @@
 import React, { useState } from 'react';
-import './categories.css';
-import Accordion from '../../src/Components/accordion'
+import { useQuery } from '@apollo/client';
+import { GET_EXERCISES } from '../utils/queries';
 
 const Categories = () => {
-    // Code will go through here
-    // function will go through our seeds, read each category to determine where the work out goes. Additionally it will pull the necessary information and store it inside
+
+    console.log('Executing GET_EXERCISES query')
+    const { loading, data } = useQuery(GET_EXERCISES)
+
+    const exercises = data?.exercises || {};
+
+    if (loading) return <p>Loading...</p>;
+    // if (error) return <p>Error: {error.message}</p>;
+
+    // if (!data) {
+    //     return null;
+    // }
+
+    console.log(exercises);
 
     return (
         <div className="app-container text-center">
@@ -82,7 +94,7 @@ const Categories = () => {
                     </div>
                 </div>
             </div>
-            
+
         </div>
 
     )
