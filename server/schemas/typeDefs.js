@@ -54,13 +54,12 @@ const typeDefs = gql`
         categories: [Category]
         user: User
         workout: Workout
-        userProfile: [User]
     }
 
     type Auth {
         token: ID
         user: User
-        userProfile: User
+
     }
 
 

@@ -30,7 +30,7 @@ const userSchema = new Schema(
         age: {
             type: Number,
             required: false,
-            min: 18,
+            min: 0,
             max: 100
         },
         bio: {
@@ -45,13 +45,13 @@ const userSchema = new Schema(
         weight: {
             type: Number,
             required: false,
-            min: 50,
+            min: 0,
             max: 500
         },
         weightGoal: {
             type: Number,
             required: false,
-            min: 50,
+            min: 0,
             max: 500
         },
         workouts: [Workout.schema]

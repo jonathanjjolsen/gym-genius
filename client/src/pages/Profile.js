@@ -61,6 +61,7 @@ function Profile() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const { loading, data } = useQuery(GET_ME);
     const userData = data?.user || {};
+    console.log(userData);
   
     const openModal = () => {
       setIsModalOpen(true);
@@ -80,6 +81,7 @@ function Profile() {
         })
         .catch((error) => {
           console.error('Mutation error:', error);
+          console.log(updatedUserData);
         });
     };
   

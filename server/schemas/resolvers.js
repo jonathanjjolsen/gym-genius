@@ -20,11 +20,6 @@ const resolvers = {
             throw new AuthenticationError('Not logged in');
         },
 
-        userProfile: async () => {
-            const info = await User.find()
-            return info;
-        },
-
         // exercises: async (parent, { category, name }) => {
         //     const params = {};
         //     if (category) {

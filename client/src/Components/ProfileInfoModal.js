@@ -10,6 +10,11 @@ const ProfileInfoModal = ({ showModal, closeModal, saveChanges }) => {
     const [weight, setWeight] = useState('');
     const [weightGoal, setWeightGoal] = useState('');
 
+    // age must be a number between 0 and 100
+    // bio must be a string with a max length of 280 characters
+    // height must be a string
+    // weight must be a number between 0 and 500
+    // weightGoal must be a number between 0 and 500
     const handleFeetChange = (event) => {
         const value = parseInt(event.target.value);
         setFeet(value);
@@ -21,16 +26,22 @@ const ProfileInfoModal = ({ showModal, closeModal, saveChanges }) => {
     };
 
     const handleWeightChange = (event) => {
-        const value = event.target.value;
+        const value = parseInt(event.target.value);
         setWeight(value);
     };
 
     const handleWeightGoalChange = (event) => {
-        const value = event.target.value;
+        const value = parseInt(event.target.value);
         setWeightGoal(value);
     };
 
+    const handleAgeChange = (event) => {
+        const value = parseInt(event.target.value);
+        setAge(value);
+    };
+
     const formattedHeight = `${feet}'${inches}"`;
+
     const [updateUserProfile] = useMutation(UPDATE_USER_PROFILE);
     
     const handleSaveChanges = () => {
@@ -58,7 +69,7 @@ const ProfileInfoModal = ({ showModal, closeModal, saveChanges }) => {
                     </div>
                     <div className="modal-body">
                         <label htmlFor="age">Age:</label>
-                        <input type="number"className="form-control" id="age" name="age" min="0" value={age} onChange={(e) => setAge(e.target.value)}/>
+                        <input type="number"className="form-control" id="age" name="age" min="0" value={age} onChange={handleAgeChange} />
 
                         <label htmlFor="bio">Bio:</label>
                         <textarea className="form-control" id="bio" rows="1" value={bio} onChange={(e) => setBio(e.target.value)} />
