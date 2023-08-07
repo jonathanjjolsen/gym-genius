@@ -1,0 +1,425 @@
+{
+    "cardioWorkouts": [
+      {
+        "name": "Running",
+        "mainMuscles": "Legs (quadriceps, hamstrings, calves), Core",
+        "minorMuscles": "Glutes, Hip Flexors",
+        "equipment": "Running Shoes",
+        "difficulty": "Intermediate",
+        "instructions": "Go for a jog or run at a steady pace for 20-30 minutes to elevate your heart rate and improve cardiovascular endurance.",
+        "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+      },
+      {
+        "name": "Jump Rope",
+        "mainMuscles": "Calves, Shoulders, Forearms",
+        "minorMuscles": "Quadriceps, Hamstrings",
+        "equipment": "Jump Rope",
+        "difficulty": "Easy",
+        "instructions": "Jump rope continuously for 10-15 minutes, focusing on maintaining a consistent pace and rhythm.",
+        "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+      },
+      {
+        "name": "Cycling",
+        "mainMuscles": "Legs (quadriceps, hamstrings, calves), Glutes",
+        "minorMuscles": "Core, Hip Flexors",
+        "equipment": "Stationary Bike or Bicycle",
+        "difficulty": "Intermediate",
+        "instructions": "Pedal on a stationary bike or ride a bicycle outdoors for 30-45 minutes, adjusting resistance as needed.",
+        "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+      },
+      {
+        "name": "High-Intensity Interval Training (HIIT)",
+        "mainMuscles": "Full Body (various muscle groups)",
+        "minorMuscles": "N/A",
+        "equipment": "Bodyweight or Dumbbells (optional)",
+        "difficulty": "Hard",
+        "instructions": "Perform a series of intense exercises with short rest intervals, such as burpees, jumping jacks, and mountain climbers, for 15-20 minutes.",
+        "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+      },
+      {
+        "name": "Swimming",
+        "mainMuscles": "Full Body (various muscle groups)",
+        "minorMuscles": "N/A",
+        "equipment": "Swimming Pool",
+        "difficulty": "Intermediate",
+        "instructions": "Swim laps using different strokes for an overall body workout and improved cardiovascular fitness.",
+        "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+      }
+    ],
+    "waistWorkouts": [
+      {
+        "name": "Russian Twists",
+        "mainMuscles": "Obliques",
+        "minorMuscles": "Rectus Abdominis, Hip Flexors",
+        "equipment": "Weighted Medicine Ball or Dumbbell",
+        "difficulty": "Intermediate",
+        "instructions": "Sit on the floor, lean back slightly, and twist your torso from side to side while holding the weight.",
+        "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+      },
+      {
+        "name": "Bicycle Crunches",
+        "mainMuscles": "Rectus Abdominis, Obliques",
+        "minorMuscles": "Hip Flexors",
+        "equipment": "N/A (Bodyweight Exercise)",
+        "difficulty": "Easy",
+        "instructions": "Lie on your back, lift your legs off the ground, and bring one knee towards your chest while simultaneously twisting your torso to touch the opposite elbow.",
+        "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+      },
+      {
+        "name": "Side Plank",
+        "mainMuscles": "Obliques",
+        "minorMuscles": "Rectus Abdominis, Transverse Abdominis",
+        "equipment": "N/A (Bodyweight Exercise)",
+        "difficulty": "Easy",
+        "instructions": "Support your body on one elbow and feet, keeping your body straight and hold the position for 30-60 seconds on each side.",
+        "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+      },
+      {
+        "name": "Hanging Leg Raises",
+        "mainMuscles": "Rectus Abdominis",
+        "minorMuscles": "Hip Flexors, Obliques",
+        "equipment": "Pull-up Bar",
+        "difficulty": "Intermediate",
+        "instructions": "Hang from a bar and lift your legs up towards your chest, then lower them down slowly without swinging.",
+        "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+      },
+      {
+        "name": "Woodchoppers",
+        "mainMuscles": "Obliques",
+        "minorMuscles": "Rectus Abdominis, Shoulders",
+        "equipment": "Cable Machine or Resistance Band",
+        "difficulty": "Intermediate",
+        "instructions": "Stand sideways to the cable machine or anchor a resistance band, then pull the handle diagonally across your body as if you are chopping wood.",
+        "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+      }
+    ],
+      "chestWorkouts": [
+        {
+          "name": "Bench Press",
+          "mainMuscles": "Pectoralis Major",
+          "minorMuscles": "Triceps, Anterior Deltoids",
+          "equipment": "Barbell or Dumbbells, Bench",
+          "difficulty": "Intermediate",
+          "instructions": "Lie on a bench, grip the barbell or dumbbells, and lower the weight to your chest before pressing it back up.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Push-Ups",
+          "equipment": "N/A (Bodyweight Exercise)",
+          "difficulty": "Easy",
+          "instructions": "Assume a plank position, lower your body by bending your elbows, and then push back up.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Dumbbell Flyes",
+          "equipment": "Dumbbells",
+          "difficulty": "Intermediate",
+          "instructions": "Lie on a flat bench with dumbbells in hand, extend your arms out to your sides, and then bring them back up, hugging an imaginary tree.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Chest Dips",
+          "equipment": "Parallel Bars or Dip Station",
+          "difficulty": "Intermediate",
+          "instructions": "Support your body on parallel bars, lower yourself by bending your elbows, and then push back up.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Cable Chest Press",
+          "equipment": "Cable Machine",
+          "difficulty": "Intermediate",
+          "instructions": "Stand facing the cable machine, grab the handles, and press them forward while keeping your arms parallel to the ground.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        }
+      ],
+      "armsWorkouts": [
+        {
+          "name": "Bicep Curls",
+          "mainMuscles": "Biceps",
+          "minorMuscles": "Forearms",
+          "equipment": "Dumbbells or Barbell",
+          "difficulty": "Easy",
+          "instructions": "Hold the dumbbells or barbell with palms facing up, curl the weight towards your shoulders, and then lower it back down.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Tricep Dips",
+          "equipment": "Parallel Bars or Dip Station",
+          "difficulty": "Intermediate",
+          "instructions": "Support your body on parallel bars, lower yourself by bending your elbows, and then push back up.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Hammer Curls",
+          "equipment": "Dumbbells",
+          "difficulty": "Intermediate",
+          "instructions": "Hold dumbbells with palms facing inward, curl the weights towards your shoulders, and then lower them back down.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Skull Crushers",
+          "equipment": "Barbell or EZ-Bar",
+          "difficulty": "Intermediate",
+          "instructions": "Lie on a bench with a barbell, lower the weight towards your forehead, and then extend your arms back up.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Preacher Curls",
+          "equipment": "Preacher Curl Bench, Dumbbell or EZ-Bar",
+          "difficulty": "Intermediate",
+          "instructions": "Sit on the preacher curl bench, hold the weight with palms facing up, and curl it towards your shoulders.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        }
+      ],
+      "backWorkouts": [
+        {
+          "name": "Deadlifts",
+          "mainMuscles": "Erector Spinae (Lower Back), Glutes, Hamstrings",
+          "minorMuscles": "Forearms, Trapezius",
+          "equipment": "Barbell or Dumbbells",
+          "difficulty": "Intermediate",
+          "instructions": "Stand with feet hip-width apart, bend at the hips and knees, and lift the weight while keeping your back straight.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Pull-Ups",
+          "equipment": "Pull-Up Bar",
+          "difficulty": "Intermediate",
+          "instructions": "Hang from a bar with an overhand grip, pull your body up until your chin is above the bar, and then lower yourself down.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Seated Cable Rows",
+          "equipment": "Cable Machine",
+          "difficulty": "Intermediate",
+          "instructions": "Sit at a cable machine, hold the handles, and pull them towards your abdomen, squeezing your shoulder blades together.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "One-Arm Dumbbell Rows",
+          "equipment": "Dumbbell and Bench",
+          "difficulty": "Intermediate",
+          "instructions": "Place one knee and hand on a bench, hold a dumbbell in the other hand, and pull it towards your abdomen.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Supermans",
+          "equipment": "N/A (Bodyweight Exercise)",
+          "difficulty": "Easy",
+          "instructions": "Lie face down, extend your arms and legs off the ground, and lift them as high as you can to engage your lower back.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        }
+      ],
+      "shouldersWorkouts": [
+        {
+          "name": "Shoulder Press",
+          "mainMuscles": "Deltoids (Shoulders)",
+          "minorMuscles": "Triceps",
+          "equipment": "Dumbbells or Barbell",
+          "difficulty": "Intermediate",
+          "instructions": "Sit on a bench or stand, hold the weights at shoulder height, and press them upward until your arms are fully extended.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Lateral Raises",
+          "equipment": "Dumbbells",
+          "difficulty": "Easy",
+          "instructions": "Stand with dumbbells by your sides, raise them out to your sides until they are parallel to the ground, and then lower them back down.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Front Raises",
+          "equipment": "Dumbbells",
+          "difficulty": "Easy",
+          "instructions": "Hold dumbbells in front of your thighs, raise them straight up to shoulder height, and then lower them back down.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Upright Rows",
+          "equipment": "Barbell or Dumbbells",
+          "difficulty": "Intermediate",
+          "instructions": "Hold the barbell or dumbbells with palms facing your body, pull them up towards your chin, and then lower them back down.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Arnold Press",
+          "equipment": "Dumbbells",
+          "difficulty": "Intermediate",
+          "instructions": "Start with dumbbells at shoulder height, rotate them as you press overhead, and then reverse the motion on the way down.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        }
+      ],
+      "thighsWorkouts": [
+        {
+          "name": "Squats",
+          "mainMuscles": "Quadriceps, Hamstrings, Glutes",
+          "minorMuscles": "Calves, Core",
+          "equipment": "Barbell or Dumbbells",
+          "difficulty": "Intermediate",
+          "instructions": "Stand with feet shoulder-width apart, lower your body by bending your knees, and then return to the starting position.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Lunges",
+          "equipment": "N/A (Bodyweight Exercise)",
+          "difficulty": "Easy",
+          "instructions": "Take a step forward, lower your body until both knees are bent at 90-degree angles, then push back up to the starting position.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Leg Press",
+          "equipment": "Leg Press Machine",
+          "difficulty": "Intermediate",
+          "instructions": "Sit on a leg press machine, push the weight away by extending your legs, and then return to the starting position.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Step-ups",
+          "equipment": "Box or Step",
+          "difficulty": "Intermediate",
+          "instructions": "Step onto a box or step with one leg, push through your heel to stand on top, and then step back down.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Romanian Deadlifts",
+          "equipment": "Barbell or Dumbbells",
+          "difficulty": "Intermediate",
+          "instructions": "Hold the barbell or dumbbells with palms facing your body, hinge at the hips, and lower the weight down while keeping your back straight.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        }
+      ],
+      "absWorkouts": [
+        {
+          "name": "Crunches",
+          "mainMuscles": "Rectus Abdominis",
+          "minorMuscles": "Obliques",
+          "equipment": "N/A (Bodyweight Exercise)",
+          "difficulty": "Easy",
+          "instructions": "Lie on your back, bend your knees, and lift your upper body towards your knees.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Plank",
+          "mainMuscles": "Rectus Abdominis, Transverse Abdominis",
+          "minorMuscles": "Obliques",
+          "equipment": "N/A (Bodyweight Exercise)",
+          "difficulty": "Easy",
+          "instructions": "Hold a push-up position with arms straight and body in a straight line from head to heels.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Hanging Leg Raises",
+          "mainMuscles": "Rectus Abdominis",
+          "minorMuscles": "Hip Flexors, Obliques",
+          "equipment": "Pull-up Bar",
+          "difficulty": "Intermediate",
+          "instructions": "Hang from a bar and lift your legs up towards your chest, then lower them down slowly without swinging.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Russian Twists",
+          "mainMuscles": "Obliques",
+          "minorMuscles": "Rectus Abdominis, Hip Flexors",
+          "equipment": "Weighted Medicine Ball or Dumbbell",
+          "difficulty": "Intermediate",
+          "instructions": "Sit on the floor, lean back slightly, and twist your torso from side to side while holding the weight.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Reverse Crunches",
+          "mainMuscles": "Rectus Abdominis",
+          "minorMuscles": "Hip Flexors",
+          "equipment": "N/A (Bodyweight Exercise)",
+          "difficulty": "Easy",
+          "instructions": "Lie on your back, lift your legs off the ground, and bring your knees towards your chest while lifting your hips off the ground.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        }
+      ],
+      "calvesWorkouts": [
+        {
+          "name": "Calf Raises",
+          "mainMuscles": "Gastrocnemius, Soleus",
+          "minorMuscles": "N/A",
+          "equipment": "Calf Raise Machine or Step",
+          "difficulty": "Easy",
+          "instructions": "Stand on a calf raise machine or on the edge of a step, rise up on your toes, and then lower back down.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Seated Calf Raises",
+          "equipment": "Calf Raise Machine or Weights",
+          "difficulty": "Easy",
+          "instructions": "Sit on a calf raise machine or a bench, place the balls of your feet on the platform or weights, and then raise your heels.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Jump Rope",
+          "equipment": "Jump Rope",
+          "difficulty": "Easy",
+          "instructions": "Jump rope continuously for 10-15 minutes, focusing on maintaining a consistent pace and rhythm.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Box Jumps",
+          "equipment": "Box or Plyometric Platform",
+          "difficulty": "Intermediate",
+          "instructions": "Stand in front of a box or platform, jump onto it, and then step back down.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Calf Stretch",
+          "equipment": "Wall or Step",
+          "difficulty": "Easy",
+          "instructions": "Stand near a wall or on a step, place one foot back with the heel on the ground, and lean forward to stretch your calf muscles.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        }
+      ],
+      "neckWorkouts": [
+        {
+          "name": "Neck Flexion",
+          "mainMuscles": "Neck (Sternocleidomastoid)",
+          "minorMuscles": "N/A",
+          "equipment": "N/A (Bodyweight Exercise)",
+          "difficulty": "Easy",
+          "instructions": "Sit or stand, place your hands on your forehead, and apply gentle pressure while pushing your head forward.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Neck Extension",
+          "mainMuscles": "Neck (Trapezius)",
+          "minorMuscles": "N/A",
+          "equipment": "N/A (Bodyweight Exercise)",
+          "difficulty": "Easy",
+          "instructions": "Sit or stand, place your hands on the back of your head, and apply gentle pressure while pushing your head backward.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Neck Lateral Flexion",
+          "mainMuscles": "Neck (Sternocleidomastoid, Trapezius)",
+          "minorMuscles": "N/A",
+          "equipment": "N/A (Bodyweight Exercise)",
+          "difficulty": "Easy",
+          "instructions": "Sit or stand, tilt your head sideways to the left by bringing your left ear towards your left shoulder, then repeat on the right side.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Neck Resistance Training",
+          "mainMuscles": "Neck (Sternocleidomastoid, Trapezius)",
+          "minorMuscles": "N/A",
+          "equipment": "Partner or Resistance Band",
+          "difficulty": "Intermediate",
+          "instructions": "Sit or stand with a partner or a resistance band behind you, resist against the pressure as they push your head in different directions.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        },
+        {
+          "name": "Neck Rotations",
+          "mainMuscles": "Neck (Sternocleidomastoid, Trapezius)",
+          "minorMuscles": "N/A",
+          "equipment": "N/A (Bodyweight Exercise)",
+          "difficulty": "Easy",
+          "instructions": "Sit or stand, turn your head to the left and right, moving your chin towards your shoulder on each side.",
+          "url": "https://tse1.mm.bing.net/th?id=OIP.UfpLVaXckCXDpd9ptFCtxwHaER&pid=Api&P=0&h=180"
+        }
+      ]
+    }
+    
