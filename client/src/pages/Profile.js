@@ -7,6 +7,7 @@ import ProfileInfoModal from '../Components/ProfileInfoModal';
 import calculateCalorieDeficit from '../utils/helpers';
 import renderAvatar from '../Components/Avatar';
 import swal from 'sweetalert';
+import { v4 as uuidv4 } from 'uuid';
 
 
 const WeekWorkout = [
@@ -65,7 +66,7 @@ function Profile() {
   const userData = data?.user || {};
   const [selectedFile, setSelectedFile] = useState(null);
   const [message, setMessage] = useState('');
-  console.log(userData);
+
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -80,12 +81,10 @@ function Profile() {
   const saveChanges = (updatedUserData) => {
     updateUserProfile({ variables: updatedUserData })
       .then((result) => {
-        console.log('Mutation result:', result);
         closeModal();
       })
       .catch((error) => {
         console.error('Mutation error:', error);
-        console.log(updatedUserData);
       });
   };
   const calorieDeficit = Math.round(
@@ -196,7 +195,7 @@ function Profile() {
                       <h2>{workout.workoutName}</h2>
                       <div>
                         {workout.exercises.map(exercise => (
-                          <div key={exercise._id}>
+                          <div key={uuidv4()}>
                             <h3>{exercise.name}</h3>
                           </div>
                         ))}

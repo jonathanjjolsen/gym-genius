@@ -36,7 +36,12 @@ function Login() {
           dangerMode: true,
         })
       } else {
-        console.log(error)
+        swal({
+          title: "Unkown Error",
+          text: "Unkown Error, Please Try Again Later",
+          icon: "warning",
+          dangerMode: true,
+        })
       }
     }
   };
