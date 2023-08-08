@@ -175,7 +175,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #000000;
     height: 90vh;
 }
 
@@ -276,6 +275,7 @@ body {
     font-size: 3rem;
     text-align: center;
     margin-top: 2%;
+    text-shadow: #ac9a9a 1px 1px 20px; 
 }
 
 #DayCardButton {
@@ -299,11 +299,17 @@ body {
     text-decoration: underline;
 }
 
+#DayCardInner {
+    background-color: #31373d18;
+    margin-top: 2%;
+    padding: 10px;
+}
 
 #DayCardInner h3 {
     color: #ffffff;
     font-family: 'Georgia', serif;
     font-weight: bold;
+    text-shadow: #ac9a9a 1px 1px 10px;
 }
 
 #DayCardInner h4 {
@@ -328,6 +334,10 @@ body {
 #CardBottom {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 #CardBottomLeft {
@@ -358,16 +368,16 @@ body {
 
 /* Profile modal styles */
 #ProfileModalBackground {
-    /* Existing styles */
+
     background: linear-gradient(to top, #837272c0, #000000);
     position: fixed;
-    opacity: 0; /* Start with zero opacity */
+    opacity: 0; 
 
-    /* New animation styles */
+
     animation-name: fadeIn;
     animation-duration: 0.6s;
     animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards; /* Keep the final state of animation */
+    animation-fill-mode: forwards;
     top: 0;
 }
 
@@ -381,7 +391,7 @@ body {
 }
 
 #ProfileModal {
-    /* Existing styles */
+
     top: 50%;
     left: 50%;
     background: linear-gradient(to bottom, #d1b5b5c0, #000000);
@@ -399,10 +409,10 @@ body {
 
 @keyframes slidedown {
     0% {
-        transform: translate(-65%, -50%);
+        transform: translate(-60%, -50%);
     }
     100% {
-        transform: translate(-50%, 50%);
+        transform: translate(-60%, 30%);
         width: 80%;
     }
 }

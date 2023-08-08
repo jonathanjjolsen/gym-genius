@@ -30,3 +30,24 @@ const WorkoutModal = ({ showModal, closeModal, saveChanges }) => {
 };
 
 export default WorkoutModal;
+
+{/* <button type="button" className="btn" onClick={openModal}>
+    Edit Profile
+</button> */}
+
+{/* <WorkoutModal showModal={isModalOpen}closeModal={closeModal}saveChanges={saveChanges}/> */ }
+
+// const [isModalOpen, setIsModalOpen] = useState(false);
+
+//     const openModal = () => {
+//         setIsModalOpen(true);
+//     };
+
+//     const closeModal = () => {
+//         setIsModalOpen(false);
+//     };
+
+//     const saveChanges = () => {
+//         console.log('Changes saved');
+//         setIsModalOpen(false);
+//     };

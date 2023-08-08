@@ -1,25 +1,10 @@
 import React, {useState}from 'react';
 import { useQuery } from '@apollo/client';
 import { GET_EXERCISES } from '../utils/queries';
-import WorkoutModal from '../Components/WorkoutModal';
 
 const Categories = () => {
 
     const { loading, data } = useQuery(GET_EXERCISES)
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
-    const openModal = () => {
-        setIsModalOpen(true);
-    };
-
-    const closeModal = () => {
-        setIsModalOpen(false);
-    };
-
-    const saveChanges = () => {
-        console.log('Changes saved');
-        setIsModalOpen(false);
-    };
 
     const exercises = data?.exercises || {};
 
@@ -49,10 +34,6 @@ const Categories = () => {
     return (
 
         <div className="app-container text-center">
-            <button type="button" className="btn" onClick={openModal}>
-                Edit Profile
-            </button>
-            <WorkoutModal showModal={isModalOpen}closeModal={closeModal}saveChanges={saveChanges}/>
 
             {Object.entries(exercisesByCategory).map(([categoryName, exercises]) => (
                 <div className="accordion accordion-flush mb-5 mx-auto " key={categoryName} id={`accordionFlushExample-${categoryName}`}>
