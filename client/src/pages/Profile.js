@@ -6,6 +6,7 @@ import DayCards from '../Components/DayCards';
 import ProfileInfoModal from '../Components/ProfileInfoModal';
 import calculateCalorieDeficit from '../utils/helpers';
 import renderAvatar from '../Components/Avatar';
+import swal from 'sweetalert';
 
 
 const WeekWorkout = [
@@ -117,7 +118,6 @@ function Profile() {
       }
 
       const formData = new FormData();
-      //TODO: function to name the file
       const ogFileName = selectedFile.name;
       const fileExtension = ogFileName.split('.').pop();
       const newFileName = `${userData.email}${'.' + fileExtension}`;
@@ -139,6 +139,12 @@ function Profile() {
     } catch (error) {
       console.error(error);
       setMessage('Error uploading the file');
+      swal({
+        title: "Upload Error",
+        text: "Failed To Upload File",
+        icon: "warning",
+        dangerMode: true,
+      })
     }
   };
 

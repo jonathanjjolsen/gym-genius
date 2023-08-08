@@ -68,7 +68,7 @@ const typeDefs = gql`
     type Mutation {
         addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
         login(email: String!, password: String!): Auth
-        createWorkout(email: String!, workoutName: String!): Workout
+        createWorkout(selectedExercises: [String]!): Workout
         addExerciseToWorkout(workoutName: String!, exerciseInput: ExerciseInput! ): Workout
         updateUserProfile(
             age: Int

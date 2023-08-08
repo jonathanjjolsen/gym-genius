@@ -1,16 +1,27 @@
-import React, {useState}from 'react';
+import React, { useState } from 'react';
 import { useQuery } from '@apollo/client';
 import { GET_EXERCISES } from '../utils/queries';
+import { useMutation } from '@apollo/client';
+import { CREATE_WORKOUT } from '../utils/mutations';
+import AuthService from '../utils/auth';
 
 const Categories = () => {
 
-    const { loading, data } = useQuery(GET_EXERCISES)
+    const [selectedExercises, setSelectedExercises] = useState([]);
+
+    const { loading, data } = useQuery(GET_EXERCISES);
+    const [createWorkout] = useMutation(CREATE_WORKOUT);
 
     const exercises = data?.exercises || {};
 
     if (loading) return <p>Loading...</p>;
 
-    //Function to sort exercises by category
+    // Function to add an exercise to selectedExercises
+    const addToWorkout = async (exercise) => {
+        setSelectedExercises(prevSelectedExercises => [...prevSelectedExercises, exercise]);
+    };
+
+    // Function to sort exercises by category
     function sortExercises(exercises) {
         const exercisesByCategory = {};
 
@@ -22,18 +33,49 @@ const Categories = () => {
             }
 
             exercisesByCategory[CategoryName].push(exercise);
-        }
-        );
-        //returns an object with the category name as the key and an array of exercises as the value
+        });
+        // Returns an object with the category name as the key and an array of exercises as the value
         return exercisesByCategory;
+    }
+
+    // Function to create a workout
+    const handleCreateWorkout = async () => {
+        console.log('Selected Exercises', selectedExercises)
+        console.log(selectedExercises);
+        if (!AuthService.loggedIn()) {
+            console.log('You must be logged in to create a workout');
+            return;
+        }
+        
+        try {
+            const response = await createWorkout({
+                variables: { selectedExercises: selectedExercises.map(exercise => exercise._id) }
+            })
+            console.log(response);
+        } catch (err) {
+            console.error(err);
+        }
     };
 
     const exercisesByCategory = sortExercises(exercises);
 
-    //Return statement generates an accordion for each category and populates it with exercises from that category
+    // Return statement generates an accordion for each category and populates it with exercises from that category
     return (
 
         <div className="app-container text-center">
+            <h1 className='m-4'>Categories</h1>
+
+            {selectedExercises?.length > 0 && (
+                <div className="selected-exercises">
+                    <h2>Selected Exercises</h2>
+                    {selectedExercises.map(exercise => (
+                        <div key={exercise.id}>
+                            <h3>{exercise.name}</h3>
+                        </div>
+                    ))}
+                    <button className="btn btn-success" onClick={handleCreateWorkout}>Create Workout</button>
+                </div>
+            )}
 
             {Object.entries(exercisesByCategory).map(([categoryName, exercises]) => (
                 <div className="accordion accordion-flush mb-5 mx-auto " key={categoryName} id={`accordionFlushExample-${categoryName}`}>
@@ -54,7 +96,12 @@ const Categories = () => {
                                     <div key={exercise.name}>
                                         <h3>{exercise.name}</h3>
                                         <p>{exercise.description}</p>
-                                        <a className='btn btn-warning'>Add to Workout</a>
+                                        <button
+                                            className='btn btn-warning'
+                                            onClick={() => addToWorkout(exercise)}
+                                        >
+                                            Add to Workout
+                                        </button>
                                     </div>
                                 ))}
                             </div>
@@ -62,6 +109,8 @@ const Categories = () => {
                     </div>
                 </div>
             ))}
+
+
         </div>
     );
 }
