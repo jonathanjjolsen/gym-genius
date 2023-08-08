@@ -71,22 +71,12 @@ const Categories = () => {
 
     // Return statement generates an accordion for each category and populates it with exercises from that category
     return (
-      
         <div className="container text-center ">
-
-
-
             <h1 className='m-4 fw-bold text-white'>Categories</h1>
-
             {selectedExercises?.length > 0 && (
-
                 <div className="selected-exercises mb-4 text-white">
                     <h2 className='underline'>Selected Exercises</h2>
-
-              
-                   
                     <input type="text" placeholder="Workout Name" value={workoutName} onChange={handleWorkOutNameChange}/>
-
                     {selectedExercises.map(exercise => (
                         <div key={exercise.id} className='m-3'>
                             <h3>{exercise.name}</h3>
@@ -95,7 +85,6 @@ const Categories = () => {
                     <button className="btn btn-success customBtn text-black" onClick={handleCreateWorkout}>Create Workout</button>
                 </div>
             )}
-
             {Object.entries(exercisesByCategory).map(([categoryName, exercises]) => (
                 <div className="accordion accordion-flush mb-5 mx-auto " key={categoryName} id={`accordionFlushExample-${categoryName}`}>
                     <div className="accordion-item w-50 mx-auto">

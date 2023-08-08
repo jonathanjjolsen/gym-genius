@@ -183,29 +183,22 @@ function Profile() {
             </div>
             <div id='workoutInfo'>
               <h1>Your Workouts</h1>
-              <div>
-                {userData.workouts.length > 0 && (
-                  <div>
-                    {userData.workouts.map(workout => (
-                      <div key={workout._id} className='m-3'>
-                        <h2>{workout.workoutName}</h2>
-                        <div>
-                          {workout.exercises.map(exercise => (
-                            <div key={exercise._id}>
-                              <h3>{exercise.name}</h3>
-                              <p>Main Muscles: {exercise.mainMuscles}</p>
-                              <p>Minor Muscles: {exercise.minorMuscles}</p>
-                              <p>Equipment: {exercise.equipment}</p>
-                              <p>Difficulty: {exercise.difficulty}</p>
-                              
-                            </div>
-                          ))}
-                        </div>
+              {userData.workouts?.length > 0 && (
+                <div>
+                  {userData.workouts.map(workout => (
+                    <div key={workout._id} className='m-3'>
+                      <h2>{workout.workoutName}</h2>
+                      <div>
+                        {workout.exercises.map(exercise => (
+                          <div key={exercise._id}>
+                            <h3>{exercise.name}</h3>
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                )}
-              </div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </div>
