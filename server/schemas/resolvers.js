@@ -76,9 +76,12 @@ const resolvers = {
             const token = signToken(user);
             return { token, user, redirectURL: '/Profile' };
         },
-        createWorkout: async (_, { selectedExercises }, context) => {
+        createWorkout: async (_, { workoutName, selectedExercises }, context) => {
             try {
-                const workout = new Workout({ exercises: selectedExercises });
+                const workout = new Workout({
+                    workoutName: workoutName,
+                    exercises: selectedExercises
+                });
 
                 await workout.save();
 
