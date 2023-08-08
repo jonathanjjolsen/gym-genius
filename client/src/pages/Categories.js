@@ -6,6 +6,7 @@ import { CREATE_WORKOUT } from '../utils/mutations';
 import AuthService from '../utils/auth';
 import './styles.css';
 import { useNavigate } from 'react-router-dom';
+import swal from 'sweetalert';
 
 const Categories = () => {
     const navigate = useNavigate();
@@ -51,7 +52,12 @@ const Categories = () => {
         console.log('Selected Exercises', selectedExercises)
         console.log(selectedExercises);
         if (!AuthService.loggedIn()) {
-            console.log('You must be logged in to create a workout');
+            swal({
+                title: "Unable To Create Workout",
+                text: "You must be logged in to create a workout",
+                icon: "warning",
+                dangerMode: true,
+            })
             return;
         }
 
