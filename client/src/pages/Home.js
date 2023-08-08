@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import './homepage.css'
+import './styles.css'
 
 const Home = () => {
   return (
@@ -7,7 +8,7 @@ const Home = () => {
       <div id="hero-flex" className='d-flex text-center justify-content-center align-items-center'>
         <div className=''>
           <h2 className='text-light text-center hero'>Insanely Smart Workouts</h2>
-          <Link className='text-center btn btn-light hero-signup rounded-pill mt-3 px-4' to={'/signUp'}>Sign Up Today</Link>
+          <Link className='text-center btn  hero-signup rounded-pill mt-3 px-4 customBtn' to={'/signUp'}>Sign Up Today</Link>
         </div>
       </div>
 
@@ -22,7 +23,7 @@ const Home = () => {
               <p className='text-light fs-3'>With an intuitive interface, simply browse through a wide selection of exercises from various categories including cardio, upper body, and more. Say goodbye to dull routines and embrace the genius of tailored workouts with Gym Genius!</p>
             </div>
             <div className='text-center'>
-              <Link to={'/signUp'} className='btn btn-light rounded-pill py-3 px-5 fs-3 fw-bold mt-3 mb-5'>Join Now</Link>
+              <Link to={'/signUp'} className='btn customBtn alt-hover rounded-pill py-3 px-5 fs-3 fw-bold mt-3 mb-5'>Join Now</Link>
             </div>
           </div>
         </div>

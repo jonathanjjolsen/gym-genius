@@ -4,6 +4,7 @@ import { GET_EXERCISES } from '../utils/queries';
 import { useMutation } from '@apollo/client';
 import { CREATE_WORKOUT } from '../utils/mutations';
 import AuthService from '../utils/auth';
+import './styles.css';
 
 const Categories = () => {
 
@@ -75,18 +76,23 @@ const Categories = () => {
 
 
 
-            <h1 className='m-4'>Categories</h1>
+            <h1 className='m-4 fw-bold text-white'>Categories</h1>
 
             {selectedExercises?.length > 0 && (
-                <div className="selected-exercises mb-4">
-                    <h2>Selected Exercises</h2>
+
+                <div className="selected-exercises mb-4 text-white">
+                    <h2 className='underline'>Selected Exercises</h2>
+
+              
+                   
                     <input type="text" placeholder="Workout Name" value={workoutName} onChange={handleWorkOutNameChange}/>
+
                     {selectedExercises.map(exercise => (
                         <div key={exercise.id} className='m-3'>
                             <h3>{exercise.name}</h3>
                         </div>
                     ))}
-                    <button className="btn btn-success" onClick={handleCreateWorkout}>Create Workout</button>
+                    <button className="btn btn-success customBtn text-black" onClick={handleCreateWorkout}>Create Workout</button>
                 </div>
             )}
 
@@ -94,7 +100,7 @@ const Categories = () => {
                 <div className="accordion accordion-flush mb-5 mx-auto " key={categoryName} id={`accordionFlushExample-${categoryName}`}>
                     <div className="accordion-item w-50 mx-auto">
                         <h2 className="accordion-header text-center bg-dark">
-                            <button className="accordion-button collapsed text-light bg-dark rounded w-100 h-100 fs-4 mx-auto text-center d-block"
+                            <button className="accordion-button collapsed text-light bg-dark rounded w-100 h-100 fs-2 mx-auto text-center d-block underline"
                                 type="button"
                                 data-bs-toggle="collapse"
                                 data-bs-target={`#flush-collapse-${categoryName}`}
@@ -107,10 +113,10 @@ const Categories = () => {
                             <div className="accordion-body">
                                 {exercises.map(exercise => (
                                     <div key={exercise.name} className='mb-5'>
-                                        <h3>{exercise.name}</h3>
-                                        <p>{exercise.description}</p>
+                                        <h3 className='fs-4'>{exercise.name}</h3>
+                                        <p className='fs-6'>{exercise.instructions}</p>
                                         <button
-                                            className='btn btn-warning'
+                                            className='btn btn-warning customBtn'
                                             onClick={() => addToWorkout(exercise)}
                                         >
                                             Add to Workout
