@@ -156,7 +156,7 @@ function Profile() {
     <div id="ProfilePage" className="card">
       <div>
         <div id="ProfileTop">
-          <div id="ProfileEdit" class="slide-fade-button">
+          <div id="ProfileEdit" className="slide-fade-button">
             <button type="button" className="btn" onClick={openModal}>Edit Profile</button>
           </div>
           <div>
