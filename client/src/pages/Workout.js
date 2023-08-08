@@ -8,27 +8,27 @@ function Workout() {
     const { loading, data } = useQuery(GET_ME);
     const userData = data?.user || {};
 
-    
+
     const [removeWorkout] = useMutation(REMOVE_WORKOUT);
-    const 
-    
-    handleRemoveWorkout = async (workoutId) => {
-        try {
-            const response = await removeWorkout({
-                variables: { workoutId: workoutId }
-            });
-            window.location.reload();
-        } catch (err) {
-            console.error(err);
-        }
-    };
-    
+    const
+
+        handleRemoveWorkout = async (workoutId) => {
+            try {
+                const response = await removeWorkout({
+                    variables: { workoutId: workoutId }
+                });
+                window.location.reload();
+            } catch (err) {
+                console.error(err);
+            }
+        };
+
     if (loading) {
         return <div>Loading...</div>;
     }
 
     return (
-        <div id="BackgroundImg">
+        <div >
             {userData.workouts.map((workout) => (
                 <div key={workout.workoutName}>
                     <div className="accordion accordion-flush mb-5 mx-auto" id={`accordionFlushExample-${workout.workoutName}`}>
@@ -48,14 +48,26 @@ function Workout() {
                             <div id={`flush-collapse-${workout.workoutName}`} className="accordion-collapse collapse bg-dark text-light" data-bs-parent={`#accordionFlushExample-${workout.workoutName}`}>
                                 <div className="accordion-body">
                                     {workout.exercises.map((exercise) => (
-                                        <div key={exercise._id} className="mb-5">
+                                        <div key={exercise._id} id="CreatedWorkouts" className="mb-5">
                                             <img id="WorkoutImageSZ" className="fs-6" src={exercise.url} alt={exercise.name} />
-                                            <h3 className="fs-4">{exercise.name}</h3>
-                                            <p className="fs-6">{exercise.instructions}</p>
-                                            <p className="fs-6">{exercise.mainMuscles}</p>
-                                            <p className="fs-6">{exercise.minorMuscles}</p>
-                                            <p className="fs-6">{exercise.equipment}</p>
-                                            <p className="fs-6">{exercise.difficulty}</p>
+                                            <h1 className="fs-4">{exercise.name}</h1>
+                                            <div id="WorkoutInfo">
+                                                <div id="WKSection1">
+                                                    <h4>How To</h4>
+                                                    <p className="fs-6">{exercise.instructions} </p>
+                                                    <h4>Rating</h4>
+                                                    <p className="fs-6">{exercise.difficulty}</p>
+                                                </div>
+                                                <div id="WKSection2">
+                                                    <h4>Main Muscles</h4>
+                                                    <p className="fs-6">{exercise.mainMuscles}</p>
+                                                    <h4>Minor </h4>
+                                                    <p className="fs-6">{exercise.minorMuscles}</p>
+                                                    <h4>Equipment</h4>
+                                                    <p className="fs-6">{exercise.equipment}</p>
+                                                </div>
+                                                
+                                            </div>
                                         </div>
                                     ))}
                                 </div>
@@ -63,7 +75,7 @@ function Workout() {
                         </div>
                     </div>
                     <div>
-                        <button className='btn btn-success customBtn text-black' onClick={() => handleRemoveWorkout(workout._id)}>
+                        <button id="WorkoutDelete" className='btn btn-success customBtn text-black' onClick={() => handleRemoveWorkout(workout._id)}>
                             Delete Workout
                         </button>
                     </div>
