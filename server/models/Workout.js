@@ -9,6 +9,7 @@ const workoutSchema = new Schema({
     },
     workoutName: {
         type: String,
+        default: 'Untitled Workout',
         trim: true
     },
     exercises: [

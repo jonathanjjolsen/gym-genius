@@ -96,7 +96,30 @@ const resolvers = {
                 throw new Error('Failed to create workout');
             }
         },
-        
+        removeWorkout: async (_, { workoutId }, context) => {
+            try{
+                if(!context.user){
+                    throw new AuthenticationError('Not authenticated');
+                }
+                const userId = context.user._id;
+
+                const workout = await Workout.findById(workoutId);
+
+                if(!workout){
+                    throw new Error('Workout not found');
+                }
+
+                await User.findByIdAndUpdate(userId, { $pull: { workouts: workoutId } });
+
+                await Workout.findByIdAndDelete(workoutId);
+
+                return workout;
+            }
+            catch(err){
+                console.error(err);
+                throw new Error('Failed to remove workout');
+            }
+        },
     }
 };
 
