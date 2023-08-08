@@ -23,6 +23,7 @@ export const GET_ME = gql`
     query user{
         user {
             _id
+            email
             firstName
             lastName
             age 
