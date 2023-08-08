@@ -33,18 +33,6 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
-// GET route to list buckets (as before)
-app.get('/buckets', async (req, res) => {
-    try {
-        const command = new ListBucketsCommand({});
-        const response = await AwsClient.s3Instance.send(command);
-        res.send(response.Buckets);
-    } catch (error) {
-        console.log(error);
-        res.send(error);
-    }
-});
-
 //Post Route to upload the Avatar photo
 app.post('/upload', upload.single('file'), async (req, res) => {
     try {

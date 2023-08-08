@@ -6,6 +6,9 @@ import { CREATE_WORKOUT } from '../utils/mutations';
 import AuthService from '../utils/auth';
 import './styles.css';
 import { useNavigate } from 'react-router-dom';
+import swal from 'sweetalert';
+import { v4 as uuidv4 } from 'uuid';
+
 
 const Categories = () => {
     const navigate = useNavigate();
@@ -48,10 +51,13 @@ const Categories = () => {
 
     // Function to create a workout
     const handleCreateWorkout = async () => {
-        console.log('Selected Exercises', selectedExercises)
-        console.log(selectedExercises);
         if (!AuthService.loggedIn()) {
-            console.log('You must be logged in to create a workout');
+            swal({
+                title: "Unable To Create Workout",
+                text: "You must be logged in to create a workout",
+                icon: "warning",
+                dangerMode: true,
+            })
             return;
         }
 
@@ -64,7 +70,6 @@ const Categories = () => {
             })
             navigate("/Workout");
             navigate(0)
-            console.log(response);
         } catch (err) {
             console.error(err);
         }
@@ -81,7 +86,7 @@ const Categories = () => {
                     <h2 className='underline'>Selected Exercises</h2>
                     <input type="text" placeholder="Workout Name" value={workoutName} onChange={handleWorkOutNameChange} />
                     {selectedExercises.map(exercise => (
-                        <div key={exercise.id} className='m-3'>
+                        <div key={uuidv4()} className='m-3'>
                             <h3>{exercise.name}</h3>
                         </div>
                     ))}
