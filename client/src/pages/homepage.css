@@ -236,7 +236,7 @@ body {
 
 #ProfileEdit button {
     background-color: #31373d;
-    color: #d1b5b56c;
+    color: white;
     font-size: 2rem;
     text-decoration: none;
     transition: transform 2s ease-in-out, box-shadow 0.7s ease-in-out, background-color 0.7s ease-in-out;
@@ -274,14 +274,21 @@ body {
     right: 0;
     margin: 2%;
     width: 5vw;
-    background-color: #31373d;
-    color: #d1b5b56c;
     font-size: 2rem;
-    text-decoration: none;
+    background-color: #31373d;
+    color: white;
     transition: transform 2s ease-in-out, box-shadow 0.7s ease-in-out, background-color 0.7s ease-in-out;
 }
 
-#DayCardButton:hover {
+#uploadBtn {
+    text-decoration: none;
+    background-color: #31373d;
+    color: white;
+    transition: transform 2s ease-in-out, box-shadow 0.7s ease-in-out, background-color 0.7s ease-in-out;
+}
+
+#DayCardButton:hover,
+#uploadBtn:hover {
     color: #000000;
     background-color: #888888;
     transform: scale(1.05);
