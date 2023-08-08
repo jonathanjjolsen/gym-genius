@@ -6,7 +6,7 @@ import { GET_ME } from '../utils/queries';
 function Workout() {
     const { loading, data } = useQuery(GET_ME);
     const userData = data?.user || {};
-
+    console.log(userData);
     if (loading) {
         return <div>Loading...</div>;
     }
@@ -39,7 +39,6 @@ function Workout() {
                                         <p className="fs-6">{exercise.minorMuscles}</p>
                                         <p className="fs-6">{exercise.equipment}</p>
                                         <p className="fs-6">{exercise.difficulty}</p>
-                                        
                                     </div>
                                 ))}
                             </div>
