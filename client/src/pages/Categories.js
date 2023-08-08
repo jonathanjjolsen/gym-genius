@@ -7,6 +7,8 @@ import AuthService from '../utils/auth';
 import './styles.css';
 import { useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
+import { v4 as uuidv4 } from 'uuid';
+
 
 const Categories = () => {
     const navigate = useNavigate();
@@ -87,7 +89,7 @@ const Categories = () => {
                     <h2 className='underline'>Selected Exercises</h2>
                     <input type="text" placeholder="Workout Name" value={workoutName} onChange={handleWorkOutNameChange} />
                     {selectedExercises.map(exercise => (
-                        <div key={exercise.id} className='m-3'>
+                        <div key={uuidv4()} className='m-3'>
                             <h3>{exercise.name}</h3>
                         </div>
                     ))}

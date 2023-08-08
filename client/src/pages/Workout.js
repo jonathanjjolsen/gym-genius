@@ -3,6 +3,8 @@ import './styles.css';
 import { useQuery, useMutation } from '@apollo/client';
 import { GET_ME } from '../utils/queries';
 import { REMOVE_WORKOUT } from '../utils/mutations';
+import { v4 as uuidv4 } from 'uuid';
+
 
 function Workout() {
     const { loading, data } = useQuery(GET_ME);
@@ -10,7 +12,7 @@ function Workout() {
 
 
     const [removeWorkout] = useMutation(REMOVE_WORKOUT);
-    
+
     const handleRemoveWorkout = async (workoutId) => {
         try {
             const response = await removeWorkout({
@@ -21,7 +23,7 @@ function Workout() {
             console.error(err);
         }
     };
-    
+
     if (loading) {
         return <div>Loading...</div>;
     }
@@ -47,7 +49,7 @@ function Workout() {
                             <div id={`flush-collapse-${workout.workoutName}`} className="accordion-collapse collapse bg-dark text-light" data-bs-parent={`#accordionFlushExample-${workout.workoutName}`}>
                                 <div className="accordion-body">
                                     {workout.exercises.map((exercise) => (
-                                        <div key={exercise._id} id="CreatedWorkouts" className="mb-5">
+                                        <div key={uuidv4()} id="CreatedWorkouts" className="mb-5">
                                             <img id="WorkoutImageSZ" className="fs-6" src={exercise.url} alt={exercise.name} />
                                             <h1 className="fs-4">{exercise.name}</h1>
                                             <div id="WorkoutInfo">
@@ -65,7 +67,7 @@ function Workout() {
                                                     <h4>Equipment</h4>
                                                     <p className="fs-6">{exercise.equipment}</p>
                                                 </div>
-                                                
+
                                             </div>
                                         </div>
                                     ))}
