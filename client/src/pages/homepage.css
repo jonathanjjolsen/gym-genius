@@ -568,6 +568,14 @@ body {
 }
 
 
+
+
+#WorkoutImageSZ {
+    width: 100%;
+    border-radius: 20px;
+}
+
+
 /*  */
 #hero-flex {
     background-image: url('../images/home-hero.jpg');
@@ -653,10 +661,7 @@ body {
 
 
 
-    #WorkoutImageSZ {
-        width: 100%;
-        border-radius: 20px;
-    }
+
 }
 
 @media only screen and (max-width: 1900px) {
