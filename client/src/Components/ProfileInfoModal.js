@@ -95,11 +95,11 @@ const ProfileInfoModal = ({ showModal, closeModal, saveChanges }) => {
 
                         <div className="ModalTextInput2">
                             <label htmlFor="weight">Weight:</label>
-                            <textarea className="form-control" id="weight" rows="1" placeholder="Weight In Lbs" maxLength={3} value={weight} onChange={handleWeightChange} />
+                            <input type="number" className="form-control" id="weight" rows="1" placeholder="Weight In Lbs" maxLength={3} value={weight} onChange={handleWeightChange} />
 
 
                             <label htmlFor="weightGoal">Weight Goal:</label>
-                            <textarea className="form-control" id="weightGoal" rows="1" placeholder="Weight Goal In Lbs" maxLength={3} value={weightGoal} onChange={handleWeightGoalChange} />
+                            <input type="number" className="form-control" id="weightGoal" rows="1" placeholder="Weight Goal In Lbs" maxLength={3} value={weightGoal} onChange={handleWeightGoalChange} />
                         </div>
 
                     </div>

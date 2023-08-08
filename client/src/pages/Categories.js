@@ -61,6 +61,7 @@ const Categories = () => {
 
     // Return statement generates an accordion for each category and populates it with exercises from that category
     return (
+
         <div className="app-container text-center">
             <h1 className='m-4'>Categories</h1>
 
