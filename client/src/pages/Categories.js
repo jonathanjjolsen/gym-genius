@@ -71,6 +71,7 @@ const Categories = () => {
             {selectedExercises?.length > 0 && (
                 <div className="selected-exercises mb-4">
                     <h2>Selected Exercises</h2>
+                    <input type="text" placeholder="Workout Name" />
                     {selectedExercises.map(exercise => (
                         <div key={exercise.id} className='m-3'>
                             <h3>{exercise.name}</h3>

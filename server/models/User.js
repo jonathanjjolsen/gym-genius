@@ -60,6 +60,7 @@ const userSchema = new Schema(
         },
         workouts: {
             type: [Schema.Types.ObjectId],
+            ref: 'Workout',
             default: []
         }
     },
