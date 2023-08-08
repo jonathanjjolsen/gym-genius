@@ -4,7 +4,6 @@ import { GET_ME } from '../utils/queries';
 import { UPDATE_USER_PROFILE } from '../utils/mutations';
 import DayCards from '../Components/DayCards';
 import ProfileInfoModal from '../Components/ProfileInfoModal';
-import { calculateDailyCalorieDeficit, calculateDailyCalorieMaintenance } from '../utils/helpers';
 import renderAvatar from '../Components/Avatar';
 import swal from 'sweetalert';
 import { v4 as uuidv4 } from 'uuid';
@@ -35,15 +34,6 @@ function Profile() {
         console.error('Mutation error:', error);
       });
   };
-  
-  const calorieDeficit = Math.round(
-    calculateDailyCalorieDeficit(userData.weight, userData.weightGoal, parseInt(userData.age), parseInt(userData.height))
-  );
-
-  const calorieMaintenance = Math.round(
-    calculateDailyCalorieMaintenance(userData.weight, parseInt(userData.age), parseInt(userData.height)
-    )
-  );
 
   // Upload Avatar form functionality
   const handleFileChange = (fileEvent) => {
@@ -136,10 +126,6 @@ function Profile() {
               <p>{userData.weight} Lbs</p>
               <h2>Goal Weight:</h2>
               <p>{userData.weightGoal} Lbs</p>
-              <h2> Daily Calorie Deficit:</h2>
-              <p>{calorieDeficit} Calories</p>
-              <h2> Daily Calorie Maintenance:</h2>
-              <p>{calorieMaintenance} Calories</p>
             </div>
             <div id='workoutInfo'>
               <h1>Your Workouts</h1>
