@@ -49,6 +49,7 @@ const typeDefs = gql`
         height: String
         weight: Int
         weightGoal: Int
+        workouts: [Workout]
     }
 
     type Query {
