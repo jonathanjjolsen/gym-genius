@@ -13,6 +13,7 @@ import Login from './pages/Login'
 import Profile from './pages/Profile'
 import Navbar from './Components/Navbar'
 import Footer from './Components/Footer'
+import Workout from './pages/Workout';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -40,28 +41,32 @@ function App() {
       <Router>
         <Navbar />
 
-          <Routes>
-            <Route
-              path="/"
-              element={<Home />}
-            />
-            <Route
-              path="/categories"
-              element={<Categories />}
-            />
-            <Route
-              path="/signUp"
-              element={<Signup />}
-            />
-            <Route
-              path="/Login"
-              element={<Login />}
-            />
-            <Route
-              path="/Profile"
-              element={<Profile />}
-            />
-          </Routes>
+        <Routes>
+          <Route
+            path="/"
+            element={<Home />}
+          />
+          <Route
+            path="/categories"
+            element={<Categories />}
+          />
+          <Route
+            path="/signUp"
+            element={<Signup />}
+          />
+          <Route
+            path="/Login"
+            element={<Login />}
+          />
+          <Route
+            path="/Profile"
+            element={<Profile />}
+          />
+          <Route
+            path="/Workout"
+            element={<Workout />}
+          />
+        </Routes>
         {/* </div> */}
         <Footer />
       </Router>
