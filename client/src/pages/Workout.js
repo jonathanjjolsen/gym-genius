@@ -12,7 +12,7 @@ function Workout() {
     }
 
     return (
-        <div>
+        <div id="BackgroundImg">
             {userData.workouts.map((workout) => (
                 <div className="accordion accordion-flush mb-5 mx-auto" key={workout.workoutName} id={`accordionFlushExample-${workout.workoutName}`}>
                     <div className="accordion-item w-50 mx-auto">
@@ -32,7 +32,7 @@ function Workout() {
                             <div className="accordion-body">
                                 {workout.exercises.map((exercise) => (
                                     <div key={exercise._id} className="mb-5">
-                                        <img className="fs-6" src={exercise.url}></img>
+                                        <img id="WorkoutImageSZ" className="fs-6" src={exercise.url}></img>
                                         <h3 className="fs-4">{exercise.name}</h3>
                                         <p className="fs-6">{exercise.instructions}</p>
                                         <p className="fs-6">{exercise.mainMuscles}</p>

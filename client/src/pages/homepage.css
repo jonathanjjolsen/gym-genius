@@ -650,6 +650,13 @@ body {
         text-decoration: none;
         transition: transform 1s ease-in-out, box-shadow 0.7s ease-in-out, color 0.5s ease-in-out;
     }
+
+
+
+    #WorkoutImageSZ {
+        width: 100%;
+        border-radius: 20px;
+    }
 }
 
 @media only screen and (max-width: 1900px) {
