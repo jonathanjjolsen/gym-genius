@@ -12,7 +12,7 @@ const Home = () => {
       </div>
 
       {/*  */}
-      <div className='container mt-4 py-5'>
+      <div className='container mt-4 py-5 my-5'>
         <div className='row'>
           <div className='col-10  mx-auto text-light bg-black rounded'>
             <h1 className='py-4 fs-1 text-center'>What is Gym Genius?</h1>
