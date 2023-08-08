@@ -59,7 +59,6 @@ const ProfileInfoModal = ({ showModal, closeModal, saveChanges }) => {
             Goals,
         };
         saveChanges(updatedPersonalInfo);
-        console.log(updatedPersonalInfo);
         updateUserProfile({
             variables: updatedPersonalInfo,
         });
