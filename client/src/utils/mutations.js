@@ -26,9 +26,9 @@ mutation login($email: String!, $password: String!) {
 `;
 
 export const CREATE_WORKOUT = gql`
-mutation createWorkout($selectedExercises: [String]!){
-    createWorkout(selectedExercises: $selectedExercises) {
-        _id
+    mutation createWorkout($workoutName: String!, $selectedExercises: [String]!) {
+        createWorkout(workoutName: $workoutName, selectedExercises: $selectedExercises) {
+            _id
         }
     }
 `;
