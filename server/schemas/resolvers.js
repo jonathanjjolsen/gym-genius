@@ -65,7 +65,7 @@ const resolvers = {
     //     }
     // },
     Mutation: {
-        updateUserProfile: async (_, { age, bio, height, weight, weightGoal }, context) => {
+        updateUserProfile: async (_, { age, bio, height, weight, weightGoal, Goals}, context) => {
             if (!context.user) {
                 throw new AuthenticationError('Not authenticated');
             }
@@ -81,6 +81,7 @@ const resolvers = {
                         height,
                         weight,
                         weightGoal,
+                        Goals,
                     },
                 },
                 { new: true }

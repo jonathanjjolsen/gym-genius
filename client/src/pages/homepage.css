@@ -250,13 +250,46 @@ body {
     text-decoration: underline;
 }
 
+#ProfileBottom {
+    display: flex;
+    flex-wrap: wrap; 
+    margin-top: 2%;
+}
 
 
+#ProfileWorkoutGoals {
+    width: 40%;
+    background-color: #31373d18;
+    margin-top: 2.1%;
+    padding: 10px;
+    min-height: 20vh;
+    max-height: 141vh;
+}
+
+#ProfileWorkoutGoals h2 {
+    font-size: 2.5rem;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: #ac9a9a 1px 1px 20px;
+}
+
+#ProfileWorkoutGoals p {
+    font-size: 1.4rem;
+    font-family: 'Arial', sans-serif;
+    color: #d1b5b5;
+    text-align: center;
+    line-height: 1.6;
+}
 
 
 /* DaysCard Styles */
 #DayCard {
     padding: 1%;
+    min-width: 60%;
+    max-width: 100%;
 }
 
 #DayCard h1 {
@@ -270,8 +303,8 @@ body {
 
 #DayCardButton {
     position: absolute;
-    top: 50;
-    right: 0;
+    top: 82vh;
+    left: 0;
     margin: 2%;
     width: 5vw;
     font-size: 2rem;
@@ -337,7 +370,7 @@ body {
     margin-bottom: 2%;
 }
 
-#CardBottomLeft {
+#CardBottom1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -345,7 +378,7 @@ body {
     margin: 0px;
 }
 
-#CardBottomMiddle {
+#CardBottom2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -353,13 +386,7 @@ body {
     margin: 0px;
 }
 
-#CardBottomRight {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 33.4%;
-    margin: 0px;
-}
+
 
 
 
@@ -389,9 +416,6 @@ body {
 }
 
 #ProfileModal {
-
-    top: 50%;
-    left: 50%;
     background: linear-gradient(to bottom, #d1b5b5c0, #000000);
     border-radius: 10%;
     margin: 0 auto;
@@ -411,7 +435,7 @@ body {
     }
 
     100% {
-        transform: translate(-60%, 30%);
+        transform: translate(0%, 10%);
         width: 80%;
     }
 }

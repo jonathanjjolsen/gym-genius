@@ -40,6 +40,7 @@ export const UPDATE_USER_PROFILE = gql`
     $height: String
     $weight: Int
     $weightGoal: Int
+    $Goals: String
   ) {
     updateUserProfile(
       age: $age
@@ -47,6 +48,7 @@ export const UPDATE_USER_PROFILE = gql`
       height: $height
       weight: $weight
       weightGoal: $weightGoal
+      Goals: $Goals
     ) {
       _id
       age
@@ -54,6 +56,7 @@ export const UPDATE_USER_PROFILE = gql`
       height
       weight
       weightGoal
+      Goals
     }
   }
 `;

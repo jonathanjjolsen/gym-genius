@@ -32,6 +32,7 @@ export const GET_ME = gql`
             height
             weight
             weightGoal
+            Goals
         }
     }
 `;
