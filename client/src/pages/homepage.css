@@ -243,6 +243,7 @@ body {
     font-family: 'Georgia', serif;
     font-weight: bold;
     letter-spacing: 1px;
+    justify-content: center;
 }
 
 #workoutInfo h2 {
@@ -252,6 +253,24 @@ body {
     font-family: 'Helvetica', sans-serif;
     font-weight: bold;
     letter-spacing: 0.5px;
+}
+
+#workoutInfo h3 {
+    color: #d1b5b5;
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+}
+
+#workoutInfo p {
+    color: #d1b5b5;
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
 }
 
 #ProfileInfo p {
