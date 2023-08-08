@@ -54,7 +54,10 @@ const userSchema = new Schema(
             min: 0,
             max: 500
         },
-        workouts: [Workout.schema]
+        workouts: {
+            type: [Schema.Types.ObjectId],
+            default: []
+        }
     },
 );
 
