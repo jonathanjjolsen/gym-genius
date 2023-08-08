@@ -4,11 +4,9 @@ import { GET_ME } from '../utils/queries';
 import { UPDATE_USER_PROFILE } from '../utils/mutations';
 import DayCards from '../Components/DayCards';
 import ProfileInfoModal from '../Components/ProfileInfoModal';
-import calculateCalorieDeficit from '../utils/helpers';
 import renderAvatar from '../Components/Avatar';
 import swal from 'sweetalert';
 import { v4 as uuidv4 } from 'uuid';
-
 
 function Profile() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -36,9 +34,6 @@ function Profile() {
         console.error('Mutation error:', error);
       });
   };
-  const calorieDeficit = Math.round(
-    calculateCalorieDeficit(userData.weight, userData.weightGoal, parseInt(userData.age), parseInt(userData.height))
-  );
 
   // Upload Avatar form functionality
   const handleFileChange = (fileEvent) => {
@@ -54,7 +49,6 @@ function Profile() {
         return;
       }
 
-      // Delete old file from AWS Bucket
       const delResponse = await fetch(`/delete/:${userData.email}.jpg`, {
         method: 'DELETE'
       });
@@ -68,7 +62,7 @@ function Profile() {
       const formData = new FormData();
       const ogFileName = selectedFile.name;
       const fileExtension = ogFileName.split('.').pop();
-      const newFileName = `${userData.email}${'.' + fileExtension}`;
+      const newFileName = `${userData.email}.${fileExtension}`;
       formData.append('file', selectedFile, newFileName);
 
       const response = await fetch('/upload', {
@@ -83,7 +77,7 @@ function Profile() {
       }
 
       setSelectedFile(null);
-      window.location.reload()
+      window.location.reload();
     } catch (error) {
       console.error(error);
       setMessage('Error uploading the file');
@@ -92,7 +86,7 @@ function Profile() {
         text: "Failed To Upload File",
         icon: "warning",
         dangerMode: true,
-      })
+      });
     }
   };
 
@@ -132,8 +126,6 @@ function Profile() {
               <p>{userData.weight} Lbs</p>
               <h2>Goal Weight:</h2>
               <p>{userData.weightGoal} Lbs</p>
-              <h2> Daily Calorie Deficit:</h2>
-              <p>{calorieDeficit} Calories</p>
             </div>
             <div id='workoutInfo'>
               <h1>Your Workouts</h1>

@@ -14,7 +14,7 @@ const DayCards = (props) => {
           <div key={index} id="CardBottom">
             <div id="CardBottom1">
               <h3> {WeekDays[index]}</h3>
-              <p> Workout:  {workout.workoutName}</p> {/* Display workout name */}
+              <p> Workout:  {workout.workoutName}</p>
             </div>
             <div id="CardBottom2">
               <h4>Exercises</h4>
