@@ -1,40 +1,34 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
-const DayCards = ({ week }) => {
-
-
-
-
+const DayCards = (props) => {
+  const { week } = props;
+  const Workouts = week.workouts;
+  const WeekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
   return (
     <div id='DayCard'>
-
       <button id='DayCardButton' className='rounded border-none btn'>Edit</button>
-
-   
-
-      {week.map((day, index) => (
-        <div id='DayCardInner'
-          key={index}>
-
-          <h3>{day.Day}</h3>
-          <div id="CardBottom">
+      <div id='DayCardInner'>
+      <h1> Workout Week</h1>
+        {Workouts.slice(0, 7).map((workout, index) => (
+          <div key={index} id="CardBottom">
             <div id="CardBottom1">
-              <h4>Workout:</h4>
-              <p>{day.WorkoutName}</p>
+              <h3> {WeekDays[index]}</h3>
+              <p> Workout:  {workout.workoutName}</p> {/* Display workout name */}
             </div>
-
             <div id="CardBottom2">
-              <h4>Excercises:</h4>
-              <p>{day.Exercise.join(', ')}</p>
+              <h4>Exercises</h4>
+              <ul>
+                {workout.exercises.map((exercise, exIndex) => (
+                  <p key={exIndex}>{exercise.name}</p>
+                ))}
+              </ul>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
-
 
 export default DayCards;
