@@ -164,7 +164,7 @@ function Profile() {
           </div>
           <form onSubmit={handleUpload} className='mx-auto'>
             <input type="file" onChange={handleFileChange} className='btn btn-dark text-center py-4' />
-            <button type='submit'>Upload</button>
+            <button type='submit' className='rounded fs-5 btn' id='uploadBtn'>Upload</button>
           </form>
           <div id="ProfileInfo" >
             <h1>{userData.firstName}</h1>
