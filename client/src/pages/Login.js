@@ -29,7 +29,6 @@ function Login() {
         error.message.includes('Incorrect credentials')
       ) {
         // Handle incorrect credentials error here
-        // swal('Password and Email Combination Do Not Match')
         swal({
           title: "Login Error",
           text: "Password and Email Combination Do Not Match",
