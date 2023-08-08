@@ -34,6 +34,7 @@ export const GET_ME = gql`
             weightGoal
             workouts {
                 _id
+                workoutName
               exercises{
                 _id
                 name

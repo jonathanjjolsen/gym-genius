@@ -166,19 +166,47 @@ function Profile() {
             <input type="file" onChange={handleFileChange} className='btn btn-dark text-center py-4' />
             <button type='submit' className='rounded fs-5 btn' id='uploadBtn'>Upload</button>
           </form>
-          <div id="ProfileInfo" >
-            <h1>{userData.firstName}</h1>
-            <h2>{userData.age} Years Old</h2>
-            <h2>Bio:</h2>
-            <p>{userData.bio} </p>
-            <h2>Height:</h2>
-            <p>{userData.height}</p>
-            <h2> Current Weight:</h2>
-            <p>{userData.weight} Lbs</p>
-            <h2>Goal Weight:</h2>
-            <p>{userData.weightGoal} Lbs</p>
-            <h2> Daily Calorie Deficit:</h2>
-            <p>{calorieDeficit} Calories</p>
+          <div id='infoContainer'>
+            <div id="ProfileInfo" >
+              <h1>{userData.firstName}</h1>
+              <h2>{userData.age} Years Old</h2>
+              <h2>Bio:</h2>
+              <p>{userData.bio} </p>
+              <h2>Height:</h2>
+              <p>{userData.height}</p>
+              <h2> Current Weight:</h2>
+              <p>{userData.weight} Lbs</p>
+              <h2>Goal Weight:</h2>
+              <p>{userData.weightGoal} Lbs</p>
+              <h2> Daily Calorie Deficit:</h2>
+              <p>{calorieDeficit} Calories</p>
+            </div>
+            <div id='workoutInfo'>
+              <h1>Your Workouts</h1>
+              <div>
+                {userData.workouts.length > 0 && (
+                  <div>
+                    {userData.workouts.map(workout => (
+                      <div key={workout._id} className='m-3'>
+                        <h2>{workout.workoutName}</h2>
+                        <div>
+                          {workout.exercises.map(exercise => (
+                            <div key={exercise._id}>
+                              <h3>{exercise.name}</h3>
+                              <p>Main Muscles: {exercise.mainMuscles}</p>
+                              <p>Minor Muscles: {exercise.minorMuscles}</p>
+                              <p>Equipment: {exercise.equipment}</p>
+                              <p>Difficulty: {exercise.difficulty}</p>
+                              
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
         </div>
       </div>
