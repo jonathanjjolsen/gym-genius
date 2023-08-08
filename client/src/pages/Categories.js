@@ -61,16 +61,19 @@ const Categories = () => {
 
     // Return statement generates an accordion for each category and populates it with exercises from that category
     return (
+      
+        <div className="container text-center ">
 
-        <div className="app-container text-center">
+
+
             <h1 className='m-4'>Categories</h1>
 
             {selectedExercises?.length > 0 && (
-                <div className="selected-exercises">
+                <div className="selected-exercises mb-4">
                     <h2>Selected Exercises</h2>
                     <input type="text" placeholder="Workout Name" />
                     {selectedExercises.map(exercise => (
-                        <div key={exercise.id}>
+                        <div key={exercise.id} className='m-3'>
                             <h3>{exercise.name}</h3>
                         </div>
                     ))}
@@ -80,7 +83,7 @@ const Categories = () => {
 
             {Object.entries(exercisesByCategory).map(([categoryName, exercises]) => (
                 <div className="accordion accordion-flush mb-5 mx-auto " key={categoryName} id={`accordionFlushExample-${categoryName}`}>
-                    <div className="accordion-item ">
+                    <div className="accordion-item w-50 mx-auto">
                         <h2 className="accordion-header text-center bg-dark">
                             <button className="accordion-button collapsed text-light bg-dark rounded w-100 h-100 fs-4 mx-auto text-center d-block"
                                 type="button"
@@ -94,7 +97,7 @@ const Categories = () => {
                         <div id={`flush-collapse-${categoryName}`} className="accordion-collapse collapse bg-dark text-light" data-bs-parent={`#accordionFlushExample-${categoryName}`}>
                             <div className="accordion-body">
                                 {exercises.map(exercise => (
-                                    <div key={exercise.name}>
+                                    <div key={exercise.name} className='mb-5'>
                                         <h3>{exercise.name}</h3>
                                         <p>{exercise.description}</p>
                                         <button

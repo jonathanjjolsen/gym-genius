@@ -71,7 +71,8 @@ function SignUp() {
         <div className='mx-auto text-center'>
           <button type="submit" className="btn btn-primary text-center mx-auto">Submit</button>
         </div>
-        <p>Already have an Account? Click here to <Link to={'/signUp'}>Log In</Link></p>
+        <p>Already have an Account?</p>
+        <p>Click here to <Link className='text-white ' to={'/login'}>Log In</Link></p>
       </form>
     </div>
   );

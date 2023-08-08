@@ -53,7 +53,7 @@ function Login() {
 
   return (
     <div id="LoginPage">
-      <h1 className="my-">Login</h1>
+      <h1 className="">Login</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group mx-auto text-center">
           <input type="email" required className="form-control rounded text-center mx-auto" name='email' id="email" placeholder="Email" onChange={handleFormChange} />
@@ -62,10 +62,10 @@ function Login() {
           <input type="password" required className="form-control rounded text-center mx-auto" name='password' id="password" placeholder="Password" onChange={handleFormChange} />
         </div>
         <div className='mx-auto text-center'>
-          <button type="submit" className="btn  text-center mx-auto">Submit</button>
+          <button type="submit" className="btn text-center mx-auto">Submit</button>
         </div>
       </form>
-      <p>New here? Click to <Link to={'/signUp'}>Sign up!</Link></p>
+      <p className='pt-4'>New here? Click to <Link to={'/signUp'}>Sign up!</Link></p>
     </div>
   );
 }
