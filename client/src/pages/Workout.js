@@ -10,19 +10,18 @@ function Workout() {
 
 
     const [removeWorkout] = useMutation(REMOVE_WORKOUT);
-    const
-
-        handleRemoveWorkout = async (workoutId) => {
-            try {
-                const response = await removeWorkout({
-                    variables: { workoutId: workoutId }
-                });
-                window.location.reload();
-            } catch (err) {
-                console.error(err);
-            }
-        };
-
+    
+    const handleRemoveWorkout = async (workoutId) => {
+        try {
+            const response = await removeWorkout({
+                variables: { workoutId: workoutId }
+            });
+            window.location.reload();
+        } catch (err) {
+            console.error(err);
+        }
+    };
+    
     if (loading) {
         return <div>Loading...</div>;
     }
