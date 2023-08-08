@@ -338,7 +338,6 @@ body {
     line-height: 1.6;
 }
 
-
 /* DaysCard Styles */
 #DayCard {
     padding: 1%;
@@ -387,6 +386,7 @@ body {
     background-color: #31373d18;
     margin-top: 2%;
     padding: 10px;
+    
 }
 
 #DayCardInner h3 {
@@ -413,6 +413,7 @@ body {
     align-items: center;
     color: #d1b5b5;
     font-family: 'Arial', sans-serif;
+    margin: 0; /* Add this to remove default margin */
 }
 
 #CardBottom {
@@ -422,13 +423,16 @@ body {
     align-items: center;
     margin-top: 2%;
     margin-bottom: 2%;
+    background-color: #31373d13;
+    padding: 10px;
 }
 
 #CardBottom1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 33.3%;
+    align-items: center; /* Change width to fit content better */
+    width: 50%;
     margin: 0px;
 }
 
@@ -436,7 +440,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 33.3%;
+    align-items: center; /* Change width to fit content better */
+    width: 50%;
     margin: 0px;
 }
 
