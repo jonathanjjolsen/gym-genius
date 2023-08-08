@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Auth from '../utils/auth';
 const Navbar = () => {
@@ -37,7 +37,7 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav ms-auto fs-4">
             <li className="nav-item"><Link className="nav-link text-light text-decoration-none" to={'/categories'} href="" id="">Categories</Link></li>
-            {/* TODO: Pull user id from data to pass to workout route /workouts/:id*/}
+            <li className="nav-item"><Link className="nav-link text-light text-decoration-none" to={'/Workout'} href="" id="">Workout</Link></li>
             <li className="nav-item"><Link className="nav-link text-light text-decoration-none" to={'/Profile'} href="" id="">Profile</Link></li>
             <li className="nav-item"><Link className="nav-link text-light text-decoration-none" onClick={Auth.logout} to={'/'} href="" id="">Log Out</Link></li>
           </ul>
