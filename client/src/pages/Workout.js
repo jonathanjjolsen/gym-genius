@@ -27,7 +27,7 @@ function Workout() {
     }
 
     return (
-        <div >
+        <div id='workoutContainer'>
             {userData.workouts.map((workout) => (
                 <div key={workout.workoutName}>
                     <div className="accordion accordion-flush mb-5 mx-auto" id={`accordionFlushExample-${workout.workoutName}`}>
@@ -73,7 +73,7 @@ function Workout() {
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div id='buttonContainer'>
                         <button id="WorkoutDelete" className='btn btn-success customBtn text-black' onClick={() => handleRemoveWorkout(workout._id)}>
                             Delete Workout
                         </button>
