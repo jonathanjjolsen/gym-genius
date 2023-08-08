@@ -10,7 +10,7 @@ const DayCards = ({ week }) => {
   return (
     <div id='DayCard'>
 
-      <button id='DayCardButton'>Edit</button>
+      <button id='DayCardButton' className='rounded border-none btn'>Edit</button>
 
       <h1> Workouts</h1>
 
