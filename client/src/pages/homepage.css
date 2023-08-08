@@ -11,14 +11,11 @@ body {
 
 /* Signup Page Styles */
 #SignupForm {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 30%;
-    margin-right: 30%;
+    text-align: center;
     padding: 5%;
     height: 90vh;
+    margin-bottom: 20%;
+    margin-top: 1%;
 }
 
 #SignupForm h1 {
@@ -26,7 +23,7 @@ body {
 }
 
 #SignupForm input {
-    width: 20vw;
+    width: 40vw;
     height: 10vh;
     border: 1px solid #000000;
     border-radius: 4%;
@@ -39,12 +36,11 @@ body {
 
 
 #SignupForm button {
-    width: 13vw;
-    height: 7vh;
     background-color: #000000c7;
     color: #ffffff;
     font-size: 2rem;
     text-decoration: none;
+    border-color: white;
     transition: transform 2s ease-in-out, box-shadow 0.7s ease-in-out, background-color .7s ease-in-out;
 }
 
@@ -54,12 +50,13 @@ body {
     transform: scale(1.05);
     box-shadow: 0 0 50px 10px rgba(0, 0, 0, .5);
     text-decoration: underline;
+    border: none;
 }
 
 #SignupForm a {
     color: #ffffff;
     font-family: 'Helvetica', sans-serif;
-    font-size: 2rem;
+    font-size: 1.7rem;
     text-decoration: none;
     transition: transform 1s ease-in-out, box-shadow 0.7s ease-in-out, color 0.5s ease-in-out;
 }
@@ -479,5 +476,40 @@ body {
         color: #000000;
         text-align: center;
         margin-bottom: 3vh;
+    }
+
+    #SignupForm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 30%;
+        margin-right: 30%;
+        padding: 5%;
+        padding-top: 15%;
+        padding-bottom: 10%;
+        margin-bottom: 10%;
+        margin-top: 3%;
+        height: 90vh;
+    }
+
+
+    #SignupForm input {
+        width: 20vw;
+        height: 10vh;
+        border: 1px solid #000000;
+        border-radius: 4%;
+        font-size: 1.5rem;
+        color: #000000;
+        text-align: center;
+        margin-bottom: 3vh;
+    }
+
+    #SignupForm a {
+        color: #ffffff;
+        font-family: 'Helvetica', sans-serif;
+        font-size: 1.5rem;
+        text-decoration: none;
+        transition: transform 1s ease-in-out, box-shadow 0.7s ease-in-out, color 0.5s ease-in-out;
     }
 }
