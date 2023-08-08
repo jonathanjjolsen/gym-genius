@@ -13,6 +13,8 @@ const Categories = () => {
     const { loading, data } = useQuery(GET_EXERCISES);
     const [createWorkout] = useMutation(CREATE_WORKOUT);
 
+    const [workoutName, setWorkoutName] = useState('');
+
     const exercises = data?.exercises || {};
 
     if (loading) return <p>Loading...</p>;
@@ -20,6 +22,10 @@ const Categories = () => {
     // Function to add an exercise to selectedExercises
     const addToWorkout = async (exercise) => {
         setSelectedExercises(prevSelectedExercises => [...prevSelectedExercises, exercise]);
+    };
+
+    const handleWorkOutNameChange = (event) => {
+        setWorkoutName(event.target.value);
     };
 
     // Function to sort exercises by category
@@ -50,7 +56,10 @@ const Categories = () => {
         
         try {
             const response = await createWorkout({
-                variables: { selectedExercises: selectedExercises.map(exercise => exercise._id) }
+                variables: {
+                    workoutName: workoutName,
+                    selectedExercises: selectedExercises.map(exercise => exercise._id)
+                }
             })
             console.log(response);
         } catch (err) {
@@ -70,8 +79,14 @@ const Categories = () => {
             <h1 className='m-4 fw-bold text-white'>Categories</h1>
 
             {selectedExercises?.length > 0 && (
+
                 <div className="selected-exercises mb-4 text-white">
                     <h2 className='underline'>Selected Exercises</h2>
+
+              
+                   
+                    <input type="text" placeholder="Workout Name" value={workoutName} onChange={handleWorkOutNameChange}/>
+
                     {selectedExercises.map(exercise => (
                         <div key={exercise.id} className='m-3'>
                             <h3>{exercise.name}</h3>

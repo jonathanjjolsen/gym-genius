@@ -54,8 +54,13 @@ const userSchema = new Schema(
             min: 0,
             max: 500
         },
+        Goals: {
+            type: String,
+            required: false,
+        },
         workouts: {
             type: [Schema.Types.ObjectId],
+            ref: 'Workout',
             default: []
         }
     },

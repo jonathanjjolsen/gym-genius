@@ -26,9 +26,9 @@ mutation login($email: String!, $password: String!) {
 `;
 
 export const CREATE_WORKOUT = gql`
-mutation createWorkout($selectedExercises: [String]!){
-    createWorkout(selectedExercises: $selectedExercises) {
-        _id
+    mutation createWorkout($workoutName: String!, $selectedExercises: [String]!) {
+        createWorkout(workoutName: $workoutName, selectedExercises: $selectedExercises) {
+            _id
         }
     }
 `;
@@ -40,6 +40,7 @@ export const UPDATE_USER_PROFILE = gql`
     $height: String
     $weight: Int
     $weightGoal: Int
+    $Goals: String
   ) {
     updateUserProfile(
       age: $age
@@ -47,6 +48,7 @@ export const UPDATE_USER_PROFILE = gql`
       height: $height
       weight: $weight
       weightGoal: $weightGoal
+      Goals: $Goals
     ) {
       _id
       age
@@ -54,6 +56,7 @@ export const UPDATE_USER_PROFILE = gql`
       height
       weight
       weightGoal
+      Goals
     }
   }
 `;

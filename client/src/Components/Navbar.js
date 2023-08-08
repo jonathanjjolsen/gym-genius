@@ -1,14 +1,8 @@
-import React, { useEffect } from 'react';
+import React  from 'react';
 import { Link } from 'react-router-dom';
 import Auth from '../utils/auth';
 const Navbar = () => {
 
-  //TODO: check for log in on load 
-  // useEffect(() => {
-
-  // }, [])
-
-  // if not logged in, display the login link 
   return (!Auth.loggedIn() ?
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-2 " id="mainNav">
       <div className="container px-4 px-lg-5">

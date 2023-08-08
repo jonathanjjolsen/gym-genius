@@ -32,6 +32,19 @@ export const GET_ME = gql`
             height
             weight
             weightGoal
+            workouts {
+                _id
+              exercises{
+                _id
+                name
+                mainMuscles
+                minorMuscles
+                equipment
+                difficulty
+                instructions
+                url
+              }
+            }
         }
     }
 `;

@@ -49,6 +49,7 @@ const typeDefs = gql`
         height: String
         weight: Int
         weightGoal: Int
+        workouts: [Workout]
     }
 
     type Query {
@@ -68,7 +69,7 @@ const typeDefs = gql`
     type Mutation {
         addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
         login(email: String!, password: String!): Auth
-        createWorkout(selectedExercises: [String]!): Workout
+        createWorkout(workoutName: String!, selectedExercises: [String]!): Workout
         addExerciseToWorkout(workoutName: String!, exerciseInput: ExerciseInput! ): Workout
         updateUserProfile(
             age: Int
@@ -76,6 +77,7 @@ const typeDefs = gql`
             height: String
             weight: Int
             weightGoal: Int
+            Goals: String
         ): User
     }
 

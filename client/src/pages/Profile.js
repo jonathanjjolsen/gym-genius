@@ -156,7 +156,7 @@ function Profile() {
     <div id="ProfilePage" className="card">
       <div>
         <div id="ProfileTop">
-          <div id="ProfileEdit" class="slide-fade-button">
+          <div id="ProfileEdit" className="slide-fade-button">
             <button type="button" className="btn" onClick={openModal}>Edit Profile</button>
           </div>
           <div>
@@ -177,15 +177,19 @@ function Profile() {
             <p>{userData.weight} Lbs</p>
             <h2>Goal Weight:</h2>
             <p>{userData.weightGoal} Lbs</p>
-
             <h2> Daily Calorie Deficit:</h2>
             <p>{calorieDeficit} Calories</p>
           </div>
-
-
         </div>
       </div>
-      <DayCards week={week} />
+      <div id="ProfileBottom">
+        <DayCards week={week} />
+        <div id="ProfileWorkoutGoals">
+          <h2>Workout Goals:</h2>
+          <p>{userData.Goals}</p>
+        </div>
+      </div>
+
       <ProfileInfoModal showModal={isModalOpen} closeModal={closeModal} saveChanges={saveChanges} />
     </div>
   );

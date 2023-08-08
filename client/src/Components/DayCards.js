@@ -12,7 +12,7 @@ const DayCards = ({ week }) => {
 
       <button id='DayCardButton' className='rounded border-none btn'>Edit</button>
 
-      <h1> Workouts</h1>
+   
 
       {week.map((day, index) => (
         <div id='DayCardInner'
@@ -20,24 +20,16 @@ const DayCards = ({ week }) => {
 
           <h3>{day.Day}</h3>
           <div id="CardBottom">
-            <div id="CardBottomLeft">
+            <div id="CardBottom1">
               <h4>Workout:</h4>
               <p>{day.WorkoutName}</p>
             </div>
 
-            <div id="CardBottomMiddle">
+            <div id="CardBottom2">
               <h4>Excercises:</h4>
               <p>{day.Exercise.join(', ')}</p>
             </div>
-
-            <div id="CardBottomRight">
-              <h4>Goals:</h4>
-              <p>{day.Goal.join(', ')}</p>
-            </div>
           </div>
-
-
-
         </div>
       ))}
     </div>
