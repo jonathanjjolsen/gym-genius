@@ -3,6 +3,7 @@ import { gql } from '@apollo/client';
 export const GET_EXERCISES = gql`
 query exercises {
     exercises {
+      _id
       name
       mainMuscles
       minorMuscles
@@ -23,6 +24,7 @@ export const GET_ME = gql`
     query user{
         user {
             _id
+            email
             firstName
             lastName
             age 

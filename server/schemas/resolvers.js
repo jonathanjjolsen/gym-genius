@@ -112,39 +112,24 @@ const resolvers = {
             const token = signToken(user);
             return { token, user, redirectURL: '/Profile' };
         },
-        createWorkout: async (parent, { email, workoutName }, context) => {
-            console.log(context);
-            //TODO: Uncomment this to only allow workouts to be created if user is logged in
-            // if (context.user) {
-            const workout = new Workout({ workoutName });
-            console.log('the workout: ', workout)
-            const theUser = await User.findOne({ email });
-            theUser.workouts.push(workout);
-            theUser.save()
-            workout.save()
+        createWorkout: async (_, { selectedExercises }, context) => {
+            try {
+                const workout = new Workout({ exercises: selectedExercises });
 
-            return workout;
-            // }
+                await workout.save();
 
-            throw new AuthenticationError('Not logged in');
+                const userId = context.user._id;
+
+                await User.findByIdAndUpdate(userId, { $push: { workouts: workout._id } });
+
+                return workout;
+            }
+            catch (err) {
+                console.error(err);
+                throw new Error('Failed to create workout');
+            }
         },
-        // addExerciseToWorkout: async (parent, { workoutName, exerciseInput }, context) => {
-        //     const workout = await Workout.findOne({ workoutName })
-        //     if (!workout) {
-        //         throw new Error('Workout not found');
-        //     }
-        //     // Create a new exercise from the exerciseInput argument
-        //     const newExercise = new Exercise({
-        //         ...exerciseInput,
-        //     });
-
-        //     workout.exercises.push(newExercise);
-        //     workout.save()
-        //     newExercise.save()
-
-        //     // 4. Return the updated workout with the new exercise
-        //     return workout;
-        // }
+        
     }
 };
 

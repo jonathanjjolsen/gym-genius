@@ -11,14 +11,11 @@ body {
 
 /* Signup Page Styles */
 #SignupForm {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 30%;
-    margin-right: 30%;
+    text-align: center;
     padding: 5%;
     height: 90vh;
+    margin-bottom: 20%;
+    margin-top: 1%;
 }
 
 #SignupForm h1 {
@@ -26,7 +23,7 @@ body {
 }
 
 #SignupForm input {
-    width: 20vw;
+    width: 40vw;
     height: 10vh;
     border: 1px solid #000000;
     border-radius: 4%;
@@ -39,12 +36,11 @@ body {
 
 
 #SignupForm button {
-    width: 13vw;
-    height: 7vh;
     background-color: #000000c7;
     color: #ffffff;
     font-size: 2rem;
     text-decoration: none;
+    border-color: white;
     transition: transform 2s ease-in-out, box-shadow 0.7s ease-in-out, background-color .7s ease-in-out;
 }
 
@@ -52,14 +48,15 @@ body {
     color: #000000;
     background-color: #696969;
     transform: scale(1.05);
-    box-shadow: 0 0 50px 10px rgba(0, 0, 0, .5); 
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, .5);
     text-decoration: underline;
+    border: none;
 }
 
 #SignupForm a {
     color: #ffffff;
     font-family: 'Helvetica', sans-serif;
-    font-size: 2rem;
+    font-size: 1.7rem;
     text-decoration: none;
     transition: transform 1s ease-in-out, box-shadow 0.7s ease-in-out, color 0.5s ease-in-out;
 }
@@ -67,8 +64,8 @@ body {
 #SignupForm a:hover {
     color: #857777;
     transform: scale(1.2);
-    box-shadow: 0 0 50px 5px rgba(0, 0, 0, .5); 
-    text-decoration:underline;
+    box-shadow: 0 0 50px 5px rgba(0, 0, 0, .5);
+    text-decoration: underline;
 }
 
 #SignupForm p {
@@ -92,19 +89,14 @@ body {
 }
 
 #LoginPage {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 30%;
-    margin-right: 30%;
     padding: 5%;
     height: 75vh;
-
+    text-align: center;
 }
 
+
 #LoginPage input {
-    width: 20vw;
+    width: 40vw;
     height: 10vh;
     border: 1px solid #000000;
     border-radius: 4%;
@@ -115,8 +107,6 @@ body {
 }
 
 #LoginPage button {
-    width: 13vw;
-    height: 7vh;
     background-color: #000000c7;
     color: #ffffff;
     font-size: 2rem;
@@ -129,7 +119,7 @@ body {
     color: #000000;
     background-color: #696969;
     transform: scale(1.05);
-    box-shadow: 0 0 50px 10px rgba(0, 0, 0, .5); 
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, .5);
     text-decoration: underline;
 }
 
@@ -144,8 +134,8 @@ body {
 #LoginPage a:hover {
     color: #857777;
     transform: scale(1.2);
-    box-shadow: 0 0 50px 5px rgba(0, 0, 0, .5); 
-    text-decoration:underline;
+    box-shadow: 0 0 50px 5px rgba(0, 0, 0, .5);
+    text-decoration: underline;
 }
 
 #LoginPage p {
@@ -158,12 +148,12 @@ body {
 
 
 
-/* Profile Page Styles */ 
+/* Profile Page Styles */
 
 
 
 #ProfilePage {
-    background: linear-gradient(to bottom, #212529, #000000);
+    background: linear-gradient(to top, #212529, #000000);
     margin-right: 2%;
     margin-left: 2%;
     margin-top: 5%;
@@ -175,7 +165,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid #000000;
     height: 90vh;
 }
 
@@ -198,10 +187,10 @@ body {
 }
 
 #ProfileTop a:hover {
-    color: #000000;
+    color: #ffffff;
     transform: scale(1.05);
-    box-shadow: 0 0 50px 5px rgba(0, 0, 0, .5); 
-    text-decoration:underline;
+    box-shadow: 0 0 50px 5px rgba(0, 0, 0, .5);
+    text-decoration: underline;
 }
 
 #ProfileInfo {
@@ -257,7 +246,7 @@ body {
     color: #000000;
     background-color: #888888;
     transform: scale(1.05);
-    box-shadow: 0 0 50px 10px rgba(0, 0, 0, .5); 
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, .5);
     text-decoration: underline;
 }
 
@@ -266,112 +255,134 @@ body {
 
 
 /* DaysCard Styles */
-#ProfileCards {
+#DayCard {
+    padding: 1%;
+}
+
+#DayCard h1 {
+    color: #ffffff;
+    font-family: 'Georgia', serif;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 2%;
+    text-shadow: #ac9a9a 1px 1px 20px;
+}
+
+#DayCardButton {
+    position: absolute;
+    top: 50;
+    right: 0;
+    margin: 2%;
+    width: 5vw;
+    background-color: #31373d;
+    color: #d1b5b56c;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: transform 2s ease-in-out, box-shadow 0.7s ease-in-out, background-color 0.7s ease-in-out;
+}
+
+#DayCardButton:hover {
+    color: #000000;
+    background-color: #888888;
+    transform: scale(1.05);
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, .5);
+    text-decoration: underline;
+}
+
+#DayCardInner {
+    background-color: #31373d18;
+    margin-top: 2%;
+    padding: 10px;
+}
+
+#DayCardInner h3 {
+    color: #ffffff;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    text-shadow: #ac9a9a 1px 1px 10px;
+}
+
+#DayCardInner h4 {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 5%;
-    background : linear-gradient(to bottom, #797979, #e7e7e7);
-}
-
-#CardTitle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    color: #d4c2c2;
+    font-family: 'Helvetica', sans-serif;
     font-weight: bold;
 }
 
-#CardEdit {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: end;
-    margin-right: 1%;
-}
-
-#CardEdit a {
-    color: #000000;
-    font-family: 'Helvetica', sans-serif;
-    font-size: 1.5rem;
-    text-decoration: none;
-    transition: transform 2s ease-in-out, color 0.5s ease-in-out;
-}
-
-#CardEdit a:hover {
-    color: #000000;
-    transform: scale(1.05);
-    text-decoration:underline;
-}
-
-#CardBtm {
+#DayCardInner p {
     display: flex;
     flex-direction: row;
-    min-height: 20vh;
+    justify-content: center;
+    align-items: center;
+    color: #d1b5b5;
+    font-family: 'Arial', sans-serif;
 }
 
-#CardExc {
-    text-align: start;
-    width: 77%;
+#CardBottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
-#CardExc h2 {
-    color: #000000;
-    font-size: 2rem;
-    font-family: 'Helvetica', sans-serif;
-    letter-spacing: 0.5px;
-    margin-top: 1%;
-    margin-bottom: 1%;
-}
-
-#CardExc h2:before {
-    content: '\2022';
-    color: #822121d3;
-    margin-right: 0.5em; 
-    font-size: 4rem;
-}
-
-#CardGoal {
+#CardBottomLeft {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 20%;
-    margin-right: 3%;
-    border: #000000 solid 1px;
-    overflow: hidden; 
-    white-space: wrap; 
+    justify-content: center;
+    width: 33.3%;
+    margin: 0px;
 }
 
-#CardGoal h1 {
-    color: #000000;
-    font-size: 2rem;
-    font-family: 'Helvetica', sans-serif;
-    letter-spacing: 0.5px;
-    margin-top: 1%;
-    margin-bottom: 1%;
-}
-#CardGoal li {
-    color: #000000;
-    font-size: 1.5rem;
-    font-family: 'Helvetica', sans-serif;
-    letter-spacing: 0.5px;
-    margin-top: 1%;
-    margin-bottom: 1%;
+#CardBottomMiddle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 33.3%;
+    margin: 0px;
 }
 
+#CardBottomRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 33.4%;
+    margin: 0px;
+}
 
 
 
 /* Profile modal styles */
 #ProfileModalBackground {
+
     background: linear-gradient(to top, #837272c0, #000000);
     position: fixed;
+    opacity: 0;
+
+
+    animation-name: fadeIn;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    top: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 #ProfileModal {
+
     top: 50%;
     left: 50%;
     background: linear-gradient(to bottom, #d1b5b5c0, #000000);
@@ -379,11 +390,26 @@ body {
     margin: 0 auto;
     padding: 4%;
     border: 1px solid #888;
-    width: 80%;
+    width: 60%;
     align-items: center;
-    transform: translate(-50%, 50%);
-    
+    animation-name: slidedown;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
+
+@keyframes slidedown {
+    0% {
+        transform: translate(-60%, -50%);
+    }
+
+    100% {
+        transform: translate(-60%, 30%);
+        width: 80%;
+    }
+}
+
+
 
 #ModalHeader button {
     color: white;
@@ -391,6 +417,7 @@ body {
     cursor: pointer;
     transition: background-color 0.5s ease;
 }
+
 #ModalHeader button:hover {
     background-color: #6b7c7a;
 }
@@ -433,8 +460,26 @@ body {
     color: #d1b5b5;
     background-color: #31373d;
     transform: scale(1.05);
-    box-shadow: 0 0 50px 10px rgba(0, 0, 0, .5); 
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, .5);
     text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+/* Workout Modal */
+#WorkoutModal {
+    /* Existing styles */
+    transform: translate(-100%, 20%);
+    background: linear-gradient(to bottom, #d1b5b5c0, #000000);
+    margin: 0 auto;
+    padding: 4%;
+    border: 1px solid #888;
+    width: 30%;
 }
 
 
@@ -462,5 +507,62 @@ body {
 
     .hero-signup {
         font-size: 2.5rem;
+    }
+
+    #LoginPage {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 30%;
+        margin-right: 30%;
+        padding: 5%;
+        height: 75vh;
+    }
+
+    #LoginPage input {
+        width: 20vw;
+        height: 10vh;
+        border: 1px solid #000000;
+        border-radius: 4%;
+        font-size: 1.5rem;
+        color: #000000;
+        text-align: center;
+        margin-bottom: 3vh;
+    }
+
+    #SignupForm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 30%;
+        margin-right: 30%;
+        padding: 5%;
+        padding-top: 15%;
+        padding-bottom: 10%;
+        margin-bottom: 10%;
+        margin-top: 3%;
+        height: 90vh;
+    }
+
+
+    #SignupForm input {
+        width: 20vw;
+        height: 10vh;
+        border: 1px solid #000000;
+        border-radius: 4%;
+        font-size: 1.5rem;
+        color: #000000;
+        text-align: center;
+        margin-bottom: 3vh;
+    }
+
+    #SignupForm a {
+        color: #ffffff;
+        font-family: 'Helvetica', sans-serif;
+        font-size: 1.5rem;
+        text-decoration: none;
+        transition: transform 1s ease-in-out, box-shadow 0.7s ease-in-out, color 0.5s ease-in-out;
     }
 }

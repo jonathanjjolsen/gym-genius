@@ -5,6 +5,8 @@ import { UPDATE_USER_PROFILE } from '../utils/mutations';
 import DayCards from '../Components/DayCards';
 import ProfileInfoModal from '../Components/ProfileInfoModal';
 import calculateCalorieDeficit from '../utils/helpers';
+import renderAvatar from '../Components/Avatar';
+import swal from 'sweetalert';
 
 
 const WeekWorkout = [
@@ -61,6 +63,8 @@ function Profile() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { loading, data } = useQuery(GET_ME);
   const userData = data?.user || {};
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [message, setMessage] = useState('');
   console.log(userData);
 
   const openModal = () => {
@@ -88,8 +92,61 @@ function Profile() {
     calculateCalorieDeficit(userData.weight, userData.weightGoal, parseInt(userData.age), parseInt(userData.height))
   );
 
+  // Upload Avatar form functionality
+  const handleFileChange = (fileEvent) => {
+    setSelectedFile(fileEvent.target.files[0]);
+  };
 
+  const handleUpload = async (submitEvent) => {
+    try {
+      submitEvent.preventDefault();
 
+      if (!selectedFile) {
+        setMessage('Please select a file');
+        return;
+      }
+
+      // Delete old file from AWS Bucket
+      const delResponse = await fetch(`/delete/:${userData.email}.jpg`, {
+        method: 'DELETE'
+      });
+
+      if (delResponse.ok) {
+        setMessage('File deleting successfully');
+      } else {
+        setMessage('Error deleting the file, may not exist');
+      }
+
+      const formData = new FormData();
+      const ogFileName = selectedFile.name;
+      const fileExtension = ogFileName.split('.').pop();
+      const newFileName = `${userData.email}${'.' + fileExtension}`;
+      formData.append('file', selectedFile, newFileName);
+
+      const response = await fetch('/upload', {
+        method: 'POST',
+        body: formData
+      });
+
+      if (response.ok) {
+        setMessage('File uploaded successfully');
+      } else {
+        setMessage('Error uploading the file');
+      }
+
+      setSelectedFile(null);
+      window.location.reload()
+    } catch (error) {
+      console.error(error);
+      setMessage('Error uploading the file');
+      swal({
+        title: "Upload Error",
+        text: "Failed To Upload File",
+        icon: "warning",
+        dangerMode: true,
+      })
+    }
+  };
 
   if (loading) {
     return <div>Loading...</div>;
@@ -103,11 +160,14 @@ function Profile() {
             <button type="button" className="btn" onClick={openModal}>Edit Profile</button>
           </div>
           <div>
-            <img src="https://via.placeholder.com/150" alt="profile" />
+            <img src={renderAvatar(userData.email)} alt="profile" />
           </div>
-          <a href="#">Change Avatar</a>
+          <form onSubmit={handleUpload} className='mx-auto'>
+            <input type="file" onChange={handleFileChange} className='btn btn-dark text-center py-4' />
+            <button type='submit'>Upload</button>
+          </form>
           <div id="ProfileInfo" >
-            <h1>{userData.firstName} {userData.lastName}</h1>
+            <h1>{userData.firstName}</h1>
             <h2>{userData.age} Years Old</h2>
             <h2>Bio:</h2>
             <p>{userData.bio} </p>
@@ -125,9 +185,7 @@ function Profile() {
 
         </div>
       </div>
-      {week.map((day, i) => {
-        return <DayCards key={i} day={day} />;
-      })}
+      <DayCards week={week} />
       <ProfileInfoModal showModal={isModalOpen} closeModal={closeModal} saveChanges={saveChanges} />
     </div>
   );
