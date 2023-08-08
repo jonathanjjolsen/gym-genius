@@ -52,7 +52,7 @@ body {
     color: #000000;
     background-color: #696969;
     transform: scale(1.05);
-    box-shadow: 0 0 50px 10px rgba(0, 0, 0, .5); 
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, .5);
     text-decoration: underline;
 }
 
@@ -67,8 +67,8 @@ body {
 #SignupForm a:hover {
     color: #857777;
     transform: scale(1.2);
-    box-shadow: 0 0 50px 5px rgba(0, 0, 0, .5); 
-    text-decoration:underline;
+    box-shadow: 0 0 50px 5px rgba(0, 0, 0, .5);
+    text-decoration: underline;
 }
 
 #SignupForm p {
@@ -92,19 +92,14 @@ body {
 }
 
 #LoginPage {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 30%;
-    margin-right: 30%;
     padding: 5%;
     height: 75vh;
-
+    text-align: center;
 }
 
+
 #LoginPage input {
-    width: 20vw;
+    width: 40vw;
     height: 10vh;
     border: 1px solid #000000;
     border-radius: 4%;
@@ -115,8 +110,6 @@ body {
 }
 
 #LoginPage button {
-    width: 13vw;
-    height: 7vh;
     background-color: #000000c7;
     color: #ffffff;
     font-size: 2rem;
@@ -129,7 +122,7 @@ body {
     color: #000000;
     background-color: #696969;
     transform: scale(1.05);
-    box-shadow: 0 0 50px 10px rgba(0, 0, 0, .5); 
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, .5);
     text-decoration: underline;
 }
 
@@ -144,8 +137,8 @@ body {
 #LoginPage a:hover {
     color: #857777;
     transform: scale(1.2);
-    box-shadow: 0 0 50px 5px rgba(0, 0, 0, .5); 
-    text-decoration:underline;
+    box-shadow: 0 0 50px 5px rgba(0, 0, 0, .5);
+    text-decoration: underline;
 }
 
 #LoginPage p {
@@ -158,7 +151,7 @@ body {
 
 
 
-/* Profile Page Styles */ 
+/* Profile Page Styles */
 
 
 
@@ -200,8 +193,8 @@ body {
 #ProfileTop a:hover {
     color: #000000;
     transform: scale(1.05);
-    box-shadow: 0 0 50px 5px rgba(0, 0, 0, .5); 
-    text-decoration:underline;
+    box-shadow: 0 0 50px 5px rgba(0, 0, 0, .5);
+    text-decoration: underline;
 }
 
 #ProfileInfo {
@@ -257,7 +250,7 @@ body {
     color: #000000;
     background-color: #888888;
     transform: scale(1.05);
-    box-shadow: 0 0 50px 10px rgba(0, 0, 0, .5); 
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, .5);
     text-decoration: underline;
 }
 
@@ -274,7 +267,7 @@ body {
     margin-left: 15%;
     margin-right: 15%;
     margin-top: 5%;
-    background : linear-gradient(to bottom, #797979, #e7e7e7);
+    background: linear-gradient(to bottom, #797979, #e7e7e7);
 }
 
 #CardTitle {
@@ -304,7 +297,7 @@ body {
 #CardEdit a:hover {
     color: #000000;
     transform: scale(1.05);
-    text-decoration:underline;
+    text-decoration: underline;
 }
 
 #CardBtm {
@@ -330,7 +323,7 @@ body {
 #CardExc h2:before {
     content: '\2022';
     color: #822121d3;
-    margin-right: 0.5em; 
+    margin-right: 0.5em;
     font-size: 4rem;
 }
 
@@ -341,8 +334,8 @@ body {
     width: 20%;
     margin-right: 3%;
     border: #000000 solid 1px;
-    overflow: hidden; 
-    white-space: wrap; 
+    overflow: hidden;
+    white-space: wrap;
 }
 
 #CardGoal h1 {
@@ -353,6 +346,7 @@ body {
     margin-top: 1%;
     margin-bottom: 1%;
 }
+
 #CardGoal li {
     color: #000000;
     font-size: 1.5rem;
@@ -382,7 +376,7 @@ body {
     width: 80%;
     align-items: center;
     transform: translate(-50%, 50%);
-    
+
 }
 
 #ModalHeader button {
@@ -391,6 +385,7 @@ body {
     cursor: pointer;
     transition: background-color 0.5s ease;
 }
+
 #ModalHeader button:hover {
     background-color: #6b7c7a;
 }
@@ -433,7 +428,7 @@ body {
     color: #d1b5b5;
     background-color: #31373d;
     transform: scale(1.05);
-    box-shadow: 0 0 50px 10px rgba(0, 0, 0, .5); 
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, .5);
     text-decoration: underline;
 }
 
@@ -462,5 +457,27 @@ body {
 
     .hero-signup {
         font-size: 2.5rem;
+    }
+
+    #LoginPage {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 30%;
+        margin-right: 30%;
+        padding: 5%;
+        height: 75vh;
+    }
+
+    #LoginPage input {
+        width: 20vw;
+        height: 10vh;
+        border: 1px solid #000000;
+        border-radius: 4%;
+        font-size: 1.5rem;
+        color: #000000;
+        text-align: center;
+        margin-bottom: 3vh;
     }
 }
