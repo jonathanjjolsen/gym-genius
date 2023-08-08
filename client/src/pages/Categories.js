@@ -4,9 +4,11 @@ import { GET_EXERCISES } from '../utils/queries';
 import { useMutation } from '@apollo/client';
 import { CREATE_WORKOUT } from '../utils/mutations';
 import AuthService from '../utils/auth';
+import { useNavigate } from 'react-router-dom';
 import './styles.css';
 
 const Categories = () => {
+    const navigate = useNavigate();
 
     const [selectedExercises, setSelectedExercises] = useState([]);
 
@@ -53,7 +55,7 @@ const Categories = () => {
             console.log('You must be logged in to create a workout');
             return;
         }
-        
+
         try {
             const response = await createWorkout({
                 variables: {
@@ -61,6 +63,8 @@ const Categories = () => {
                     selectedExercises: selectedExercises.map(exercise => exercise._id)
                 }
             })
+            navigate("/Workout");
+            navigate(0)
             console.log(response);
         } catch (err) {
             console.error(err);
@@ -76,7 +80,7 @@ const Categories = () => {
             {selectedExercises?.length > 0 && (
                 <div className="selected-exercises mb-4 text-white">
                     <h2 className='underline'>Selected Exercises</h2>
-                    <input type="text" placeholder="Workout Name" value={workoutName} onChange={handleWorkOutNameChange}/>
+                    <input type="text" placeholder="Workout Name" value={workoutName} onChange={handleWorkOutNameChange} />
                     {selectedExercises.map(exercise => (
                         <div key={exercise.id} className='m-3'>
                             <h3>{exercise.name}</h3>
@@ -117,8 +121,6 @@ const Categories = () => {
                     </div>
                 </div>
             ))}
-
-
         </div>
     );
 }
