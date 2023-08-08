@@ -20,7 +20,7 @@ function Workout() {
                     <h1 className='mb-5'>Your Workouts</h1>
                     <div>
                         {userData.workouts?.length > 0 && (
-                            <div>
+                            <div className='mb-5 pb-5'>
                                 {userData.workouts.map(workout => (
                                     <div key={workout._id} class="card text-center mb-5">
                                         <div className="card-header fs-2 bg-dark py-2" >
