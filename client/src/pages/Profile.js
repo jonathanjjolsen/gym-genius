@@ -66,7 +66,7 @@ function Profile() {
   const userData = data?.user || {};
   const [selectedFile, setSelectedFile] = useState(null);
   const [message, setMessage] = useState('');
-  console.log(userData);
+
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -81,12 +81,10 @@ function Profile() {
   const saveChanges = (updatedUserData) => {
     updateUserProfile({ variables: updatedUserData })
       .then((result) => {
-        console.log('Mutation result:', result);
         closeModal();
       })
       .catch((error) => {
         console.error('Mutation error:', error);
-        console.log(updatedUserData);
       });
   };
   const calorieDeficit = Math.round(

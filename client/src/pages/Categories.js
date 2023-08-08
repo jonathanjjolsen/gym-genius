@@ -51,8 +51,6 @@ const Categories = () => {
 
     // Function to create a workout
     const handleCreateWorkout = async () => {
-        console.log('Selected Exercises', selectedExercises)
-        console.log(selectedExercises);
         if (!AuthService.loggedIn()) {
             swal({
                 title: "Unable To Create Workout",
@@ -72,7 +70,6 @@ const Categories = () => {
             })
             navigate("/Workout");
             navigate(0)
-            console.log(response);
         } catch (err) {
             console.error(err);
         }

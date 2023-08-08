@@ -12,7 +12,6 @@ function SignUp() {
   //handle form submit and pass variables to addUser mutation
   const handleFormSubmit = async event => {
     try {
-      console.log(formState)
       event.preventDefault();
       const response = await addUser({
         variables: {
