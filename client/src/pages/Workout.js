@@ -10,9 +10,8 @@ function Workout() {
 
     
     const [removeWorkout] = useMutation(REMOVE_WORKOUT);
-    const 
     
-    handleRemoveWorkout = async (workoutId) => {
+    const handleRemoveWorkout = async (workoutId) => {
         try {
             const response = await removeWorkout({
                 variables: { workoutId: workoutId }
