@@ -162,10 +162,16 @@ function Profile() {
           <div>
             <img src={renderAvatar(userData.email)} alt="profile" />
           </div>
-          <form onSubmit={handleUpload} className='mx-auto'>
-            <input type="file" onChange={handleFileChange} className='btn btn-dark text-center py-4' />
-            <button type='submit' className='rounded fs-5 btn' id='uploadBtn'>Upload</button>
-          </form>
+          <div>
+            <form onSubmit={handleUpload} className='mx-auto'>
+              <div>
+                <input type="file" accept='.jpg' onChange={handleFileChange} className=' text-center py-2 my-2 btn btn-secondary rounded' />
+              </div>
+              <div className='text-center mt-2'>
+                <button type='submit' className='rounded fs-5 btn' id='uploadBtn'>Upload</button>
+              </div>
+            </form>
+          </div>
           <div id='infoContainer'>
             <div id="ProfileInfo" >
               <h1>{userData.firstName}</h1>
