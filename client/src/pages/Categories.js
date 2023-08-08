@@ -62,17 +62,17 @@ const Categories = () => {
     // Return statement generates an accordion for each category and populates it with exercises from that category
     return (
       
-        <div className="container text-center">
+        <div className="container text-center ">
 
 
 
             <h1 className='m-4'>Categories</h1>
 
             {selectedExercises?.length > 0 && (
-                <div className="selected-exercises">
+                <div className="selected-exercises mb-4">
                     <h2>Selected Exercises</h2>
                     {selectedExercises.map(exercise => (
-                        <div key={exercise.id}>
+                        <div key={exercise.id} className='m-3'>
                             <h3>{exercise.name}</h3>
                         </div>
                     ))}
