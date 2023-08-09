@@ -32,21 +32,21 @@ function Workout() {
         <div id='workoutContainer'>
             {userData.workouts.map((workout) => (
                 <div key={workout.workoutName}>
-                    <div className="accordion accordion-flush mb-5 mx-auto" id={`accordionFlushExample-${workout.workoutName}`}>
+                    <div className="accordion accordion-flush mb-5 mx-auto" id={`accordionFlushExample-${workout.workoutName.replace(/\s+/g, '-')}`}>
                         <div className="accordion-item w-50 mx-auto">
                             <h2 className="accordion-header text-center bg-dark">
                                 <button
                                     className="accordion-button collapsed text-light bg-dark rounded w-100 h-100 fs-2 mx-auto text-center d-block underline"
                                     type="button"
                                     data-bs-toggle="collapse"
-                                    data-bs-target={`#flush-collapse-${workout.workoutName}`}
+                                    data-bs-target={`#flush-collapse-${workout.workoutName.replace(/\s+/g, '-')}`}
                                     aria-expanded="false"
-                                    aria-controls={`flush-collapse-${workout.workoutName}`}
+                                    aria-controls={`flush-collapse-${workout.workoutName.replace(/\s+/g, '-')}`}
                                 >
                                     {workout.workoutName}
                                 </button>
                             </h2>
-                            <div id={`flush-collapse-${workout.workoutName}`} className="accordion-collapse collapse bg-dark text-light" data-bs-parent={`#accordionFlushExample-${workout.workoutName}`}>
+                            <div id={`flush-collapse-${workout.workoutName.replace(/\s+/g, '-')}`} className="accordion-collapse collapse bg-dark text-light" data-bs-parent={`#accordionFlushExample-${workout.workoutName.replace(/\s+/g, '-')}`}>
                                 <div className="accordion-body">
                                     {workout.exercises.map((exercise) => (
                                         <div key={uuidv4()} id="CreatedWorkouts" className="mb-5">
