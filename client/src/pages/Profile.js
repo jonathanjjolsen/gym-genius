@@ -102,7 +102,7 @@ function Profile() {
             <button type="button" className="btn" onClick={openModal}>Edit Profile</button>
           </div>
           <div>
-            <img src={renderAvatar(userData.email)} alt="https://via.placeholder.com/150x150/2b2b2b/ffffff?text=Ghost" />
+            <img src={renderAvatar(userData.email)} alt="placeholder" />
           </div>
           <div>
             <form onSubmit={handleUpload} className='mx-auto'>
