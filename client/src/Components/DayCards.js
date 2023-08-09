@@ -7,7 +7,6 @@ const DayCards = (props) => {
 
   return (
     <div id='DayCard'>
-      <button id='DayCardButton' className='rounded border-none btn'>Edit</button>
       <div id='DayCardInner'>
       <h1> Workout Week</h1>
         {Workouts.slice(0, 7).map((workout, index) => (

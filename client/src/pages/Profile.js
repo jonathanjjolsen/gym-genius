@@ -114,7 +114,6 @@ function Profile() {
               </div>
             </form>
           </div>
-          <div id='infoContainer'>
             <div id="ProfileInfo" >
               <h1>{userData.firstName}</h1>
               <h2>{userData.age} Years Old</h2>
@@ -126,26 +125,6 @@ function Profile() {
               <p>{userData.weight} Lbs</p>
               <h2>Goal Weight:</h2>
               <p>{userData.weightGoal} Lbs</p>
-            </div>
-            <div id='workoutInfo'>
-              <h1>Your Workouts</h1>
-              {userData.workouts?.length > 0 && (
-                <div>
-                  {userData.workouts.map(workout => (
-                    <div key={workout._id} className='m-3'>
-                      <h2>{workout.workoutName}</h2>
-                      <div>
-                        {workout.exercises.map(exercise => (
-                          <div key={uuidv4()}>
-                            <h3>{exercise.name}</h3>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
           </div>
         </div>
       </div>
