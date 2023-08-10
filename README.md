@@ -73,7 +73,7 @@ Licensed under the The MIT License
 ### Workouts Page                                     
 ![](client/public/Screenshots/gymGenius7.png)     
 ### Workouts Expanded                                           
-![](client/public/Screenshots/gymGenius8.png)  
+![](client/public/Screenshots/GymGenius8.png)  
 ### Profile Page       
 ![](client/public/Screenshots/gymGenius9.png)                         
  
