@@ -70,10 +70,11 @@ Licensed under the The MIT License
 ![](client/public/Screenshots/gymGenius5.png)         
 ### Add Exercise to Workout                                     
 ![](client/public/Screenshots/gymGenius6.png) 
-### Sign Up Page                                     
-![](client/public/Screenshots/gymGenius3.png)     
-### Login Page                                           
-![](client/public/Screenshots/gymGenius2.png)  
-### Profile Page                              
+### Workouts Page                                     
+![](client/public/Screenshots/gymGenius7.png)     
+### Workouts Expanded                                           
+![](client/public/Screenshots/gymGenius8.png)  
+### Profile Page       
+![](client/public/Screenshots/gymGenius9.png)                         
  
 
