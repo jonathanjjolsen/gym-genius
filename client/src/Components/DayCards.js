@@ -18,9 +18,9 @@ const DayCards = (props) => {
             </div>
             <div id="CardBottom2" className='text-center'>
               <h4 >Exercises</h4>
-              <ul>
+              <ul className='list-unstyled'>
                 {workout.exercises.map((exercise, exIndex) => (
-                  <p key={exIndex}>{exercise.name}</p>
+                  <li key={exIndex}>{exercise.name}</li>
                 ))}
               </ul>
             </div>
