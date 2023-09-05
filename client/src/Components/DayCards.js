@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const DayCards = (props) => {
   const { week } = props;
@@ -8,15 +9,15 @@ const DayCards = (props) => {
   return (
     <div id='DayCard'>
       <div id='DayCardInner'>
-      <h1> Workout Week</h1>
+        <h2 className='fs-1 '><Link className="text-decoration-none" to={'/Workout'}> Your Workouts</Link></h2>
         {Workouts.slice(0, 7).map((workout, index) => (
-          <div key={index} id="CardBottom">
+          <div key={index} id="CardBottom" className='shadow rounded'>
             <div id="CardBottom1">
-              <h3> {WeekDays[index]}</h3>
-              <p> Workout:  {workout.workoutName}</p>
+              {/* <h3> {WeekDays[index]}</h3> */}
+              <h3>{workout.workoutName}</h3>
             </div>
-            <div id="CardBottom2">
-              <h4>Exercises</h4>
+            <div id="CardBottom2" className='text-center'>
+              <h4 >Exercises</h4>
               <ul>
                 {workout.exercises.map((exercise, exIndex) => (
                   <p key={exIndex}>{exercise.name}</p>

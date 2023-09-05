@@ -94,45 +94,75 @@ function Profile() {
     return <div>Loading...</div>;
   }
 
+  const renderGoals = () => {
+    if (userData.Goals === null || userData.Goals === '') {
+      return (
+        <p className='grey-bg py-4 mx-3 rounded shadow'>Add your workout goals in the edit profile section!</p>
+      )
+    }
+    else {
+      return (
+        <p className='grey-bg py-4 mx-3 rounded shadow'>{userData.Goals}</p>
+      )
+    }
+  }
+
+  const renderWorkouts = () => {
+    if (userData.workouts === null || userData.workouts === '') {
+      return (
+        <p className='grey-bg py-4 mx-3 rounded shadow'>Add your workout goals in the edit profile section!</p>
+      )
+    }
+    else {
+      return (
+        <DayCards week={userData} />
+      )
+    }
+  }
+
   return (
-    <div id="ProfilePage" className="card">
-      <div>
-        <div id="ProfileTop">
-          <div id="ProfileEdit" className="slide-fade-button">
-            <button type="button" className="btn" onClick={openModal}>Edit Profile</button>
-          </div>
+    <div id="ProfilePage" className="container mt-5 rounded">
+      <div className='row text-white'>
+        <div id="ProfileTop" className='col text-center'>
           <div>
-            <img src={renderAvatar(userData.email)} alt="placeholder" />
+            <img src={renderAvatar(userData.email)} alt="profile pic" />
           </div>
           <div>
             <form onSubmit={handleUpload} className='mx-auto'>
               <div>
-                <input type="file" accept='.jpg' onChange={handleFileChange} className=' text-center py-2 my-2 btn btn-secondary rounded' />
+                <input type="file" accept='.jpg' onChange={handleFileChange} className=' text-center py-2 my-2 btn btn-secondary fs-5 rounded' />
               </div>
               <div className='text-center mt-2'>
                 <button type='submit' className='rounded fs-5 btn' id='uploadBtn'>Upload</button>
               </div>
             </form>
           </div>
-            <div id="ProfileInfo" >
-              <h1>{userData.firstName}</h1>
-              <h2>{userData.age} Years Old</h2>
-              <h2>Bio:</h2>
-              <p>{userData.bio} </p>
-              <h2>Height:</h2>
-              <p>{userData.height}</p>
-              <h2> Current Weight:</h2>
-              <p>{userData.weight} Lbs</p>
-              <h2>Goal Weight:</h2>
-              <p>{userData.weightGoal} Lbs</p>
+          <hr className='mx-5'></hr>
+          <div id="ProfileEdit" className=" text-center py-3 mx-4 ">
+            <button type="button" className="btn fs-5 customBtn" onClick={openModal}>Edit Profile</button>
+          </div>
+          <div id="ProfileInfo" >
+            <h1 className='py-3'>{userData.firstName} {userData.lastName}</h1>
+            <h2 className='py-3 fs-3'>{userData.age} Years Old</h2>
+            <h2 className='py-2 fs-3'>Bio:</h2>
+            <p className='py-2 fs-4'>{userData.bio} </p>
+            <h2 className='py-2 fs-3'>Height:</h2>
+            <p className='py-2 fs-4'>{userData.height}</p>
+            <h2 className='py-2 fs-3'> Current Weight:</h2>
+            <p className='py-2 fs-4'>{userData.weight} Lbs</p>
+            <h2 className='py-2 fs-3'>Goal Weight:</h2>
+            <p className='py-2 fs-4'>{userData.weightGoal} Lbs</p>
           </div>
         </div>
       </div>
-      <div id="ProfileBottom">
-        <DayCards week={userData} />
-        <div id="ProfileWorkoutGoals">
-          <h2>Workout Goals:</h2>
-          <p>{userData.Goals}</p>
+      <div id="ProfileBottom" className='row text-white mb-5 pb-5 text-center'>
+        <div className='col'>
+          <div id="ProfileWorkoutGoals">
+            <h2 className='white-shadow fs-1 pt-4'>Workout Goals:</h2>
+            {renderGoals()}
+          </div>
+          {renderWorkouts()}
+          {/* <DayCards week={userData} /> */}
         </div>
       </div>
 

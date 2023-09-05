@@ -7,7 +7,16 @@ body {
 }
 
 
+.white-shadow {
+    color: #ffffff;
+    font-family: 'Georgia', serif;
+    /* text-shadow: #ac9a9a 1px 1px 10px; */
+    text-shadow: #ac9a9a 1px 1px 20px;
+}
 
+.grey-bg {
+    background-color: #b1b3b413;
+}
 
 /* Signup Page Styles */
 #SignupForm {
@@ -151,28 +160,19 @@ body {
 
 #ProfilePage {
     background: linear-gradient(to top, #212529, #000000);
-    margin-right: 2%;
+    /* margin-right: 2%;
     margin-left: 2%;
     margin-top: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 5%; */
 }
 
-#ProfileTop {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-}
-
-#ProfileTop img {
-    max-width: 10vw;
-    max-width: 17vh;
-    min-width: 10px;
-    min-height: 10px;
-    border: 1px solid #000000;
-    border-radius: 50%;
-    margin-top: 2%;
+#ProfileInfo p {
+    color: #d1b5b5;
+    /* font-size: 1.4rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    line-height: 1.6; */
+    font-family: 'Arial', sans-serif;
 }
 
 #ProfileTop a {
@@ -182,6 +182,44 @@ body {
     text-decoration: none;
     transition: transform 2s ease-in-out, box-shadow 0.7s ease-in-out, color 0.5s ease-in-out;
 }
+
+#ProfileTop img {
+    max-width: 10vw;
+    max-width: 10vw;
+    min-width: 10px;
+    min-height: 10px;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    margin-top: 2%;
+}
+
+/* #ProfileEdit button {
+    background-color: #31373d;
+    color: white;
+    text-decoration: none;
+    transition: transform 2s ease-in-out, box-shadow 0.7s ease-in-out, background-color 0.7s ease-in-out;
+}
+
+#ProfileEdit button:hover {
+    color: #000000;
+    background-color: #888888;
+    transform: scale(1.05);
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, .5);
+    text-decoration: underline;
+} */
+
+/*
+#ProfileTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+
+
+
 
 #ProfileTop a:hover {
     color: #ffffff;
@@ -219,14 +257,7 @@ body {
 
 
 
-#ProfileInfo p {
-    color: #d1b5b5;
-    font-size: 1.4rem;
-    margin-top: 0.5rem;
-    text-align: center;
-    line-height: 1.6;
-    font-family: 'Arial', sans-serif;
-}
+
 
 #ProfileEdit {
     position: absolute;
@@ -234,21 +265,7 @@ body {
     right: 15px;
 }
 
-#ProfileEdit button {
-    background-color: #31373d;
-    color: white;
-    font-size: 2rem;
-    text-decoration: none;
-    transition: transform 2s ease-in-out, box-shadow 0.7s ease-in-out, background-color 0.7s ease-in-out;
-}
 
-#ProfileEdit button:hover {
-    color: #000000;
-    background-color: #888888;
-    transform: scale(1.05);
-    box-shadow: 0 0 50px 10px rgba(0, 0, 0, .5);
-    text-decoration: underline;
-}
 
 #ProfileBottom {
     display: flex;
@@ -284,7 +301,7 @@ body {
     line-height: 1.6;
     margin-right: 35%;
     margin-left: 35%;
-}
+} */
 
 /* DaysCard Styles */
 #DayCard {
@@ -293,10 +310,10 @@ body {
     max-width: 100%;
 }
 
-#DayCard h1 {
+#DayCard h2,
+#DayCard h2 a {
     color: #ffffff;
     font-family: 'Georgia', serif;
-    font-size: 3rem;
     text-align: center;
     margin-top: 2%;
     text-shadow: #ac9a9a 1px 1px 20px;
@@ -309,7 +326,7 @@ body {
     margin: 2%;
     width: 5vw;
     font-size: 2rem;
-    background-color: #31373d;
+    /* background-color: #31373d; */
     color: white;
     transition: transform 2s ease-in-out, box-shadow 0.7s ease-in-out, background-color 0.7s ease-in-out;
 }
@@ -331,16 +348,15 @@ body {
 }
 
 #DayCardInner {
-    background-color: #31373d18;
+    /* background-color: #31373d18; */
     margin-top: 2%;
     padding: 10px;
-    
+
 }
 
 #DayCardInner h3 {
     color: #ffffff;
     font-family: 'Georgia', serif;
-    font-weight: bold;
     text-shadow: #ac9a9a 1px 1px 10px;
 }
 
@@ -359,9 +375,10 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    color: #d1b5b5;
+    /* color: #d1b5b5; */
     font-family: 'Arial', sans-serif;
-    margin: 0; /* Add this to remove default margin */
+    margin: 0;
+    /* Add this to remove default margin */
 }
 
 #CardBottom {
@@ -371,7 +388,8 @@ body {
     align-items: center;
     margin-top: 2%;
     margin-bottom: 2%;
-    background-color: #31373d13;
+    /* background-color: #31373d13; */
+    background-color: #b1b3b413;
     padding: 10px;
 }
 
@@ -379,7 +397,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Change width to fit content better */
+    align-items: center;
+    /* Change width to fit content better */
     width: 50%;
     margin: 0px;
 }
@@ -388,7 +407,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Change width to fit content better */
+    align-items: center;
+    /* Change width to fit content better */
     width: 50%;
     margin: 0px;
 }
@@ -707,7 +727,7 @@ body {
 }
 
 @media only screen and (max-width: 1900px) {
-    #infoContainer{
+    #infoContainer {
         flex-direction: column;
     }
 }
